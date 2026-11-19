@@ -1,0 +1,47 @@
+---
+import '../styles/global.css';
+const { title = 'Què proposen?', description = 'Atles independent d’iniciatives parlamentàries', active = '' } = Astro.props;
+const base = import.meta.env.BASE_URL.endsWith('/')
+  ? import.meta.env.BASE_URL
+  : import.meta.env.BASE_URL + '/';
+---
+<!doctype html>
+<html lang="ca">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#152b35" />
+    <meta name="description" content={description} />
+    <title>{title} · Què proposen?</title>
+  </head>
+  <body>
+    <a class="skip-link" href="#contingut">Ves al contingut</a>
+    <header class="site-header">
+      <div class="container header-inner">
+        <a class="site-mark" href={base} aria-label="Què proposen? Inici">
+          <span class="brand-square">Q<span>?</span></span>
+          <span>Què proposen<span class="brand-dot">?</span></span>
+        </a>
+        <nav class="site-nav" aria-label="Navegació principal">
+          <a href={base} aria-current={active === 'inici' ? 'page' : undefined}>Inici</a>
+          <a href={base + 'medi-ambient/'} aria-current={active === 'medi' ? 'page' : undefined}>Medi ambient</a>
+          <a href={base + 'com-funciona/'} aria-current={active === 'guia' ? 'page' : undefined}>Com funciona?</a>
+        </nav>
+      </div>
+    </header>
+    <main id="contingut">
+      <slot />
+    </main>
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <div>
+          <strong>Què proposen<span>?</span></strong>
+          <p>Projecte independent de divulgació parlamentària.</p>
+        </div>
+        <p>Les iniciatives no equivalen a lleis ni a resultats de govern.<br />
+          <a href={base + 'com-funciona/'}>Consulta la guia dels procediments</a>
+        </p>
+      </div>
+    </footer>
+  </body>
+</html>
