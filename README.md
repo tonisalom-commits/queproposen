@@ -23,7 +23,7 @@ Quan la sol·licitud de fusió s'hagi aprovat: **Settings → Pages → Deploy f
 
 - `medi-ambient/index.html`: secció ambiental amb portada pròpia, filtres, expedients, **comparador de dos grups**, classificació multietiqueta i enllaços contextuals a la guia pedagògica. Comparteix la **mateixa** `dades.js` del portal. No és un repositori independent.
 - `docs/metodologia-medi-ambient.md`: criteris d'inclusió i full de ruta per fer un inventari exhaustiu.
-- La secció ambiental conté, en aquesta revisió, **22 expedients parlamentaris** seleccionats i dos documents governamentals oficials d'exemple (projecte de llei 121/000025 i RDL 20/2026). No s'han de sumar els dos universos ni utilitzar-ne les xifres per classificar grups.
+- La secció ambiental conté, en aquesta revisió, **22 expedients parlamentaris** seleccionats i quatre documents governamentals oficials d'exemple (projectes de llei 121/000025, 121/000014 i 121/000015, i RDL 20/2026). No s'han de sumar els dos universos ni utilitzar-ne les xifres per classificar grups.
 - La guia permet anar directament a l'explicació de PNL o proposició de llei des de cada expedient.
 - No són justificables rànquings ni comparacions quantitatives de prioritats mentre no s'hagi recuperat i revisat l'inventari complet.
 
