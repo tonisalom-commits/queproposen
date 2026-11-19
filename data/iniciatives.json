@@ -904,7 +904,15 @@
     "etiquetesAmbientals": [
       "Aigua i gestió hídrica",
       "Recursos naturals"
-    ]
+    ],
+    "revisio": {
+      "data": "2026-11-19",
+      "nivell": "contingut",
+      "fonts": [
+        "https://www.congreso.es/gl/busqueda-de-publicaciones?_publicaciones_id_texto=BOCG-15-CG-A-268.CODI.&_publicaciones_legislatura=XV&_publicaciones_mode=mostrarTextoIntegro&p_p_id=publicaciones&p_p_lifecycle=0&p_p_mode=view&p_p_state=normal"
+      ],
+      "nota": "El BOCG A-268 registra una PNL de Vox sobre conservació de preses i infraestructures hídriques; l'argumentació relaciona la restauració de rius amb la seguretat hídrica. No s'ha verificat una votació final."
+    }
   },
   {
     "id": "161/003542",
@@ -925,7 +933,15 @@
     "url": "https://www.congreso.es/es/busqueda-de-iniciativas?_iniciativas_id=161%2F003542&_iniciativas_legislatura=XV&_iniciativas_mode=mostrarDetalle&p_p_id=iniciativas&p_p_lifecycle=0&p_p_mode=view&p_p_state=normal",
     "etiquetesAmbientals": [
       "Agricultura i sòls"
-    ]
+    ],
+    "revisio": {
+      "data": "2026-11-19",
+      "nivell": "autoria",
+      "fonts": [
+        "https://www.congreso.es/en/busqueda-de-publicaciones?_publicaciones_id_texto=%28BOCG-15-CG-A-255.CODI.%29&_publicaciones_legislatura=XV&_publicaciones_mode=mostrarTextoIntegro&p_p_id=publicaciones&p_p_lifecycle=0&p_p_mode=view&p_p_state=normal"
+      ],
+      "nota": "El BOCG A-255 confirma l'autoria del PSOE i el títol de la PNL sobre el futur sostenible del camp dins l'Agenda 2030 i el Pacte Verd, tractada a la comissió mixta ODS. Falta revisar les mesures del dispositiu i el resultat."
+    }
   },
   {
     "id": "161/003357",
@@ -990,13 +1006,21 @@
     "fontEspecifica": "https://www.congreso.es/es/busqueda-de-iniciativas?_iniciativas_id=161%2F001819&_iniciativas_legislatura=XV&_iniciativas_mode=mostrarDetalle&p_p_id=iniciativas&p_p_lifecycle=0&p_p_mode=view&p_p_state=normal",
     "tipus": "PNL",
     "ambit": "Comissió",
-    "estat": "Resultat no incorporat",
+    "estat": "Rebutjada",
     "lectura": "La proposta permet identificar una petició política formal, però cal llegir els punts dispositius abans d'interpretar-ne l'abast.",
     "qualitat": "Autoria i objecte comprovats a la font oficial; lectura del text complet pendent o parcial.",
     "url": "https://www.congreso.es/es/busqueda-de-iniciativas?_iniciativas_id=161%2F001819&_iniciativas_legislatura=XV&_iniciativas_mode=mostrarDetalle&p_p_id=iniciativas&p_p_lifecycle=0&p_p_mode=view&p_p_state=normal",
     "etiquetesAmbientals": [
       "Adaptació i riscos"
-    ]
+    ],
+    "revisio": {
+      "data": "2026-11-19",
+      "nivell": "resultat",
+      "fonts": [
+        "https://www.congreso.es/es/busqueda-de-publicaciones?_publicaciones_id_texto=%28BOCG-15-CG-A-134.CODI.%29&_publicaciones_legislatura=XV&_publicaciones_mode=mostrarTextoIntegro&p_p_id=publicaciones&p_p_lifecycle=0&p_p_mode=view&p_p_state=normal"
+      ],
+      "nota": "El BOCG A-134 publica la desestimació el 11 de març de 2025 de la PNL del PSOE sobre vulnerabilitats i riscos mediambientals a la Comissió Mixta per a la UE, així com una esmena. No es disposa d'anàlisi del vot individual."
+    }
   },
   {
     "id": "162/000335",
