@@ -1085,5 +1085,97 @@
     "qualitat": "Objecte i autoria documentats en un Butlletí Oficial del Congrés; desglossament del text dispositiu pendent.",
     "lectura": "El registre confirma la proposta presentada; el seu abast precís exigeix revisar el text i les esmenes.",
     "url": "https://www.congreso.es/es/busqueda-de-iniciativas?_iniciativas_id=162%2F000366&_iniciativas_legislatura=XV&_iniciativas_mode=mostrarDetalle&p_p_id=iniciativas&p_p_lifecycle=0&p_p_mode=view&p_p_state=normal"
+  },
+  {
+    "id": "162/000826",
+    "grups": [
+      "PP"
+    ],
+    "tipus": "PNL",
+    "tema": "Medi ambient i clima",
+    "subtemaAmbiental": "Boscos i incendis",
+    "etiquetesAmbientals": [
+      "Boscos i incendis",
+      "Adaptació i riscos"
+    ],
+    "accio": "Reforçar la prevenció i la resposta als incendis",
+    "titol": "Pla estatal de prevenció, coordinació i resposta davant els incendis",
+    "resum": "Proposa un pla estatal amb mapa nacional de risc, coordinació amb comunitats autònomes, gestió preventiva del paisatge i restauració de les zones afectades.",
+    "lectura": "La proposta formal s'ha identificat en un document oficial; l'avaluació política requereix comparar també els texts i els vots.",
+    "ambit": "Ple",
+    "estat": "Resultat no incorporat",
+    "qualitat": "Autoria i mesures principals contrastades al Butlletí Oficial del Congrés; resultat final, esmenes i vots encara pendents d'estudi.",
+    "url": "https://www.congreso.es/es/busqueda-de-iniciativas?_iniciativas_id=162%2F000826&_iniciativas_legislatura=XV&_iniciativas_mode=mostrarDetalle&p_p_id=iniciativas&p_p_lifecycle=0&p_p_mode=view&p_p_state=normal",
+    "fontEspecifica": "https://www.congreso.es/es/busqueda-de-publicaciones?_publicaciones_id_texto=%28BOCG-15-D-578.CODI.%29&_publicaciones_legislatura=XV&_publicaciones_mode=mostrarTextoIntegro&p_p_id=publicaciones&p_p_lifecycle=0&p_p_mode=view&p_p_state=normal",
+    "revisio": {
+      "data": "2026-11-19",
+      "nivell": "contingut",
+      "fonts": [
+        "https://www.congreso.es/es/busqueda-de-publicaciones?_publicaciones_id_texto=%28BOCG-15-D-578.CODI.%29&_publicaciones_legislatura=XV&_publicaciones_mode=mostrarTextoIntegro&p_p_id=publicaciones&p_p_lifecycle=0&p_p_mode=view&p_p_state=normal"
+      ],
+      "nota": "El BOCG D-578 identifica la PNL del PP i les mesures de planificació, mapa de risc, mosaics paisatgístics i recuperació després d'incendis. No s'ha contrastat una votació definitiva."
+    }
+  },
+  {
+    "id": "162/000841",
+    "grups": [
+      "MIXT"
+    ],
+    "impulsor": "Podemos",
+    "tipus": "PNL",
+    "tema": "Agricultura i alimentació",
+    "subtemaAmbiental": "Agricultura i sòls",
+    "etiquetesAmbientals": [
+      "Agricultura i sòls",
+      "Biodiversitat i espais naturals",
+      "Salut ambiental"
+    ],
+    "accio": "Exigir criteris ecològics en l'alimentació escolar",
+    "titol": "Alimentació ecològica als menjadors escolars",
+    "resum": "Demana incorporar producció ecològica, proximitat, estacionalitat i cadenes curtes al programa escolar d'aliments, adaptar la contractació als petits productors i reduir l'ús de plaguicides.",
+    "lectura": "La proposta formal s'ha identificat en un document oficial; l'avaluació política requereix comparar també els texts i els vots.",
+    "ambit": "Ple",
+    "estat": "Resultat no incorporat",
+    "qualitat": "Autoria i mesures principals contrastades al Butlletí Oficial del Congrés; resultat final, esmenes i vots encara pendents d'estudi.",
+    "url": "https://www.congreso.es/es/busqueda-de-iniciativas?_iniciativas_id=162%2F000841&_iniciativas_legislatura=XV&_iniciativas_mode=mostrarDetalle&p_p_id=iniciativas&p_p_lifecycle=0&p_p_mode=view&p_p_state=normal",
+    "fontEspecifica": "https://www.congreso.es/es/busqueda-de-publicaciones?_publicaciones_id_texto=%28BOCG-15-D-591.CODI.%29&_publicaciones_legislatura=XV&_publicaciones_mode=mostrarTextoIntegro&p_p_id=publicaciones&p_p_lifecycle=0&p_p_mode=view&p_p_state=normal",
+    "revisio": {
+      "data": "2026-11-19",
+      "nivell": "contingut",
+      "fonts": [
+        "https://www.congreso.es/es/busqueda-de-publicaciones?_publicaciones_id_texto=%28BOCG-15-D-591.CODI.%29&_publicaciones_legislatura=XV&_publicaciones_mode=mostrarTextoIntegro&p_p_id=publicaciones&p_p_lifecycle=0&p_p_mode=view&p_p_state=normal"
+      ],
+      "nota": "El BOCG D-591 identifica Ione Belarra (Podemos) com a impulsora dins el Grup Mixt i detalla tres blocs dispositius; l'estat de tramitació final no s'ha revisat."
+    }
+  },
+  {
+    "id": "162/000825",
+    "grups": [
+      "SUMAR"
+    ],
+    "tipus": "PNL",
+    "tema": "Sanitat i salut pública",
+    "subtemaAmbiental": "Salut ambiental",
+    "etiquetesAmbientals": [
+      "Salut ambiental",
+      "Contaminació i residus"
+    ],
+    "accio": "Establir un sistema coordinat de qualitat de l'aire interior",
+    "titol": "Marc integral per a la qualitat de l'aire interior",
+    "resum": "Proposa coordinar normes i administracions per millorar la qualitat de l'aire als espais tancats, amb mesures de ventilació i prevenció de riscos per a la salut.",
+    "lectura": "La proposta formal s'ha identificat en un document oficial; l'avaluació política requereix comparar també els texts i els vots.",
+    "ambit": "Ple",
+    "estat": "Resultat no incorporat",
+    "qualitat": "Autoria i mesures principals contrastades al Butlletí Oficial del Congrés; resultat final, esmenes i vots encara pendents d'estudi.",
+    "url": "https://www.congreso.es/es/busqueda-de-iniciativas?_iniciativas_id=162%2F000825&_iniciativas_legislatura=XV&_iniciativas_mode=mostrarDetalle&p_p_id=iniciativas&p_p_lifecycle=0&p_p_mode=view&p_p_state=normal",
+    "fontEspecifica": "https://www.congreso.es/es/busqueda-de-publicaciones?_publicaciones_id_texto=%28BOCG-15-D-586.CODI.%29&_publicaciones_legislatura=XV&_publicaciones_mode=mostrarTextoIntegro&p_p_id=publicaciones&p_p_lifecycle=0&p_p_mode=view&p_p_state=normal",
+    "revisio": {
+      "data": "2026-11-19",
+      "nivell": "contingut",
+      "fonts": [
+        "https://www.congreso.es/es/busqueda-de-publicaciones?_publicaciones_id_texto=%28BOCG-15-D-586.CODI.%29&_publicaciones_legislatura=XV&_publicaciones_mode=mostrarTextoIntegro&p_p_id=publicaciones&p_p_lifecycle=0&p_p_mode=view&p_p_state=normal"
+      ],
+      "nota": "El BOCG D-586 recull la proposta de Sumar, amb un marc de qualitat de l'aire interior i coordinació entre administracions. Encara no consta una revisió de la votació final."
+    }
   }
 ]
