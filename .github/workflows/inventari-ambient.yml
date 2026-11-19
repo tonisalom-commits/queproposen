@@ -4,6 +4,7 @@ on:
   pull_request:
     paths:
       - "scripts/recull_index_congres.py"
+      - "scripts/prova_paginacio.py"
       - "tests/test_recull_index_congres.py"
       - ".github/workflows/inventari-ambient.yml"
   workflow_dispatch:
@@ -25,7 +26,7 @@ jobs:
   recollida:
     needs: tests
     runs-on: ubuntu-latest
-    timeout-minutes: 5
+    timeout-minutes: 7
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
@@ -44,6 +45,8 @@ jobs:
           if [ "$CODE" -ne 0 ]; then
             echo "AVÍS: el servidor no ha proporcionat un índex utilitzable; no s'ha generat un catàleg complet"
           fi
+          python scripts/prova_paginacio.py \
+            > revisio-ambiental/diagnostic_paginacio.log 2>&1 || true
           exit 0
       - name: Conserva dades brutes i informe per a revisió, no per a publicació
         if: always()
