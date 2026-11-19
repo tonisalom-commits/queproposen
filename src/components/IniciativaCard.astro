@@ -7,6 +7,8 @@ const groups = Array.isArray(item.grups) ? item.grups : [];
 const tags = Array.isArray(item.etiquetesAmbientals) ? item.etiquetesAmbientals : [];
 const guide = item.tipus === 'PL' ? 'proposicio' : 'pnl';
 const status = item.estat || 'Resultat no incorporat';
+const review = item.revisio || null;
+const reviewText = review ? {"autoria":"Autoria i títol contrastats","contingut":"Petició principal contrastada","tramitacio":"Tràmit contrastat, resultat final pendent","resultat":"Resultat parlamentari contrastat"}[review.nivell] || 'Revisió parcial' : 'Verificació documental pendent';
 const corpus = [
   item.id, item.titol, item.resum, item.accio, item.lectura,
   item.tema, item.impulsor, ...groups, ...tags
@@ -34,6 +36,7 @@ const corpus = [
   <p class="card-topic">{item.subtemaAmbiental || item.tema}</p>
   <h3>{item.titol}</h3>
   <p class="card-summary">{item.resum}</p>
+  <p class="review-marker"><strong>Revisió:</strong> {reviewText}</p>
   <div class="card-tail">
     <p class="card-action"><strong>Acció resumida:</strong> {item.accio}</p>
     <div class="card-meta">
@@ -49,6 +52,13 @@ const corpus = [
     <details class="card-details">
       <summary>Fonts, límits i interpretació</summary>
       <p>{item.qualitat}</p>
+      {review && (
+        <div class="verification-notes">
+          <p><strong>Comprovat el {review.data}:</strong> {review.nota}</p>
+          {review.fonts?.map((url) => <p><a href={url} target="_blank" rel="noopener noreferrer">Font primària d'aquesta comprovació ↗</a></p>)}
+        </div>
+      )}
+      {!review && <p><strong>Pendent:</strong> contrastar l'autoria, el text exacte i/o l'estat de tramitació amb les fonts originals.</p>}
       {item.notes && <p><strong>Observació:</strong> {item.notes}</p>}
       {item.lectura && <p><strong>Lectura editorial:</strong> {item.lectura}</p>}
       <p><a href={base + 'com-funciona/#' + guide}>Què significa {item.tipus === 'PL' ? 'aquesta proposició de llei' : 'una PNL'}?</a></p>
