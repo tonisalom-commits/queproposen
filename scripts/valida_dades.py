@@ -76,7 +76,7 @@ def main() -> int:
             else:
                 if rev.get("nivell") not in {"autoria", "contingut", "tramitacio", "resultat"}:
                     errors.append(f"{context}: nivell de revisio desconegut.")
-                if not re.fullmatch(r"20\\d{2}-\\d{2}-\\d{2}", str(rev.get("data", ""))):
+                if not re.fullmatch(r"20\d{2}-\d{2}-\d{2}", str(rev.get("data", ""))):
                     errors.append(f"{context}: manca data ISO de revisio.")
                 if not isinstance(rev.get("nota"), str) or len(rev.get("nota", "")) < 30:
                     errors.append(f"{context}: cal documentar el límit de la revisió.")
