@@ -40,7 +40,7 @@ def normalize(s: object) -> str:
                    if not unicodedata.combining(ch))
 
 
-def official_url(series: str) -> str:
+def official_url(series: str, pagina: int = 1) -> str:
     if series not in SERIES:
         raise ValueError("Sèrie no admesa: " + series)
     params = {
@@ -51,6 +51,10 @@ def official_url(series: str) -> str:
         "_iniciativas_mode": "verListadoIndice",
         "_iniciativas_legislatura": "15", "_iniciativas_tipo": series,
     }
+    if pagina < 1:
+        raise ValueError("Número de pàgina no vàlid")
+    if pagina > 1:
+        params["_iniciativas_paginaActual"] = str(pagina)
     return SOURCE + "?" + urlencode(params)
 
 
@@ -142,14 +146,20 @@ def prepare(source_files: list[tuple[str, Path]], out: Path) -> dict:
                                       "font": record_url(row["id"]),
                                       "verificacio": "PENDENT: revisar text íntegre, autoria i estat"}
         total_declared = int(payload.get("iniciativas_encontradas", 0)) if isinstance(payload, dict) else 0
-        series_info[serie] = {
-            "registres_visibles": len(rows),
-            "registres_declarats_pel_Congres": total_declared,
-            "pagines_pendents": bool(total_declared and len(rows) < total_declared),
-            "font": official_url(serie),
-            "completitud_no_acreditada": True,
-            "fitxer_brut": path.name,
-        }
+        if serie not in series_info:
+            series_info[serie] = {
+                "registres_visibles": 0,
+                "registres_declarats_pel_Congres": total_declared,
+                "pagines_pendents": True,
+                "font": official_url(serie),
+                "completitud_no_acreditada": True,
+                "fitxers_bruts": [],
+            }
+        series_info[serie]["registres_visibles"] += len(rows)
+        series_info[serie]["fitxers_bruts"].append(path.name)
+        series_info[serie]["pagines_pendents"] = (
+            series_info[serie]["registres_visibles"] < series_info[serie]["registres_declarats_pel_Congres"]
+        )
     ordered = sorted(allrows.values(), key=lambda r: r["id"])
     if not ordered:
         raise ValueError("Cap expedient admissible. Comprova l'estructura de les fonts.")
@@ -189,20 +199,51 @@ def main() -> int:
                    default=[], help="JSON descarregat anteriorment (repetible)")
     p.add_argument("--sortida", type=Path, default=Path("revisio-ambiental"))
     p.add_argument("--pausa", type=float, default=2.0)
+    p.add_argument("--totes-les-pagines", action="store_true",
+                   help="Recorre l'índex oficial fins al total declarat, si el servidor ho permet")
+    p.add_argument("--max-pagines", type=int, default=0,
+                   help="Límit de pàgines per sèrie per a proves (0 = totes)")
     args = p.parse_args()
     sources = [(series, Path(path)) for series, path in args.entrada]
     if args.descarrega:
         args.sortida.mkdir(parents=True, exist_ok=True)
+        import math
         for series in SERIES:
-            url = official_url(series)
-            dest = args.sortida / ("index_" + series + ".json")
+            seen_this_series = set()
             try:
-                payload = get_json(url)
-                dest.write_text(json.dumps(payload, ensure_ascii=False), encoding="utf-8")
-                sources.append((series, dest))
-                print("Descarregada sèrie", series, file=sys.stderr)
+                first = get_json(official_url(series))
+                declared = int(first.get("iniciativas_encontradas", 0))
+                if declared < 1:
+                    raise ValueError("No hi ha un total declarat al cercador")
+                number_pages = math.ceil(declared / 25) if args.totes_les_pagines else 1
+                if args.max_pagines > 0:
+                    number_pages = min(number_pages, args.max_pagines)
+                print(f"Sèrie {series}: total oficial {declared}, pàgines previstes {number_pages}", file=sys.stderr)
+                for page in range(1, number_pages + 1):
+                    payload = first if page == 1 else get_json(official_url(series, pagina=page))
+                    entries = extract(payload)
+                    current_ids = {x["id"] for x in entries}
+                    if not current_ids:
+                        raise ValueError(f"Pàgina {page}: cap expedient reconegut")
+                    if seen_this_series.intersection(current_ids):
+                        raise ValueError(
+                            f"Pàgina {page}: el servidor repeteix expedients d'una pàgina anterior; "
+                            "la paginació no és correcta"
+                        )
+                    seen_this_series.update(current_ids)
+                    dest = args.sortida / f"index_{series}_pagina_{page:03d}.json"
+                    dest.write_text(json.dumps(payload, ensure_ascii=False), encoding="utf-8")
+                    sources.append((series, dest))
+                    print(f"Sèrie {series}, pàgina {page}/{number_pages}: {len(entries)} registres", file=sys.stderr)
+                    if page < number_pages:
+                        time.sleep(max(args.pausa, 0))
+                if args.totes_les_pagines and len(seen_this_series) != declared:
+                    print(
+                        f"ATENCIÓ sèrie {series}: esperats {declared}, recuperats {len(seen_this_series)}",
+                        file=sys.stderr
+                    )
             except (ValueError, HTTPError, URLError, TimeoutError, OSError) as exc:
-                print(f"ADVERTIMENT: no s'ha pogut obtenir la sèrie {series}: {exc}", file=sys.stderr)
+                print(f"ADVERTIMENT: la sèrie {series} ha quedat incompleta: {exc}", file=sys.stderr)
             time.sleep(max(args.pausa, 0))
     if not sources:
         p.error("Indica --descarrega o, per a una prova local, --entrada SERIE FITXER.json")
