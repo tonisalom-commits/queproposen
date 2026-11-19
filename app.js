@@ -15,7 +15,7 @@ el('party').insertAdjacentHTML('beforeend',grups.map(g=>'<option value="'+esc(g.
 let selectedKind='';
 function card(p){
  const tags=p.grups.map(g=>'<span class="chip '+(g==='MIXT'?'emphasis':'')+'" title="'+esc(names[g]||g)+'">'+esc(g==='MIXT'?(p.impulsor?'MIXT · '+p.impulsor:'GRUP MIXT'):g)+'</span>').join('');
- return '<article class="proposal"><div class="proposal-top"><span class="kind-chip "+(p.tipus==='PL'?'kind-law':'')+"">'+esc(p.tipus==='PL'?'Proposició de llei':'PNL')+'</span>'+tags+'<span class="topic-chip">'+esc(p.tema)+'</span></div>'+
+ return '<article class="proposal"><div class="proposal-top"><span class="kind-chip '+(p.tipus==='PL'?'kind-law':'')+'">'+esc(p.tipus==='PL'?'Proposició de llei':'PNL')+'</span>'+tags+'<span class="topic-chip">'+esc(p.tema)+'</span></div>'+
  '<span class="action-line">'+esc(p.accio)+'</span><h3>'+esc(p.titol)+'</h3>'+
  '<p class="summary">'+esc(p.resum)+'</p><p class="reading"><b>Què ens indica?</b> '+esc(p.lectura)+'</p>'+
  '<footer><div class="meta"><span>EXP. '+esc(p.id)+'</span><span>'+esc(p.ambit)+' · '+esc(p.estat)+'</span></div>'+
