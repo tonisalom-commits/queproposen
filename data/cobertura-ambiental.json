@@ -69,5 +69,25 @@
   "fitxes_contrastades": 25,
   "discrepancies_automatiques": 0,
   "exclusions_en_mostra_per_revisar": 160,
-  "advertiment": "Cobertura de l'índex completa, però selecció ambiental i textos encara NO auditats íntegrament."
+  "advertiment": "Cobertura dels índexs parlamentaris verificada; classificació ambiental, text dispositiu, esmenes i votacions NO auditats exhaustivament.",
+  "auditoria_documental": {
+    "data": "2026-11-19",
+    "expedients_a_revisio": 826,
+    "fitxes_oficials_recuperades": 826,
+    "fragments_BOCG_localitzats": 795,
+    "incidencies_localitzacio": 31,
+    "primeres_decisions_amb_lectura": 34,
+    "inclusions_amb_lectura": 19,
+    "exclusions_amb_lectura": 10,
+    "frontereres_o_pendents": 5,
+    "pendents_lectura_dins_cua": 792,
+    "expedients_fora_cua_sense_auditoria_individual": 4268,
+    "esmenes_i_votacions_revisades_exhaustivament": false,
+    "auditoria_ambiental_exhaustiva": false,
+    "fonts_recuperades": [
+      "https://github.com/tonisalom-commits/queproposen/actions/runs/44630938748",
+      "https://github.com/tonisalom-commits/queproposen/actions/runs/44632672066"
+    ],
+    "nota": "Els 826 registres són una cua provisional; les 34 decisions són lectures inicials amb fonts primàries, sense segona auditoria independent. No se'n poden derivar recomptes representatius per partit."
+  }
 }
