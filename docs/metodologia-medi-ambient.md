@@ -41,3 +41,30 @@ Fonts:
 - https://www.congreso.es/es/busqueda-de-iniciativas
 - https://www.congreso.es/es/proposiciones-no-de-ley
 - https://www.congreso.es/es/proposiciones-de-ley
+
+## Integració amb el portal i la guia pedagògica
+
+La portada ofereix l'accés a cada secció temàtica i a **Com funciona?**. Medi ambient es troba a `medi-ambient/` i comparteix la font `dades.js` amb el cercador general. A cada fitxa hi ha un accés a la guia dels instruments legislatius; una PNL, una proposició de llei i una iniciativa del Govern no poden confondre's.
+
+### Tres capes de consulta
+
+1. **Propostes parlamentàries:** PNL i proposicions de llei dels grups; traçabilitat de les mesures sol·licitades, grups, textos i resultats.
+2. **Tramitació i votacions:** quan constin a les fonts oficials, amb les modificacions i les dates; un text aprovat amb esmenes no és equivalent al text inicial.
+3. **Acció governamental:** projectes de llei (121), reials decrets llei, reials decrets legislatius i reglaments; **pendent d'inventari propi**. No s'afegeixen al còmput parlamentari de PNL i proposicions de llei.
+
+El comparador de dos grups de la secció ambiental mostra **només els documents fins ara incorporats**, no el volum real de propostes, el grau de suport a una política ni una puntuació del grup. La selecció d'exemples actual és insuficient per a fer estadístiques representatives.
+
+### Graus de revisió de cada fitxa
+
+- **A. Expedient localitzat:** número, títol i autoria contrastats.
+- **B. Petició revisada:** punts dispositius o articulat llegits i sintetitzats amb precisió.
+- **C. Tramitació revisada:** esmenes, text resultant, estat i votacions contrastades.
+- **D. Fitxa auditada:** doble revisió, data i fonts reproduïbles.
+
+Actualment, les fitxes de mostra tenen graus desiguals i moltes continuen al nivell A. No atribuir mai una votació o una decisió jurídica que no s'hagi contrastat.
+
+### Com comprovarem la completitud
+
+Un registre ha de sortir d'un **univers recuperat per tipus d'expedient i legislatura**, no de cerques temàtiques parcials. El catàleg s'auditarà també contra expedients d'agricultura, indústria, transport, sanitat i altres comissions, i contra una mostra d'iniciatives descartades. Publicarem `total recuperat / total revisat / total inclòs` amb els criteris de les exclusions i la data de tall. **El portal no pot afirmar que Medi ambient és complet abans d'acabar aquests passos.**
+
+Font de dades obertes per a proposicions de llei: https://www.congreso.es/es/opendata/iniciativas . Per a les PNL, el cercador oficial i les publicacions parlamentàries són la font principal: https://www.congreso.es/es/busqueda-de-iniciativas .
