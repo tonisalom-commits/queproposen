@@ -52,6 +52,21 @@ main .intro{padding:48px 0 8px;display:grid;grid-template-columns:1fr 1fr;gap:35
 .compare-grid,.info-row{grid-template-columns:1fr}.compare-col{min-height:0}
 }
 
+
+.govern-section{padding:66px 0 68px;background:#fdfaf6;border-top:1px solid #ece0d3}
+.section-kicker{font-size:10px;color:#945a33;letter-spacing:.12em;font-weight:850}
+.govern-section h2{font-size:clamp(28px,3.5vw,40px);letter-spacing:-.047em;margin:10px 0}
+.govern-intro{font-size:14px;color:#60727a;max-width:760px;line-height:1.7}
+.govern-cards{display:grid;grid-template-columns:repeat(2,1fr);gap:18px;margin-top:25px}
+.govern-card{border:1px solid #e6ded4;background:#fff;padding:25px;border-radius:11px}
+.gov-type{display:inline-block;color:#935f3b;font-size:10px;text-transform:uppercase;letter-spacing:.07em;font-weight:850}
+.govern-card h3{font-size:22px;line-height:1.2;letter-spacing:-.035em;margin:13px 0}
+.govern-card p{font-size:13px;line-height:1.65;color:#576d77}
+.govern-card .gov-diff{color:#233e4a;font-weight:750}
+.govern-card a{display:block;margin-top:12px;color:#925936;font-size:12px;font-weight:800;text-decoration:none}
+.gov-note{margin-top:18px;font-size:12px;color:#65757c}
+.gov-note a{color:#925936;font-weight:800}
+@media(max-width:740px){.govern-cards{grid-template-columns:1fr}}
 </style>
 <script src="../dades.js" defer></script>
 <script defer>
@@ -119,7 +134,7 @@ document.addEventListener('DOMContentLoaded',()=>{
 <section class="hero"><div class="wrap"><div class="eyebrow">XV legislatura · Àmbit temàtic 01</div><h1>Medi ambient<span>.</span><br>Què proposen?</h1><p class="lead">Del canvi climàtic a la biodiversitat, de l'aigua al transport: consulta què han proposat formalment els grups al Congrés i contrasta-ho amb els documents originals.</p><p class="hero-meta"><b>PNL + proposicions de llei</b> · 2023–2026 · Contingut en construcció, inventari no exhaustiu</p></div></section>
 <div class="context"><div class="wrap"><p><strong>Abans de comparar:</strong> una PNL aprovada no es converteix en llei. Una proposició de llei pot modificar normes si acaba tota la tramitació.</p><a href="../com-funciona/#guia">Entén les diferències ↗</a></div></div>
 <main>
-<div class="wrap"><nav class="sect-nav" aria-label="Seccions de medi ambient"><a href="#iniciatives">Explora expedients</a><a href="#compara">Compara grups</a><a href="#metode">Metodologia</a><a href="../com-funciona/">Com funciona?</a></nav></div>
+<div class="wrap"><nav class="sect-nav" aria-label="Seccions de medi ambient"><a href="#iniciatives">Explora expedients</a><a href="#compara">Compara grups</a><a href="#govern">Acció del Govern</a><a href="#metode">Metodologia</a><a href="../com-funciona/">Com funciona?</a></nav></div>
 <section class="intro wrap"><h2>Un tema, moltes decisions polítiques.</h2><p>No totes les propostes ambientals inclouen les paraules «medi ambient». També tracten de mobilitat, gestió de l'aigua, energia, salut o agricultura. Aquí classificam aquestes iniciatives pel que proposen, no només pel títol. <strong>Les fitxes actuals no són representatives</strong> del conjunt de la legislatura.</p></section>
 <section id="iniciatives" class="browse wrap"><h2>Explora les iniciatives</h2><p class="sub">Filtra per grup, subtema o tipus. Cada fitxa du a l'expedient original.</p>
 <div class="metric-line"><strong id="subsetCount">Carregant dades…</strong> · <span>La cobertura encara no és completa</span></div><div class="filters">
@@ -139,8 +154,29 @@ document.addEventListener('DOMContentLoaded',()=>{
 <label>Àmbit de comparació<select id="compareTopic"></select></label>
 </div>
 <div class="compare-grid"><div class="compare-col" id="compareLeft"></div><div class="compare-col" id="compareRight"></div></div>
-<div class="info-row"><div><h3>I què ha fet el Govern?</h3><p>És una altra pregunta. Els <strong>projectes de llei</strong>, <strong>reials decrets llei</strong> i <strong>reials decrets</strong> s'han d'inventariar separadament: no són PNL ni proposicions de llei dels grups. Aquesta capa encara està pendent de recopilar, i no la barrejarem amb les xifres parlamentàries.</p></div><div><h3>Què significa «aprovada»?</h3><p>Depèn del tipus d'iniciativa. Una PNL aprovada expressa una decisió política de la cambra, però no crea una obligació jurídica d'executar-la. <a href="../com-funciona/#guia">Consulta la guia dels procediments ↗</a></p></div></div>
+<div class="info-row"><div><h3>I què ha fet el Govern?</h3><p>És una altra pregunta. Els <strong>projectes de llei</strong>, <strong>reials decrets llei</strong> i <strong>reials decrets</strong> s'han d'inventariar separadament: no són PNL ni proposicions de llei dels grups. Només hi ha dos documents governamentals d’exemple a la secció següent, i no els barrejarem amb les xifres parlamentàries.</p></div><div><h3>Què significa «aprovada»?</h3><p>Depèn del tipus d'iniciativa. Una PNL aprovada expressa una decisió política de la cambra, però no crea una obligació jurídica d'executar-la. <a href="../com-funciona/#guia">Consulta la guia dels procediments ↗</a></p></div></div>
 </div></section>
+<section class="govern-section" id="govern"><div class="wrap">
+ <span class="section-kicker">UNA ALTRA CAPA D'ANÀLISI</span>
+ <h2>Què ha impulsat el Govern?</h2>
+ <p class="govern-intro">Les propostes dels grups no s'han de confondre amb les iniciatives del Govern. Aquests són dos documents oficials d'exemple, <strong>no un inventari complet de l'acció governamental</strong> durant la legislatura.</p>
+ <div class="govern-cards">
+  <article class="govern-card"><span class="gov-type">Projecte de llei · 121/000025</span>
+   <h3>Comerç de drets d'emissió</h3>
+   <p>El Govern presenta un projecte de llei per modificar la Llei 1/2005, que regula el règim de comerç dels drets d'emissió de gasos amb efecte d'hivernacle. És un <strong>projecte legislatiu</strong>, no una norma aprovada només pel fet de presentar-se.</p>
+   <p class="gov-diff">Tramitació final i esmenes: pendent de reconstrucció a la nostra base de dades.</p>
+   <a href="https://www.congreso.es/es/busqueda-de-iniciativas?_iniciativas_id=121%2F000025&_iniciativas_legislatura=XV&_iniciativas_mode=mostrarDetalle&p_p_id=iniciativas&p_p_lifecycle=0&p_p_mode=view&p_p_state=normal" target="_blank" rel="noopener noreferrer">Consulta el projecte de llei al Congrés ↗</a>
+  </article>
+  <article class="govern-card"><span class="gov-type">Reial decret llei · 20/2026</span>
+   <h3>Protecció social davant incendis forestals</h3>
+   <p>El Govern adopta mesures urgents laborals i de Seguretat Social per protegir persones treballadores i empreses afectades pels incendis forestals. <strong>No és una norma de prevenció ecològica dels incendis</strong>, sinó una resposta als seus efectes socials.</p>
+   <p class="gov-diff">Convalidat pel Congrés el 9 de setembre de 2026.</p>
+   <a href="https://www.boe.es/buscar/doc.php?id=BOE-A-2026-16543" target="_blank" rel="noopener noreferrer">Consulta la norma al BOE ↗</a>
+   <a href="https://www.boe.es/buscar/doc.php?id=BOE-A-2026-18994" target="_blank" rel="noopener noreferrer">Comprova la convalidació ↗</a>
+  </article>
+ </div>
+ <div class="gov-note">Com es diferencia un projecte de llei d'un reial decret llei? <a href="../com-funciona/#projecte">Consulta la guia dels procediments</a>.</div>
+ </div></section>
 <section id="metode" class="method"><div class="wrap"><h2>Perquè les dades siguin comprovables</h2><div class="method-grid"><div><strong>01 · Criteri ambiental explícit</strong><p>Inclourem clima i emissions, biodiversitat, aigua, contaminació, energia, mobilitat, recursos naturals i adaptació, amb categories múltiples quan calgui.</p></div><div><strong>02 · Tots els grups i tots els resultats</strong><p>La recopilació final ha d'incloure iniciatives aprovades, rebutjades, caducades i sense votació; cal identificar partits del Grup Mixt, coautories i esmenes.</p></div><div><strong>03 · Fet i interpretació separats</strong><p>El número d'expedient i el text original són la prova. Les valoracions sobre les implicacions polítiques aniran diferenciades i justificades. Consulta el <a href="https://github.com/tonisalom-commits/queproposen/blob/feat/prototip-atles-pnl/docs/metodologia-medi-ambient.md" target="_blank" rel="noopener noreferrer">document metodològic</a> del repositori.</p></div></div></div></section>
 </main><footer><div class="wrap"><span>Què proposen? · Projecte independent de divulgació parlamentària</span><a href="../">Torna al portal</a></div></footer>
 </body></html>
