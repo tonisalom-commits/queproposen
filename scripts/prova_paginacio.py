@@ -71,7 +71,17 @@ def main() -> None:
     page,ctype=fetch("https://www.congreso.es/es/busqueda-de-iniciativas")
     patterns=re.findall(r".{0,140}(?:paginar|paginacion|filtrarListado|docs_ini|docs_fin|pagina).{0,170}",
                         page, flags=re.I)
-    out={"resultats":results,"fragments_paginacio":patterns[:35]}
+    scripts={}
+    for name,url in [
+        ("paginationAjaxBuscador.js", "https://www.congreso.es/o/buscador/js/paginationAjaxBuscador.js"),
+        ("paginationAjax.js", "https://www.congreso.es/o/congreso-theme/js/paginationAjax.js"),
+    ]:
+        content, typ=fetch(url)
+        scripts[name]={"content_type":typ,"bytes":len(content),"error":content[:160] if not typ else ""}
+        if typ and not content.startswith("ERROR"):
+            Path("revisio-ambiental").mkdir(exist_ok=True)
+            Path("revisio-ambiental",name).write_text(content,encoding="utf-8")
+    out={"resultats":results,"fragments_paginacio":patterns[:35],"scripts":scripts}
     dest=Path("revisio-ambiental/proves_paginacio.json")
     dest.parent.mkdir(exist_ok=True)
     dest.write_text(json.dumps(out,ensure_ascii=False,indent=2)+"\n",encoding="utf-8")
