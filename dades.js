@@ -7,6 +7,28 @@
 const punt = (id) => 'https://www.congreso.es/es/busqueda-de-iniciativas?_iniciativas_id=' + encodeURIComponent(id) + '&_iniciativas_legislatura=XV&_iniciativas_mode=mostrarDetalle&p_p_id=iniciativas&p_p_lifecycle=0&p_p_mode=view&p_p_state=normal';
 const font = 'Fitxa resumida a partir del títol i l’expedient; cal revisar íntegrament els punts dispositius.';
 window.DADES = {
+  temes: [
+    "Habitatge",
+    "Igualtat i violències masclistes",
+    "Drets LGTBI",
+    "Sanitat i salut pública",
+    "Educació i universitat",
+    "Treball i salaris",
+    "Pensions i protecció social",
+    "Economia i fiscalitat",
+    "Migracions i asil",
+    "Medi ambient i clima",
+    "Energia i indústria",
+    "Infraestructures i mobilitat",
+    "Justícia i seguretat",
+    "Model territorial",
+    "Drets civils i democràcia",
+    "Dependència i discapacitat",
+    "Agricultura i alimentació",
+    "Defensa i política exterior",
+    "Cultura i llengües",
+    "Recerca i tecnologia"
+  ],
   resum: {legislatura:'XV',inici:'17/08/2023',final:'06/10/2026',total:4673,ple:850,comissio:3823,aprovades:1231,caducades:2692,font:'https://agora.vedratic.com/ca/learn/pnl/'},
   grups: [
     {id:'PP',nom:'Partit Popular',ple:240,comissio:1370,aprovadesPle:37,aprovadesComissio:498},
@@ -30,6 +52,15 @@ window.DADES = {
     {id:'162/000167',grups:['BILDU'],tema:'Habitatge',accio:'Garantir l’accés',titol:'Mesures per assegurar el dret efectiu a l’habitatge',resum:'Planteja mesures per fer efectiu el dret a l’habitatge.',lectura:'Situa la garantia efectiva de l’accés a l’habitatge com a objectiu.',ambit:'Ple',estat:'Rebutjada',qualitat:'Títol, autoria i resultat contrastats; manca desglossar el text complet.'},
     {id:'162/000822',grups:['PNB'],tema:'Infraestructures',accio:'Impulsar infraestructures',titol:'Variant Sud Ferroviària i transport de mercaderies al País Basc',resum:'Proposa actuacions sobre la Variant Sud Ferroviària i la Y basca i mesures mitigadores locals.',lectura:'Prioritza una infraestructura ferroviària concreta i els efectes territorials.',ambit:'Ple',estat:'Aprovada',qualitat:'Títol, autoria i aprovació contrastats al Congrés.'},
     {id:'162/000728',grups:['PNB'],tema:'Indústria i energia',accio:'Reforçar la indústria',titol:'Competitivitat de la indústria siderúrgica i electrointensiva',resum:'Reclama reforçar la competitivitat i resiliència d’aquests sectors.',lectura:'Situa la indústria intensiva en energia entre les seves prioritats.',ambit:'Ple',estat:'Resultat no incorporat',qualitat:font},
-    {id:'162/000797',grups:['BILDU','PNB','SUMAR','MIXT'],tema:'Defensa i territori',accio:'Cessar una activitat',titol:'Cessar l’activitat del polígon de tir de Bardenas',resum:'Iniciativa presentada conjuntament per diversos grups.',lectura:'Mostra una coincidència formal entre grups sobre una instal·lació militar.',ambit:'Ple',estat:'Resultat no incorporat',qualitat:'Coautoria contrastada; cal identificar els diputats del Grup Mixt i analitzar el text.'}
-  ].map(p=>({...p,url:punt(p.id)}))
+    {id:'162/000797',grups:['BILDU','PNB','SUMAR','MIXT'],tema:'Defensa i territori',accio:'Cessar una activitat',titol:'Cessar l’activitat del polígon de tir de Bardenas',resum:'Iniciativa presentada conjuntament per diversos grups.',lectura:'Mostra una coincidència formal entre grups sobre una instal·lació militar.',ambit:'Ple',estat:'Resultat no incorporat',qualitat:'Coautoria contrastada; cal identificar els diputats del Grup Mixt i analitzar el text.'},
+    {"id":"161/003172","grups":["PP"],"tema":"Igualtat i violències masclistes","accio":"Reduir la bretxa salarial","titol":"Mesures estructurals contra la bretxa salarial i laboral de gènere","resum":"Reclama corregir l'estancament de les desigualtats salarials i laborals entre dones i homes i reforçar la conciliació.","lectura":"Planteja la desigualtat en el mercat laboral com un problema que requereix actuacions estructurals.","ambit":"Comissió","estat":"Resultat no incorporat","qualitat":"Títol i autoria confirmats al registre del Congrés; els punts exactes resten pendents de revisió."},
+    {"id":"161/003046","grups":["PP"],"tema":"Igualtat i violències masclistes","accio":"Reforçar l'acompanyament","titol":"Acompanyament integral de les dones víctimes de violència de gènere després de la denúncia","resum":"Reclama reforçar l'atenció a les víctimes en les fases especialment delicades del procediment penal.","lectura":"Prioritza la protecció i l'acompanyament després de la denúncia.","ambit":"Comissió","estat":"Resultat no incorporat","qualitat":"Títol i autoria oficials; els punts dispositius i les esmenes encara no s'han estudiat."},
+    {"id":"162/000333","grups":["PSOE"],"tema":"Igualtat i violències masclistes","accio":"Garantir la igualtat","titol":"Igualtat efectiva entre homes i dones i salut sexual i reproductiva","resum":"Reclama defensar la igualtat efectiva, amb especial atenció a la salut sexual i reproductiva.","lectura":"Vincula el dret a la igualtat amb les garanties de salut sexual i reproductiva.","ambit":"Ple","estat":"Resultat no incorporat","qualitat":"Autoria i títol oficials; manca revisar els punts dispositius íntegres."},
+    {"id":"161/002608","grups":["PSOE"],"tema":"Igualtat i violències masclistes","accio":"Combatre el negacionisme","titol":"Protecció de les víctimes davant el negacionisme de la violència de gènere","resum":"Demana mesures per combatre el negacionisme de la violència de gènere i els discursos masclistes.","lectura":"Considera aquests discursos un problema rellevant per a la protecció de les víctimes.","ambit":"Comissió","estat":"Aprovada","qualitat":"Text dispositiu i aprovació documentats al BOCG; cal examinar possibles esmenes i el resultat final."},
+    {"id":"161/001737","grups":["VOX"],"tema":"Drets LGTBI","accio":"Derogar una llei","titol":"Derogació de la Llei 4/2023 de drets de les persones trans i LGTBI","resum":"Demana promoure la derogació de la llei estatal que regula la igualtat real i efectiva de les persones trans i els drets LGTBI.","lectura":"S'oposa explícitament a l'actual marc estatal d'aquests drets.","ambit":"Comissió","estat":"Resultat no incorporat","qualitat":"Títol i autoria confirmats al Congrés; resum limitat a la petició de derogació."},
+    {"id":"161/002537","grups":["MIXT"],"impulsor":"Podemos","tema":"Drets LGTBI","accio":"Reservar places públiques","titol":"Creació d'una quota laboral per a persones trans","resum":"La iniciativa, impulsada per Podemos dins el Grup Mixt, proposa reservar almenys l'1 % de les places de les ofertes públiques d'ocupació a persones trans.","lectura":"Defensa una mesura d'acció positiva per afavorir l'accés a l'ocupació pública.","ambit":"Comissió","estat":"Resultat no incorporat","qualitat":"Autoria concreta i percentatge contrastats amb el text publicat al BOCG."},
+    {"id":"161/003200","grups":["SUMAR"],"tema":"Sanitat i salut pública","accio":"Millorar condicions laborals","titol":"Condicions i planificació dels professionals sanitaris del Sistema Nacional de Salut","resum":"Reclama millorar la situació laboral dels professionals sanitaris i la planificació dels recursos humans del sistema públic.","lectura":"Situa la dotació i les condicions de treball del personal sanitari com a part dels problemes del sistema.","ambit":"Comissió","estat":"Resultat no incorporat","qualitat":"Títol i autoria contrastats al Congrés; mesures específiques encara no desglossades."},
+    {"id":"161/000637","grups":["VOX"],"tema":"Sanitat i salut pública","accio":"Reformar el sistema","titol":"Implantació d'un sistema nacional de salut per acabar amb les desigualtats","resum":"Planteja una reorganització del sistema sanitari per eliminar desigualtats entre ciutadans.","lectura":"Prioritza una resposta estatal als problemes de desigualtat en l'assistència sanitària.","ambit":"Comissió","estat":"Resultat no incorporat","qualitat":"Autoria i títol oficials; l'abast de la reforma no s'ha estudiat encara."},
+    {"id":"161/002665","grups":["VOX"],"tema":"Sanitat i salut pública","accio":"Revisar cribratges","titol":"Defensa de la sanitat pública davant fallades en programes de cribratge de càncer","resum":"Demana actuacions davant les deficiències detectades en els programes de cribratge de càncer.","lectura":"Reclama mesures de control i correcció dels programes de detecció precoç.","ambit":"Comissió","estat":"Resultat no incorporat","qualitat":"Títol i autoria confirmats en documents del Congrés; no és una avaluació de les causes o responsabilitats."}
+  ].map(p=>({...p,tema:{"Medi ambient":"Medi ambient i clima","Infraestructures":"Infraestructures i mobilitat","Indústria i energia":"Energia i indústria","Defensa i territori":"Defensa i política exterior"}[p.tema]||p.tema,url:punt(p.id)}))
 };
