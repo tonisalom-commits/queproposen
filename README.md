@@ -6,6 +6,12 @@ Prototip interactiu en català per explorar proposicions no de llei (PNL) i prop
 
 Quan la sol·licitud de fusió s'hagi aprovat: **Settings → Pages → Deploy from a branch → main → /(root)**. URL prevista: https://tonisalom-commits.github.io/queproposen/ . Aquesta branca no està publicada automàticament.
 
+## Secció pedagògica
+
+- `com-funciona/index.html`: guia interactiva i accessible sobre projecte de llei, proposició de llei, PNL, reial decret llei, reial decret legislatiu i reial decret, amb recorreguts simplificats i un exercici de comprovació.
+- Fonts primàries: Constitució espanyola, Reglament del Congrés, Llei del Govern i portals institucionals.
+- La guia explica el procediment estatal general i no substitueix una consulta al text normatiu ni recull totes les excepcions.
+
 ## Fitxers
 
 - `index.html`: estructura accessible.
