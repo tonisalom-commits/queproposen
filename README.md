@@ -69,7 +69,7 @@ Els paràmetres de la ruta són a astro.config.mjs.
 
 Hem afegit eines per passar de les fitxes seleccionades a una recerca amb traçabilitat:
 
-- `scripts/recull_index_congres.py`: consulta els índexs oficials per sèries **161, 162, 120 i 122**, desa la resposta original i genera un CSV d'expedients i una cua de candidats ambientals. **No insereix candidats automàticament al portal**: els títols no basten per determinar pertinència o resultat. Accepta també fitxers JSON ja descarregats per revisar-los fora de línia.
+- `scripts/recull_index_congres.py`: consulta els índexs oficials per sèries **161, 162, 120, 122, 123, 124 i 125**, desa la resposta original i genera un CSV d'expedients i una cua de candidats ambientals. **No insereix candidats automàticament al portal**: els títols no basten per determinar pertinència o resultat. Accepta també fitxers JSON ja descarregats per revisar-los fora de línia.
 - `scripts/audita_mediambient.py`: informa dels expedients introduïts i del grau de revisió, sense fabricar un percentatge de cobertura.
 - `tests/test_recull_index_congres.py`: proves de deduplicació, validació dels codis, selecció provisional i segregació de les dades candidates.
 - `.github/workflows/inventari-ambient.yml`: consulta de les dades com a **artefacte de revisió**, mai com a fitxes públiques de forma automàtica.
@@ -85,9 +85,9 @@ python3 scripts/audita_mediambient.py --sortida revisio-ambiental/estat_fitxes.j
 **Important:** els índexs oficials estan paginats (25 registres per petició), i el catàleg d'opendata del Congrés no publica una descàrrega global equivalent per a totes les PNL. La recuperació automàtica inicial és una **cua de treball**. La cobertura completa requereix comprovar paginació, descarregar els texts, auditar els casos negatius i contrastar els tràmits, els partits concrets del Grup Mixt i les votacions. No publicarem cap xifra d'exhaustivitat fins haver fet aquestes comprovacions.
 
 
-La primera execució del recuperador, el **19/11/2026**, ha aconseguit connexió amb el Congrés, però ha recuperat **només 25 expedients per sèrie** (100 en total). Els índexs oficials indiquen **3.824** expedients per a 161, **850** per a 162, **306** per a 122 i **49** per a 120. Això és una **fotografia dels resultats declarats pel cercador**, no l'univers ambiental classificat. La resta de pàgines no s'ha descarregat ni revisat encara; la comprovació de la paginació forma part de la feina pendent. S'ha desat l'artefacte de GitHub Actions per a auditoria.
+La recuperació del **19/11/2026** ha descarregat **totes les pàgines de les sèries 161, 162, 122 i 120**: **5.029 expedients** amb correspondència entre els registres recuperats i els totals del cercador oficial (3.824, 850, 306 i 49 respectivament). El primer cribratge de títols selecciona **408 candidats possibles**, NO 408 propostes ambientals confirmades: s'han de llegir els dispositius i auditar exclusions. El codi també contempla les sèries **123 (diputats), 124 (Senat) i 125 (comunitats autònomes)**, que s'han de tractar com a orígens diferents. La sèrie **120 és iniciativa legislativa popular** i no s'ha d'atribuir a un partit.
 
-**Revisió parcial documentada:** 14 de les 25 fitxes ambientals de mostra tenen a `data/iniciatives.json` una `revisio` amb grau (autoria, contingut, tràmit o resultat), data, observació i enllaç oficial. La resta es mostren com a pendents de comprovació detallada. L'aspecte de les fitxes s'actualitza a partir del **mateix component Astro**; no es reescriu cada pàgina HTML.
+**Revisió parcial documentada:** 25 de les 25 fitxes ambientals de mostra tenen a `data/iniciatives.json` una `revisio` amb grau (autoria, contingut, tràmit o resultat), data, observació i enllaç oficial. Les 25 tenen una correspondència contrastada amb l'índex oficial del Congrés per autoria i estat; això **no** vol dir que els 25 textos dispositius, les esmenes i les votacions individuals estiguin íntegrament revisats. L'aspecte de les fitxes s'actualitza a partir del **mateix component Astro**; no es reescriu cada pàgina HTML.
 
 ## Rigor i límits
 
