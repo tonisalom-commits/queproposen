@@ -76,9 +76,10 @@
       "data": "2026-11-19",
       "nivell": "resultat",
       "fonts": [
+        "https://www.congreso.es/es/busqueda-de-iniciativas?_iniciativas_id=161%2F003360&_iniciativas_legislatura=XV&_iniciativas_mode=mostrarDetalle&p_p_id=iniciativas&p_p_lifecycle=0&p_p_mode=view&p_p_state=normal",
         "https://www.congreso.es/es/iniciativas-organo?_iniciativas_codOrg=315&_iniciativas_codigoOrgano=315&_iniciativas_legislatura=XV&p_p_cacheability=cacheLevelPage&p_p_id=iniciativas&p_p_lifecycle=2&p_p_mode=view&p_p_resource_id=filtrarListado&p_p_state=normal"
       ],
-      "nota": "La fitxa i la llista oficial de la Comissió Mixta ODS acrediten que Vox proposà revocar les zones de baixes emissions i que la iniciativa fou rebutjada."
+      "nota": "La fitxa i la llista oficial de la Comissió Mixta ODS acrediten que Vox proposà revocar les zones de baixes emissions i que la iniciativa fou rebutjada. Estat rebutjada segons el registre oficial de la sèrie 161 de la XV legislatura del Congrés, consultat el 19/11/2026. L'índex dona el resultat global però no substitueix la comprovació del text final ni de les votacions."
     }
   },
   {
@@ -540,7 +541,7 @@
     "lectura": "Expressa una posició restrictiva envers l'ús d'aquest herbicida.",
     "tipus": "PNL",
     "ambit": "Ple",
-    "estat": "Resultat no incorporat",
+    "estat": "Caducada",
     "qualitat": "Títol i autoria identificats al BOCG D 194 (2024); text íntegre i resultat pendents d'estudi.",
     "url": "https://www.congreso.es/es/busqueda-de-iniciativas?_iniciativas_id=162%2F000299&_iniciativas_legislatura=XV&_iniciativas_mode=mostrarDetalle&p_p_id=iniciativas&p_p_lifecycle=0&p_p_mode=view&p_p_state=normal",
     "etiquetesAmbientals": [
@@ -548,11 +549,12 @@
     ],
     "revisio": {
       "data": "2026-11-19",
-      "nivell": "contingut",
+      "nivell": "resultat",
       "fonts": [
+        "https://www.congreso.es/es/busqueda-de-iniciativas?_iniciativas_id=162%2F000299&_iniciativas_legislatura=XV&_iniciativas_mode=mostrarDetalle&p_p_id=iniciativas&p_p_lifecycle=0&p_p_mode=view&p_p_state=normal",
         "https://www.congreso.es/es/busqueda-de-publicaciones?_publicaciones_id_texto=%28BOCG-15-D-194.CODI.%29&_publicaciones_legislatura=XV&_publicaciones_mode=mostrarTextoIntegro&p_p_id=publicaciones&p_p_lifecycle=0&p_p_mode=view&p_p_state=normal"
       ],
-      "nota": "El BOCG D-194 confirma autoria del Grup Plurinacional Sumar i petició de prohibir l'ús del glifosat. No hem reconstruït la votació o esmenes."
+      "nota": "El BOCG D-194 confirma autoria del Grup Plurinacional Sumar i petició de prohibir l'ús del glifosat. No hem reconstruït la votació o esmenes. Estat caducada segons el registre oficial de la sèrie 162 de la XV legislatura del Congrés, consultat el 19/11/2026. L'índex dona el resultat global però no substitueix la comprovació del text final ni de les votacions."
     }
   },
   {
@@ -568,7 +570,7 @@
     "lectura": "Prioritza la protecció legal d'un espai marí concret.",
     "tipus": "PNL",
     "ambit": "Ple",
-    "estat": "Resultat no incorporat",
+    "estat": "Caducada",
     "qualitat": "Expedient i autoria del Grup Mixt documentats al BOCG D 194 (2024); partit impulsor pendent d'identificar.",
     "url": "https://www.congreso.es/es/busqueda-de-iniciativas?_iniciativas_id=162%2F000287&_iniciativas_legislatura=XV&_iniciativas_mode=mostrarDetalle&p_p_id=iniciativas&p_p_lifecycle=0&p_p_mode=view&p_p_state=normal",
     "etiquetesAmbientals": [
@@ -578,11 +580,12 @@
     "impulsor": "Coalición Canaria",
     "revisio": {
       "data": "2026-11-19",
-      "nivell": "contingut",
+      "nivell": "resultat",
       "fonts": [
+        "https://www.congreso.es/es/busqueda-de-iniciativas?_iniciativas_id=162%2F000287&_iniciativas_legislatura=XV&_iniciativas_mode=mostrarDetalle&p_p_id=iniciativas&p_p_lifecycle=0&p_p_mode=view&p_p_state=normal",
         "https://www.congreso.es/ca/busqueda-de-publicaciones?_publicaciones_id_texto=%28BOCG-15-D-194.CODI.%29&_publicaciones_legislatura=XV&_publicaciones_mode=mostrarTextoIntegro&p_p_id=publicaciones&p_p_lifecycle=0&p_p_mode=view&p_p_state=normal"
       ],
-      "nota": "El BOCG D-194 identifica Cristina Valido García de Coalición Canaria com a impulsora dins el Grup Mixt; la PNL demana criteris concrets per declarar parc nacional marí el mar de Las Calmas. Estat final no contrastat."
+      "nota": "El BOCG D-194 identifica Cristina Valido García de Coalición Canaria com a impulsora dins el Grup Mixt; la PNL demana criteris concrets per declarar parc nacional marí el mar de Las Calmas. Estat final no contrastat. Estat caducada segons el registre oficial de la sèrie 162 de la XV legislatura del Congrés, consultat el 19/11/2026. L'índex dona el resultat global però no substitueix la comprovació del text final ni de les votacions."
     }
   },
   {
@@ -598,7 +601,7 @@
     "lectura": "Situa la conservació dels cetacis mediterranis dins les prioritats ambientals.",
     "tipus": "PNL",
     "ambit": "Ple",
-    "estat": "Resultat no incorporat",
+    "estat": "Caducada",
     "qualitat": "Expedient i autoria documentats al BOCG D 317 (2025); cal revisar-ne el dispositiu.",
     "fontEspecifica": "https://www.congreso.es/es/busqueda-de-publicaciones?_publicaciones_id_texto=%28BOCG-15-D-317.CODI.%29&_publicaciones_legislatura=XV&_publicaciones_mode=mostrarTextoIntegro&p_p_id=publicaciones&p_p_lifecycle=0&p_p_mode=view&p_p_state=normal",
     "notes": "Text dispositiu original: insta a declarar àrea marina protegida la zona de cria de catxalots al nord de Menorca.",
@@ -609,11 +612,12 @@
     ],
     "revisio": {
       "data": "2026-11-19",
-      "nivell": "contingut",
+      "nivell": "resultat",
       "fonts": [
+        "https://www.congreso.es/es/busqueda-de-iniciativas?_iniciativas_id=162%2F000470&_iniciativas_legislatura=XV&_iniciativas_mode=mostrarDetalle&p_p_id=iniciativas&p_p_lifecycle=0&p_p_mode=view&p_p_state=normal",
         "https://www.congreso.es/es/busqueda-de-publicaciones?_publicaciones_id_texto=%28BOCG-15-D-317.CODI.%29&_publicaciones_legislatura=XV&_publicaciones_mode=mostrarTextoIntegro&p_p_id=publicaciones&p_p_lifecycle=0&p_p_mode=view&p_p_state=normal"
       ],
-      "nota": "El BOCG D-317 acredita autoria del PSOE i l'objecte: protegir l'àrea de cria de catxalots al nord de Menorca. Resultat de tramitació no contrastat."
+      "nota": "El BOCG D-317 acredita autoria del PSOE i l'objecte: protegir l'àrea de cria de catxalots al nord de Menorca. Resultat de tramitació no contrastat. Estat caducada segons el registre oficial de la sèrie 162 de la XV legislatura del Congrés, consultat el 19/11/2026. L'índex dona el resultat global però no substitueix la comprovació del text final ni de les votacions."
     }
   },
   {
@@ -629,7 +633,7 @@
     "lectura": "Relaciona la gestió dels recursos hídrics amb l'evolució de la normativa europea.",
     "tipus": "PNL",
     "ambit": "Comissió",
-    "estat": "Resultat no incorporat",
+    "estat": "Aprovada amb modificacions",
     "qualitat": "Expedient i autoria confirmats al registre del Congrés; text i resultat pendents d'anàlisi.",
     "fontEspecifica": "https://www.congreso.es/es/busqueda-de-iniciativas?_iniciativas_id=161%2F003420&_iniciativas_legislatura=XV&_iniciativas_mode=mostrarDetalle&p_p_id=iniciativas&p_p_lifecycle=0&p_p_mode=view&p_p_state=normal",
     "url": "https://www.congreso.es/es/busqueda-de-iniciativas?_iniciativas_id=161%2F003420&_iniciativas_legislatura=XV&_iniciativas_mode=mostrarDetalle&p_p_id=iniciativas&p_p_lifecycle=0&p_p_mode=view&p_p_state=normal",
@@ -638,11 +642,12 @@
     ],
     "revisio": {
       "data": "2026-11-19",
-      "nivell": "contingut",
+      "nivell": "resultat",
       "fonts": [
+        "https://www.congreso.es/es/busqueda-de-iniciativas?_iniciativas_id=161%2F003420&_iniciativas_legislatura=XV&_iniciativas_mode=mostrarDetalle&p_p_id=iniciativas&p_p_lifecycle=0&p_p_mode=view&p_p_state=normal",
         "https://www.congreso.es/eu/busqueda-de-publicaciones?_publicaciones_id_texto=BOCG-15-CG-A-242.CODI.&_publicaciones_legislatura=XV&_publicaciones_mode=mostrarTextoIntegro&p_p_id=publicaciones&p_p_lifecycle=0&p_p_mode=view&p_p_state=normal"
       ],
-      "nota": "El BOCG de les Corts Generals A-242 confirma la PNL del PP sobre els estàndards de qualitat de l'aigua de la UE, debatuda a la Comissió Mixta per a la UE. Els textos d'esmenes i l'estat final encara s'han de contrastar."
+      "nota": "El BOCG de les Corts Generals A-242 confirma la PNL del PP sobre els estàndards de qualitat de l'aigua de la UE, debatuda a la Comissió Mixta per a la UE. Els textos d'esmenes i l'estat final encara s'han de contrastar. Estat aprovada amb modificacions segons el registre oficial de la sèrie 161 de la XV legislatura del Congrés, consultat el 19/11/2026. L'índex dona el resultat global però no substitueix la comprovació del text final ni de les votacions."
     }
   },
   {
@@ -658,7 +663,7 @@
     "lectura": "Afecta el marc legislatiu dels instruments econòmics de control d'emissions.",
     "tipus": "PL",
     "ambit": "Tramitació legislativa",
-    "estat": "Resultat no incorporat",
+    "estat": "Caducada",
     "qualitat": "Expedient i autoria identificats al Congrés; encara no se n'han analitzat els articles.",
     "url": "https://www.congreso.es/es/busqueda-de-iniciativas?_iniciativas_id=122%2F000170&_iniciativas_legislatura=XV&_iniciativas_mode=mostrarDetalle&p_p_id=iniciativas&p_p_lifecycle=0&p_p_mode=view&p_p_state=normal",
     "etiquetesAmbientals": [
@@ -667,11 +672,12 @@
     ],
     "revisio": {
       "data": "2026-11-19",
-      "nivell": "tramitacio",
+      "nivell": "resultat",
       "fonts": [
+        "https://www.congreso.es/es/busqueda-de-iniciativas?_iniciativas_id=122%2F000170&_iniciativas_legislatura=XV&_iniciativas_mode=mostrarDetalle&p_p_id=iniciativas&p_p_lifecycle=0&p_p_mode=view&p_p_state=normal",
         "https://www.congreso.es/es/busqueda-de-publicaciones?_publicaciones_id_texto=%28BOCG-15-B-193-4.CODI.%29&_publicaciones_legislatura=XV&_publicaciones_mode=mostrarTextoIntegro&p_p_id=publicaciones&p_p_lifecycle=0&p_p_mode=view&p_p_state=normal"
       ],
-      "nota": "La proposició de llei de modificació del règim de comerç d'emissions fou presa en consideració. La documentació inicial inclou una signatura de Sumar que després fou retirada; no atribuïm un estat final no contrastat."
+      "nota": "La proposició de llei de modificació del règim de comerç d'emissions fou presa en consideració. La documentació inicial inclou una signatura de Sumar que després fou retirada; no atribuïm un estat final no contrastat. Estat caducada segons el registre oficial de la sèrie 122 de la XV legislatura del Congrés, consultat el 19/11/2026. L'índex dona el resultat global però no substitueix la comprovació del text final ni de les votacions."
     }
   },
   {
@@ -700,9 +706,10 @@
       "data": "2026-11-19",
       "nivell": "resultat",
       "fonts": [
+        "https://www.congreso.es/es/busqueda-de-iniciativas?_iniciativas_id=161%2F000070&_iniciativas_legislatura=XV&_iniciativas_mode=mostrarDetalle&p_p_id=iniciativas&p_p_lifecycle=0&p_p_mode=view&p_p_state=normal",
         "https://www.congreso.es/ca/busqueda-de-publicaciones?_publicaciones_id_texto=%28BOCG-15-D-100.CODI.%29&_publicaciones_legislatura=XV&_publicaciones_mode=mostrarTextoIntegro&p_p_id=publicaciones&p_p_lifecycle=0&p_p_mode=view&p_p_state=normal"
       ],
-      "nota": "La Comissió de Transició Ecològica aprovà amb modificacions la PNL de Sumar sobre vols curts el 21 de febrer de 2024. El text original no és idèntic a l'aprovat."
+      "nota": "La Comissió de Transició Ecològica aprovà amb modificacions la PNL de Sumar sobre vols curts el 21 de febrer de 2024. El text original no és idèntic a l'aprovat. Estat aprovada amb modificacions segons el registre oficial de la sèrie 161 de la XV legislatura del Congrés, consultat el 19/11/2026. L'índex dona el resultat global però no substitueix la comprovació del text final ni de les votacions."
     }
   },
   {
@@ -718,7 +725,7 @@
     "lectura": "Prioritza el tractament normatiu dels riscos climàtics a les ciutats.",
     "tipus": "PNL",
     "ambit": "Ple",
-    "estat": "Resultat no incorporat",
+    "estat": "Caducada",
     "qualitat": "Expedient i autoria del Grup Mixt documentats al BOCG D 181 (2024); formació impulsora pendent de verificar.",
     "url": "https://www.congreso.es/es/busqueda-de-iniciativas?_iniciativas_id=162%2F000273&_iniciativas_legislatura=XV&_iniciativas_mode=mostrarDetalle&p_p_id=iniciativas&p_p_lifecycle=0&p_p_mode=view&p_p_state=normal",
     "etiquetesAmbientals": [
@@ -728,11 +735,12 @@
     "impulsor": "Podemos",
     "revisio": {
       "data": "2026-11-19",
-      "nivell": "contingut",
+      "nivell": "resultat",
       "fonts": [
+        "https://www.congreso.es/es/busqueda-de-iniciativas?_iniciativas_id=162%2F000273&_iniciativas_legislatura=XV&_iniciativas_mode=mostrarDetalle&p_p_id=iniciativas&p_p_lifecycle=0&p_p_mode=view&p_p_state=normal",
         "https://www.congreso.es/en/busqueda-de-publicaciones?_publicaciones_id_texto=%28BOCG-15-D-181.CODI.%29&_publicaciones_legislatura=XV&_publicaciones_mode=mostrarTextoIntegro&p_p_id=publicaciones&p_p_lifecycle=0&p_p_mode=view&p_p_state=normal"
       ],
-      "nota": "El BOCG D-181 identifica Ione Belarra i Javier Sánchez Serna (Podemos, Grup Mixt) i la petició d'una llei d'adaptació i mitigació climàtica a les ciutats. Resultat no revisat."
+      "nota": "El BOCG D-181 identifica Ione Belarra i Javier Sánchez Serna (Podemos, Grup Mixt) i la petició d'una llei d'adaptació i mitigació climàtica a les ciutats. Resultat no revisat. Estat caducada segons el registre oficial de la sèrie 162 de la XV legislatura del Congrés, consultat el 19/11/2026. L'índex dona el resultat global però no substitueix la comprovació del text final ni de les votacions."
     }
   },
   {
@@ -748,7 +756,7 @@
     "fontEspecifica": "https://www.congreso.es/es/busqueda-de-publicaciones?_publicaciones_id_texto=%28BOCG-15-D-7.CODI.%29&_publicaciones_legislatura=XV&_publicaciones_mode=mostrarTextoIntegro&p_p_id=publicaciones&p_p_lifecycle=0&p_p_mode=view&p_p_state=normal",
     "tipus": "PNL",
     "ambit": "Ple",
-    "estat": "Resultat no incorporat",
+    "estat": "Caducada",
     "lectura": "La proposta permet identificar una petició política formal, però cal llegir els punts dispositius abans d'interpretar-ne l'abast.",
     "qualitat": "Autoria i objecte comprovats a la font oficial; lectura del text complet pendent o parcial.",
     "url": "https://www.congreso.es/es/busqueda-de-iniciativas?_iniciativas_id=162%2F000001&_iniciativas_legislatura=XV&_iniciativas_mode=mostrarDetalle&p_p_id=iniciativas&p_p_lifecycle=0&p_p_mode=view&p_p_state=normal",
@@ -757,11 +765,12 @@
     ],
     "revisio": {
       "data": "2026-11-19",
-      "nivell": "contingut",
+      "nivell": "resultat",
       "fonts": [
+        "https://www.congreso.es/es/busqueda-de-iniciativas?_iniciativas_id=162%2F000001&_iniciativas_legislatura=XV&_iniciativas_mode=mostrarDetalle&p_p_id=iniciativas&p_p_lifecycle=0&p_p_mode=view&p_p_state=normal",
         "https://www.congreso.es/eu/publicaciones-organo?_publicaciones_id_texto=BOCG-15-D-7.CODI.&_publicaciones_legislatura=XV&_publicaciones_mode=mostrarTextoIntegro&_publicaciones_texto=&p_p_id=publicaciones&p_p_lifecycle=0&p_p_mode=view&p_p_state=normal"
       ],
-      "nota": "El BOCG D-7 acredita la PNL del Grup Popular sobre els incendis de Tenerife d'agost de 2023 i la petició d'avaluar i quantificar els danys, entre altres mesures. Resultat final no comprovat."
+      "nota": "El BOCG D-7 acredita la PNL del Grup Popular sobre els incendis de Tenerife d'agost de 2023 i la petició d'avaluar i quantificar els danys, entre altres mesures. Resultat final no comprovat. Estat caducada segons el registre oficial de la sèrie 162 de la XV legislatura del Congrés, consultat el 19/11/2026. L'índex dona el resultat global però no substitueix la comprovació del text final ni de les votacions."
     }
   },
   {
@@ -791,7 +800,7 @@
       "fonts": [
         "https://www.congreso.es/es/busqueda-de-iniciativas?_iniciativas_id=162%2F000348&_iniciativas_legislatura=XV&_iniciativas_mode=mostrarDetalle&p_p_id=iniciativas&p_p_lifecycle=0&p_p_mode=view&p_p_state=normal"
       ],
-      "nota": "El registre oficial identifica el PP i la PNL sobre transició energètica; el Ple la rebutjà. No s'han revisat totes les esmenes ni els vots individuals."
+      "nota": "El registre oficial identifica el PP i la PNL sobre transició energètica; el Ple la rebutjà. No s'han revisat totes les esmenes ni els vots individuals. Estat rebutjada segons el registre oficial de la sèrie 162 de la XV legislatura del Congrés, consultat el 19/11/2026. L'índex dona el resultat global però no substitueix la comprovació del text final ni de les votacions."
     }
   },
   {
@@ -821,13 +830,14 @@
       "fonts": [
         "https://www.congreso.es/es/busqueda-de-iniciativas?_iniciativas_id=162%2F000432&_iniciativas_legislatura=XV&_iniciativas_mode=mostrarDetalle&p_p_id=iniciativas&p_p_lifecycle=0&p_p_mode=view&p_p_state=normal"
       ],
-      "nota": "La PNL de Sumar pretenia un impost sobre les emissions de jets privats i iots de luxe. El Congrés la rebutjà el 14 de maig de 2025."
+      "nota": "La PNL de Sumar pretenia un impost sobre les emissions de jets privats i iots de luxe. El Congrés la rebutjà el 14 de maig de 2025. Estat rebutjada segons el registre oficial de la sèrie 162 de la XV legislatura del Congrés, consultat el 19/11/2026. L'índex dona el resultat global però no substitueix la comprovació del text final ni de les votacions."
     }
   },
   {
     "id": "162/000807",
     "grups": [
-      "SUMAR"
+      "SUMAR",
+      "MIXT"
     ],
     "tema": "Medi ambient i clima",
     "subtemaAmbiental": "Clima i emissions",
@@ -838,7 +848,7 @@
     "notes": "Consta una modificació posterior de signatures. Cal revisar la relació definitiva de coautors.",
     "tipus": "PNL",
     "ambit": "Ple",
-    "estat": "Resultat no incorporat",
+    "estat": "Caducada",
     "lectura": "La proposta permet identificar una petició política formal, però cal llegir els punts dispositius abans d'interpretar-ne l'abast.",
     "qualitat": "Autoria i objecte comprovats a la font oficial; lectura del text complet pendent o parcial.",
     "url": "https://www.congreso.es/es/busqueda-de-iniciativas?_iniciativas_id=162%2F000807&_iniciativas_legislatura=XV&_iniciativas_mode=mostrarDetalle&p_p_id=iniciativas&p_p_lifecycle=0&p_p_mode=view&p_p_state=normal",
@@ -848,11 +858,12 @@
     ],
     "revisio": {
       "data": "2026-11-19",
-      "nivell": "contingut",
+      "nivell": "resultat",
       "fonts": [
+        "https://www.congreso.es/es/busqueda-de-iniciativas?_iniciativas_id=162%2F000807&_iniciativas_legislatura=XV&_iniciativas_mode=mostrarDetalle&p_p_id=iniciativas&p_p_lifecycle=0&p_p_mode=view&p_p_state=normal",
         "https://www.congreso.es/ca/busqueda-de-publicaciones?_publicaciones_id_texto=%28BOCG-15-D-558.CODI.%29&_publicaciones_legislatura=XV&_publicaciones_mode=mostrarTextoIntegro&p_p_id=publicaciones&p_p_lifecycle=0&p_p_mode=view&p_p_state=normal"
       ],
-      "nota": "El BOCG D-558 recull la PNL sobre transparència d'emissions militars de GEH. Hi ha publicacions posteriors de retirada de signatures: cal verificar els grups coautors abans d'atribuir-la només a Sumar, i el resultat final no està acreditat."
+      "nota": "El BOCG D-558 recull la PNL sobre transparència d'emissions militars de GEH. Hi ha publicacions posteriors de retirada de signatures: cal verificar els grups coautors abans d'atribuir-la només a Sumar, i el resultat final no està acreditat. Estat caducada segons el registre oficial de la sèrie 162 de la XV legislatura del Congrés, consultat el 19/11/2026. L'índex dona el resultat global però no substitueix la comprovació del text final ni de les votacions. L'índex oficial atribueix coautoria a Sumar i al Grup Mixt; hi ha avisos posteriors de retirada de signatures i cal comprovar quines subscriuen el text final."
     }
   },
   {
@@ -868,7 +879,7 @@
     "fontEspecifica": "https://www.congreso.es/es/proposiciones-no-de-ley?_iniciativas_id=162%2F000801&_iniciativas_legislatura=XV&_iniciativas_mode=mostrarDetalle&p_p_id=iniciativas&p_p_lifecycle=0&p_p_mode=view&p_p_state=normal",
     "tipus": "PNL",
     "ambit": "Ple",
-    "estat": "Resultat no incorporat",
+    "estat": "Caducada",
     "lectura": "La proposta permet identificar una petició política formal, però cal llegir els punts dispositius abans d'interpretar-ne l'abast.",
     "qualitat": "Autoria i objecte comprovats a la font oficial; lectura del text complet pendent o parcial.",
     "url": "https://www.congreso.es/es/busqueda-de-iniciativas?_iniciativas_id=162%2F000801&_iniciativas_legislatura=XV&_iniciativas_mode=mostrarDetalle&p_p_id=iniciativas&p_p_lifecycle=0&p_p_mode=view&p_p_state=normal",
@@ -877,11 +888,12 @@
     ],
     "revisio": {
       "data": "2026-11-19",
-      "nivell": "autoria",
+      "nivell": "resultat",
       "fonts": [
+        "https://www.congreso.es/es/busqueda-de-iniciativas?_iniciativas_id=162%2F000801&_iniciativas_legislatura=XV&_iniciativas_mode=mostrarDetalle&p_p_id=iniciativas&p_p_lifecycle=0&p_p_mode=view&p_p_state=normal",
         "https://www.congreso.es/es/proposiciones-no-de-ley?_iniciativas_id=162%2F000801&_iniciativas_legislatura=XV&_iniciativas_mode=mostrarDetalle&p_p_id=iniciativas&p_p_lifecycle=0&p_p_mode=view&p_p_state=normal"
       ],
-      "nota": "El Congrés confirma el títol sobre prevenció d'incendis forestals i l'autoria de Vox; dispositiu i resultat no revisats."
+      "nota": "El Congrés confirma el títol sobre prevenció d'incendis forestals i l'autoria de Vox; dispositiu i resultat no revisats. Estat caducada segons el registre oficial de la sèrie 162 de la XV legislatura del Congrés, consultat el 19/11/2026. L'índex dona el resultat global però no substitueix la comprovació del text final ni de les votacions."
     }
   },
   {
@@ -897,7 +909,7 @@
     "fontEspecifica": "https://www.congreso.es/es/busqueda-de-publicaciones?_publicaciones_id_texto=BOCG-15-CG-A-268.CODI.&_publicaciones_legislatura=XV&_publicaciones_mode=mostrarTextoIntegro&p_p_id=publicaciones&p_p_lifecycle=0&p_p_mode=view&p_p_state=normal",
     "tipus": "PNL",
     "ambit": "Comissió",
-    "estat": "Resultat no incorporat",
+    "estat": "Caducada",
     "lectura": "La proposta permet identificar una petició política formal, però cal llegir els punts dispositius abans d'interpretar-ne l'abast.",
     "qualitat": "Autoria i objecte comprovats a la font oficial; lectura del text complet pendent o parcial.",
     "url": "https://www.congreso.es/es/busqueda-de-iniciativas?_iniciativas_id=161%2F003639&_iniciativas_legislatura=XV&_iniciativas_mode=mostrarDetalle&p_p_id=iniciativas&p_p_lifecycle=0&p_p_mode=view&p_p_state=normal",
@@ -907,11 +919,12 @@
     ],
     "revisio": {
       "data": "2026-11-19",
-      "nivell": "contingut",
+      "nivell": "resultat",
       "fonts": [
+        "https://www.congreso.es/es/busqueda-de-iniciativas?_iniciativas_id=161%2F003639&_iniciativas_legislatura=XV&_iniciativas_mode=mostrarDetalle&p_p_id=iniciativas&p_p_lifecycle=0&p_p_mode=view&p_p_state=normal",
         "https://www.congreso.es/gl/busqueda-de-publicaciones?_publicaciones_id_texto=BOCG-15-CG-A-268.CODI.&_publicaciones_legislatura=XV&_publicaciones_mode=mostrarTextoIntegro&p_p_id=publicaciones&p_p_lifecycle=0&p_p_mode=view&p_p_state=normal"
       ],
-      "nota": "El BOCG A-268 registra una PNL de Vox sobre conservació de preses i infraestructures hídriques; l'argumentació relaciona la restauració de rius amb la seguretat hídrica. No s'ha verificat una votació final."
+      "nota": "El BOCG A-268 registra una PNL de Vox sobre conservació de preses i infraestructures hídriques; l'argumentació relaciona la restauració de rius amb la seguretat hídrica. No s'ha verificat una votació final. Estat caducada segons el registre oficial de la sèrie 161 de la XV legislatura del Congrés, consultat el 19/11/2026. L'índex dona el resultat global però no substitueix la comprovació del text final ni de les votacions."
     }
   },
   {
@@ -927,7 +940,7 @@
     "fontEspecifica": "https://www.congreso.es/es/busqueda-de-publicaciones?_publicaciones_id_texto=BOCG-15-CG-A-255.CODI.&_publicaciones_legislatura=XV&_publicaciones_mode=mostrarTextoIntegro&p_p_id=publicaciones&p_p_lifecycle=0&p_p_mode=view&p_p_state=normal",
     "tipus": "PNL",
     "ambit": "Comissió",
-    "estat": "Resultat no incorporat",
+    "estat": "Caducada",
     "lectura": "La proposta permet identificar una petició política formal, però cal llegir els punts dispositius abans d'interpretar-ne l'abast.",
     "qualitat": "Autoria i objecte comprovats a la font oficial; lectura del text complet pendent o parcial.",
     "url": "https://www.congreso.es/es/busqueda-de-iniciativas?_iniciativas_id=161%2F003542&_iniciativas_legislatura=XV&_iniciativas_mode=mostrarDetalle&p_p_id=iniciativas&p_p_lifecycle=0&p_p_mode=view&p_p_state=normal",
@@ -936,11 +949,12 @@
     ],
     "revisio": {
       "data": "2026-11-19",
-      "nivell": "autoria",
+      "nivell": "resultat",
       "fonts": [
+        "https://www.congreso.es/es/busqueda-de-iniciativas?_iniciativas_id=161%2F003542&_iniciativas_legislatura=XV&_iniciativas_mode=mostrarDetalle&p_p_id=iniciativas&p_p_lifecycle=0&p_p_mode=view&p_p_state=normal",
         "https://www.congreso.es/en/busqueda-de-publicaciones?_publicaciones_id_texto=%28BOCG-15-CG-A-255.CODI.%29&_publicaciones_legislatura=XV&_publicaciones_mode=mostrarTextoIntegro&p_p_id=publicaciones&p_p_lifecycle=0&p_p_mode=view&p_p_state=normal"
       ],
-      "nota": "El BOCG A-255 confirma l'autoria del PSOE i el títol de la PNL sobre el futur sostenible del camp dins l'Agenda 2030 i el Pacte Verd, tractada a la comissió mixta ODS. Falta revisar les mesures del dispositiu i el resultat."
+      "nota": "El BOCG A-255 confirma l'autoria del PSOE i el títol de la PNL sobre el futur sostenible del camp dins l'Agenda 2030 i el Pacte Verd, tractada a la comissió mixta ODS. Falta revisar les mesures del dispositiu i el resultat. Estat caducada segons el registre oficial de la sèrie 161 de la XV legislatura del Congrés, consultat el 19/11/2026. L'índex dona el resultat global però no substitueix la comprovació del text final ni de les votacions."
     }
   },
   {
@@ -988,9 +1002,10 @@
       "data": "2026-11-19",
       "nivell": "resultat",
       "fonts": [
+        "https://www.congreso.es/es/busqueda-de-iniciativas?_iniciativas_id=161%2F000296&_iniciativas_legislatura=XV&_iniciativas_mode=mostrarDetalle&p_p_id=iniciativas&p_p_lifecycle=0&p_p_mode=view&p_p_state=normal",
         "https://www.congreso.es/eu/publicaciones-organo?_publicaciones_id_texto=DSCD-15-CO-175.CODI.&_publicaciones_legislatura=XV&_publicaciones_mode=mostrarTextoIntegro&_publicaciones_texto=&p_p_id=publicaciones&p_p_lifecycle=0&p_p_mode=view&p_p_state=normal"
       ],
-      "nota": "El Diari de Sessions de la comissió de 25/09/2024 recull el debat de la PNL del Grup Mixt contra la sequera (161/000296) i el rebuig expressament proclamat per la presidència."
+      "nota": "El Diari de Sessions de la comissió de 25/09/2024 recull el debat de la PNL del Grup Mixt contra la sequera (161/000296) i el rebuig expressament proclamat per la presidència. Estat rebutjada segons el registre oficial de la sèrie 161 de la XV legislatura del Congrés, consultat el 19/11/2026. L'índex dona el resultat global però no substitueix la comprovació del text final ni de les votacions."
     }
   },
   {
@@ -1017,9 +1032,10 @@
       "data": "2026-11-19",
       "nivell": "resultat",
       "fonts": [
+        "https://www.congreso.es/es/busqueda-de-iniciativas?_iniciativas_id=161%2F001819&_iniciativas_legislatura=XV&_iniciativas_mode=mostrarDetalle&p_p_id=iniciativas&p_p_lifecycle=0&p_p_mode=view&p_p_state=normal",
         "https://www.congreso.es/es/busqueda-de-publicaciones?_publicaciones_id_texto=%28BOCG-15-CG-A-134.CODI.%29&_publicaciones_legislatura=XV&_publicaciones_mode=mostrarTextoIntegro&p_p_id=publicaciones&p_p_lifecycle=0&p_p_mode=view&p_p_state=normal"
       ],
-      "nota": "El BOCG A-134 publica la desestimació el 11 de març de 2025 de la PNL del PSOE sobre vulnerabilitats i riscos mediambientals a la Comissió Mixta per a la UE, així com una esmena. No es disposa d'anàlisi del vot individual."
+      "nota": "El BOCG A-134 publica la desestimació el 11 de març de 2025 de la PNL del PSOE sobre vulnerabilitats i riscos mediambientals a la Comissió Mixta per a la UE, així com una esmena. No es disposa d'anàlisi del vot individual. Estat rebutjada segons el registre oficial de la sèrie 161 de la XV legislatura del Congrés, consultat el 19/11/2026. L'índex dona el resultat global però no substitueix la comprovació del text final ni de les votacions."
     }
   },
   {
@@ -1048,9 +1064,10 @@
       "data": "2026-11-19",
       "nivell": "resultat",
       "fonts": [
+        "https://www.congreso.es/es/busqueda-de-iniciativas?_iniciativas_id=162%2F000335&_iniciativas_legislatura=XV&_iniciativas_mode=mostrarDetalle&p_p_id=iniciativas&p_p_lifecycle=0&p_p_mode=view&p_p_state=normal",
         "https://www.congreso.es/es/busqueda-de-publicaciones?_publicaciones_id_texto=BOCG-15-D-236.CODI.&_publicaciones_legislatura=XV&_publicaciones_mode=mostrarTextoIntegro&p_p_id=publicaciones&p_p_lifecycle=0&p_p_mode=view&p_p_state=normal"
       ],
-      "nota": "El BOCG D-236 documenta la retirada de la PNL de Junts sobre normativa del litoral."
+      "nota": "El BOCG D-236 documenta la retirada de la PNL de Junts sobre normativa del litoral. Estat retirada segons el registre oficial de la sèrie 162 de la XV legislatura del Congrés, consultat el 19/11/2026. L'índex dona el resultat global però no substitueix la comprovació del text final ni de les votacions."
     }
   },
   {
@@ -1079,9 +1096,10 @@
       "data": "2026-11-19",
       "nivell": "resultat",
       "fonts": [
+        "https://www.congreso.es/es/busqueda-de-iniciativas?_iniciativas_id=161%2F002045&_iniciativas_legislatura=XV&_iniciativas_mode=mostrarDetalle&p_p_id=iniciativas&p_p_lifecycle=0&p_p_mode=view&p_p_state=normal",
         "https://www.congreso.es/gl/busqueda-de-publicaciones?_publicaciones_id_texto=%28BOCG-15-D-434.CODI.%29&_publicaciones_legislatura=XV&_publicaciones_mode=mostrarTextoIntegro&p_p_id=publicaciones&p_p_lifecycle=0&p_p_mode=view&p_p_state=normal"
       ],
-      "nota": "El BOCG D-434 documenta la retirada de la PNL del Grup Basc sobre el sistema de retorn d'envasos. Retirada no equival a rebutjada."
+      "nota": "El BOCG D-434 documenta la retirada de la PNL del Grup Basc sobre el sistema de retorn d'envasos. Retirada no equival a rebutjada. Estat retirada segons el registre oficial de la sèrie 161 de la XV legislatura del Congrés, consultat el 19/11/2026. L'índex dona el resultat global però no substitueix la comprovació del text final ni de les votacions."
     }
   },
   {
@@ -1098,7 +1116,7 @@
     "accio": "Tipificar penalment l'ecocidi",
     "titol": "Introducció de l'ecocidi com a delicte al Codi penal",
     "resum": "Demana incorporar la figura de l'ecocidi a la legislació penal per perseguir danys ambientals greus.",
-    "estat": "Resultat no incorporat",
+    "estat": "Caducada",
     "fontEspecifica": "https://www.congreso.es/es/busqueda-de-publicaciones?_publicaciones_id_texto=BOCG-15-D-236.CODI.&_publicaciones_legislatura=XV&_publicaciones_mode=mostrarTextoIntegro&p_p_id=publicaciones&p_p_lifecycle=0&p_p_mode=view&p_p_state=normal",
     "tipus": "PNL",
     "ambit": "Ple",
@@ -1107,11 +1125,11 @@
     "url": "https://www.congreso.es/es/busqueda-de-iniciativas?_iniciativas_id=162%2F000360&_iniciativas_legislatura=XV&_iniciativas_mode=mostrarDetalle&p_p_id=iniciativas&p_p_lifecycle=0&p_p_mode=view&p_p_state=normal",
     "revisio": {
       "data": "2026-11-19",
-      "nivell": "autoria",
+      "nivell": "resultat",
       "fonts": [
         "https://www.congreso.es/es/busqueda-de-iniciativas?_iniciativas_id=162%2F000360&_iniciativas_legislatura=XV&_iniciativas_mode=mostrarDetalle&p_p_id=iniciativas&p_p_lifecycle=0&p_p_mode=view&p_p_state=normal"
       ],
-      "nota": "La fitxa del Congrés i el BOCG acrediten una PNL de Sumar per introduir l'ecocidi com a delicte al Codi penal; resultat no revisat."
+      "nota": "La fitxa del Congrés i el BOCG acrediten una PNL de Sumar per introduir l'ecocidi com a delicte al Codi penal; resultat no revisat. Estat caducada segons el registre oficial de la sèrie 162 de la XV legislatura del Congrés, consultat el 19/11/2026. L'índex dona el resultat global però no substitueix la comprovació del text final ni de les votacions."
     }
   },
   {
@@ -1130,7 +1148,7 @@
     "accio": "Reconèixer serveis ambientals de la ramaderia extensiva",
     "titol": "Reconeixement de la ramaderia caprina extensiva per la biodiversitat i la prevenció d'incendis",
     "resum": "Demana reconèixer les funcions de la ramaderia caprina extensiva en la biodiversitat, la prevenció d'incendis i l'adaptació climàtica.",
-    "estat": "Resultat no incorporat",
+    "estat": "Aprovada sense modificacions",
     "fontEspecifica": "https://www.congreso.es/es/busqueda-de-publicaciones?_publicaciones_id_texto=%28BOCG-15-D-584.CODI.%29&_publicaciones_legislatura=XV&_publicaciones_mode=mostrarTextoIntegro&p_p_id=publicaciones&p_p_lifecycle=0&p_p_mode=view&p_p_state=normal",
     "tipus": "PNL",
     "ambit": "Comissió",
@@ -1139,11 +1157,12 @@
     "url": "https://www.congreso.es/es/busqueda-de-iniciativas?_iniciativas_id=161%2F003686&_iniciativas_legislatura=XV&_iniciativas_mode=mostrarDetalle&p_p_id=iniciativas&p_p_lifecycle=0&p_p_mode=view&p_p_state=normal",
     "revisio": {
       "data": "2026-11-19",
-      "nivell": "autoria",
+      "nivell": "resultat",
       "fonts": [
+        "https://www.congreso.es/es/busqueda-de-iniciativas?_iniciativas_id=161%2F003686&_iniciativas_legislatura=XV&_iniciativas_mode=mostrarDetalle&p_p_id=iniciativas&p_p_lifecycle=0&p_p_mode=view&p_p_state=normal",
         "https://app.congreso.es/portales-api-margo/p1/acta-mesa?fecha=08%2F09%2F2026&sesion=1&tipoDocumento=2"
       ],
-      "nota": "L'acta de la Mesa del 8 de setembre de 2026 registra la PNL de Sumar sobre ramaderia caprina extensiva, biodiversitat, incendis i adaptació. El resultat no és revisat."
+      "nota": "L'acta de la Mesa del 8 de setembre de 2026 registra la PNL de Sumar sobre ramaderia caprina extensiva, biodiversitat, incendis i adaptació. El resultat no és revisat. Estat aprovada sense modificacions segons el registre oficial de la sèrie 161 de la XV legislatura del Congrés, consultat el 19/11/2026. L'índex dona el resultat global però no substitueix la comprovació del text final ni de les votacions."
     }
   },
   {
@@ -1159,7 +1178,7 @@
     "accio": "Fixar propostes per a una cimera climàtica",
     "titol": "Propostes per a la COP29 de Bakú",
     "resum": "Presenta propostes perquè Espanya les defensi a la conferència internacional del clima COP29.",
-    "estat": "Resultat no incorporat",
+    "estat": "Caducada",
     "fontEspecifica": "https://www.congreso.es/es/busqueda-de-publicaciones?_publicaciones_id_texto=BOCG-15-D-236.CODI.&_publicaciones_legislatura=XV&_publicaciones_mode=mostrarTextoIntegro&p_p_id=publicaciones&p_p_lifecycle=0&p_p_mode=view&p_p_state=normal",
     "notes": "El Grup Mixt no és un partit únic; cal identificar la formació que promogué la PNL.",
     "tipus": "PNL",
@@ -1170,11 +1189,12 @@
     "impulsor": "Podemos",
     "revisio": {
       "data": "2026-11-19",
-      "nivell": "contingut",
+      "nivell": "resultat",
       "fonts": [
+        "https://www.congreso.es/es/busqueda-de-iniciativas?_iniciativas_id=162%2F000366&_iniciativas_legislatura=XV&_iniciativas_mode=mostrarDetalle&p_p_id=iniciativas&p_p_lifecycle=0&p_p_mode=view&p_p_state=normal",
         "https://www.congreso.es/es/busqueda-de-publicaciones?_publicaciones_id_texto=BOCG-15-D-236.CODI.&_publicaciones_legislatura=XV&_publicaciones_mode=mostrarTextoIntegro&p_p_id=publicaciones&p_p_lifecycle=0&p_p_mode=view&p_p_state=normal"
       ],
-      "nota": "El BOCG D-236 identifica Ione Belarra (Podemos) com a signant pel Grup Mixt i recull les peticions relatives a la COP29 de Bakú. Estat final no acreditat en aquesta revisió."
+      "nota": "El BOCG D-236 identifica Ione Belarra (Podemos) com a signant pel Grup Mixt i recull les peticions relatives a la COP29 de Bakú. Estat final no acreditat en aquesta revisió. Estat caducada segons el registre oficial de la sèrie 162 de la XV legislatura del Congrés, consultat el 19/11/2026. L'índex dona el resultat global però no substitueix la comprovació del text final ni de les votacions."
     }
   },
   {
@@ -1194,17 +1214,18 @@
     "resum": "Proposa un pla estatal amb mapa nacional de risc, coordinació amb comunitats autònomes, gestió preventiva del paisatge i restauració de les zones afectades.",
     "lectura": "La proposta formal s'ha identificat en un document oficial; l'avaluació política requereix comparar també els texts i els vots.",
     "ambit": "Ple",
-    "estat": "Resultat no incorporat",
+    "estat": "Caducada",
     "qualitat": "Autoria i mesures principals contrastades al Butlletí Oficial del Congrés; resultat final, esmenes i vots encara pendents d'estudi.",
     "url": "https://www.congreso.es/es/busqueda-de-iniciativas?_iniciativas_id=162%2F000826&_iniciativas_legislatura=XV&_iniciativas_mode=mostrarDetalle&p_p_id=iniciativas&p_p_lifecycle=0&p_p_mode=view&p_p_state=normal",
     "fontEspecifica": "https://www.congreso.es/es/busqueda-de-publicaciones?_publicaciones_id_texto=%28BOCG-15-D-578.CODI.%29&_publicaciones_legislatura=XV&_publicaciones_mode=mostrarTextoIntegro&p_p_id=publicaciones&p_p_lifecycle=0&p_p_mode=view&p_p_state=normal",
     "revisio": {
       "data": "2026-11-19",
-      "nivell": "contingut",
+      "nivell": "resultat",
       "fonts": [
+        "https://www.congreso.es/es/busqueda-de-iniciativas?_iniciativas_id=162%2F000826&_iniciativas_legislatura=XV&_iniciativas_mode=mostrarDetalle&p_p_id=iniciativas&p_p_lifecycle=0&p_p_mode=view&p_p_state=normal",
         "https://www.congreso.es/es/busqueda-de-publicaciones?_publicaciones_id_texto=%28BOCG-15-D-578.CODI.%29&_publicaciones_legislatura=XV&_publicaciones_mode=mostrarTextoIntegro&p_p_id=publicaciones&p_p_lifecycle=0&p_p_mode=view&p_p_state=normal"
       ],
-      "nota": "El BOCG D-578 identifica la PNL del PP i les mesures de planificació, mapa de risc, mosaics paisatgístics i recuperació després d'incendis. No s'ha contrastat una votació definitiva."
+      "nota": "El BOCG D-578 identifica la PNL del PP i les mesures de planificació, mapa de risc, mosaics paisatgístics i recuperació després d'incendis. No s'ha contrastat una votació definitiva. Estat caducada segons el registre oficial de la sèrie 162 de la XV legislatura del Congrés, consultat el 19/11/2026. L'índex dona el resultat global però no substitueix la comprovació del text final ni de les votacions."
     }
   },
   {
@@ -1226,17 +1247,18 @@
     "resum": "Demana incorporar producció ecològica, proximitat, estacionalitat i cadenes curtes al programa escolar d'aliments, adaptar la contractació als petits productors i reduir l'ús de plaguicides.",
     "lectura": "La proposta formal s'ha identificat en un document oficial; l'avaluació política requereix comparar també els texts i els vots.",
     "ambit": "Ple",
-    "estat": "Resultat no incorporat",
+    "estat": "Caducada",
     "qualitat": "Autoria i mesures principals contrastades al Butlletí Oficial del Congrés; resultat final, esmenes i vots encara pendents d'estudi.",
     "url": "https://www.congreso.es/es/busqueda-de-iniciativas?_iniciativas_id=162%2F000841&_iniciativas_legislatura=XV&_iniciativas_mode=mostrarDetalle&p_p_id=iniciativas&p_p_lifecycle=0&p_p_mode=view&p_p_state=normal",
     "fontEspecifica": "https://www.congreso.es/es/busqueda-de-publicaciones?_publicaciones_id_texto=%28BOCG-15-D-591.CODI.%29&_publicaciones_legislatura=XV&_publicaciones_mode=mostrarTextoIntegro&p_p_id=publicaciones&p_p_lifecycle=0&p_p_mode=view&p_p_state=normal",
     "revisio": {
       "data": "2026-11-19",
-      "nivell": "contingut",
+      "nivell": "resultat",
       "fonts": [
+        "https://www.congreso.es/es/busqueda-de-iniciativas?_iniciativas_id=162%2F000841&_iniciativas_legislatura=XV&_iniciativas_mode=mostrarDetalle&p_p_id=iniciativas&p_p_lifecycle=0&p_p_mode=view&p_p_state=normal",
         "https://www.congreso.es/es/busqueda-de-publicaciones?_publicaciones_id_texto=%28BOCG-15-D-591.CODI.%29&_publicaciones_legislatura=XV&_publicaciones_mode=mostrarTextoIntegro&p_p_id=publicaciones&p_p_lifecycle=0&p_p_mode=view&p_p_state=normal"
       ],
-      "nota": "El BOCG D-591 identifica Ione Belarra (Podemos) com a impulsora dins el Grup Mixt i detalla tres blocs dispositius; l'estat de tramitació final no s'ha revisat."
+      "nota": "El BOCG D-591 identifica Ione Belarra (Podemos) com a impulsora dins el Grup Mixt i detalla tres blocs dispositius; l'estat de tramitació final no s'ha revisat. Estat caducada segons el registre oficial de la sèrie 162 de la XV legislatura del Congrés, consultat el 19/11/2026. L'índex dona el resultat global però no substitueix la comprovació del text final ni de les votacions."
     }
   },
   {
@@ -1256,17 +1278,18 @@
     "resum": "Proposa coordinar normes i administracions per millorar la qualitat de l'aire als espais tancats, amb mesures de ventilació i prevenció de riscos per a la salut.",
     "lectura": "La proposta formal s'ha identificat en un document oficial; l'avaluació política requereix comparar també els texts i els vots.",
     "ambit": "Ple",
-    "estat": "Resultat no incorporat",
+    "estat": "Retirada",
     "qualitat": "Autoria i mesures principals contrastades al Butlletí Oficial del Congrés; resultat final, esmenes i vots encara pendents d'estudi.",
     "url": "https://www.congreso.es/es/busqueda-de-iniciativas?_iniciativas_id=162%2F000825&_iniciativas_legislatura=XV&_iniciativas_mode=mostrarDetalle&p_p_id=iniciativas&p_p_lifecycle=0&p_p_mode=view&p_p_state=normal",
     "fontEspecifica": "https://www.congreso.es/es/busqueda-de-publicaciones?_publicaciones_id_texto=%28BOCG-15-D-586.CODI.%29&_publicaciones_legislatura=XV&_publicaciones_mode=mostrarTextoIntegro&p_p_id=publicaciones&p_p_lifecycle=0&p_p_mode=view&p_p_state=normal",
     "revisio": {
       "data": "2026-11-19",
-      "nivell": "contingut",
+      "nivell": "resultat",
       "fonts": [
+        "https://www.congreso.es/es/busqueda-de-iniciativas?_iniciativas_id=162%2F000825&_iniciativas_legislatura=XV&_iniciativas_mode=mostrarDetalle&p_p_id=iniciativas&p_p_lifecycle=0&p_p_mode=view&p_p_state=normal",
         "https://www.congreso.es/es/busqueda-de-publicaciones?_publicaciones_id_texto=%28BOCG-15-D-586.CODI.%29&_publicaciones_legislatura=XV&_publicaciones_mode=mostrarTextoIntegro&p_p_id=publicaciones&p_p_lifecycle=0&p_p_mode=view&p_p_state=normal"
       ],
-      "nota": "El BOCG D-586 recull la proposta de Sumar, amb un marc de qualitat de l'aire interior i coordinació entre administracions. Encara no consta una revisió de la votació final."
+      "nota": "El BOCG D-586 recull la proposta de Sumar, amb un marc de qualitat de l'aire interior i coordinació entre administracions. Encara no consta una revisió de la votació final. Estat retirada segons el registre oficial de la sèrie 162 de la XV legislatura del Congrés, consultat el 19/11/2026. L'índex dona el resultat global però no substitueix la comprovació del text final ni de les votacions."
     }
   }
 ]
