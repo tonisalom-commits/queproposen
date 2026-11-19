@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#101e2b">
   <meta name="description" content="Què proposen els grups parlamentaris? Explora les proposicions no de llei de la XV legislatura amb enllaços al Congrés.">
-  <title>Què proposen? · Atles de les PNL</title>
+  <title>Què proposen? · Iniciatives parlamentàries</title>
   <link rel="stylesheet" href="estils.css">
   <script src="dades.js" defer></script>
   <script src="app.js" defer></script>
@@ -24,43 +24,43 @@
         <div>
           <p class="eyebrow light">ATLES PARLAMENTARI · XV LEGISLATURA</p>
           <h1>Del discurs<br>al <em>document.</em></h1>
-          <p class="lead">Què han demanat formalment els grups polítics al Congrés? Explora les seves proposicions no de llei, compara posicions i consulta les fonts originals.</p>
+          <p class="lead">Què han proposat realment els grups al Congrés? Explora les proposicions de llei i les proposicions no de llei, compara posicions i consulta les fonts originals.</p>
           <a class="primary-btn" href="#explora">Explora les propostes <span aria-hidden="true">↘</span></a>
           <p class="hero-note">17 d’agost de 2023 — 6 d’octubre de 2026 · Espanya</p>
         </div>
-        <div class="hero-art" aria-hidden="true">
-          <div class="ring ring1"></div><div class="ring ring2"></div><div class="ring ring3"></div>
-          <span class="artlabel a1">HABITATGE</span><span class="artlabel a2">DRETS</span><span class="artlabel a3">MEDI AMBIENT</span><span class="artlabel a4">ECONOMIA</span>
-          <div class="artcenter">PNL<span>?</span></div>
-        </div>
+        <aside class="hero-side" aria-label="Dos tipus d'iniciativa">
+          <div class="hero-side-row"><span class="hero-n">01</span><div><strong>Proposicions de llei</strong><p>Canvis concrets al text de les lleis.</p></div><span class="hero-arrow" aria-hidden="true">↗</span></div>
+          <div class="hero-side-row"><span class="hero-n">02</span><div><strong>Proposicions no de llei</strong><p>Posicions i peticions polítiques formals.</p></div><span class="hero-arrow" aria-hidden="true">↗</span></div>
+        </aside>
       </div>
     </section>
-    <section class="stats wrap" aria-label="Xifres de la legislatura">
+    <section class="section wrap" id="explora">
+      <div class="section-head"><div><p class="eyebrow">01 / LES INICIATIVES</p><h2>Què proposen sobre el que t'importa?</h2><p class="muted">Cerca una qüestió i compara les propostes. Aquesta és una <strong>selecció provisional</strong>, no el catàleg complet de la legislatura.</p></div></div>
+      <div class="type-switch" role="group" aria-label="Filtra per tipus d'iniciativa">
+        <button type="button" class="type-button" data-kind="" aria-pressed="true">Totes</button>
+        <button type="button" class="type-button" data-kind="PL" aria-pressed="false">Proposicions de llei <small>PL</small></button>
+        <button type="button" class="type-button" data-kind="PNL" aria-pressed="false">Proposicions no de llei <small>PNL</small></button>
+      </div>
+      <div class="controls" aria-label="Filtres de les iniciatives">
+        <label class="field field-search"><span>Què vols cercar?</span><input id="search" type="search" placeholder="Per exemple: habitatge, sanitat, salari…" autocomplete="off"></label>
+        <label class="field"><span>Tema</span><select id="topic"><option value="">Tots els temes</option></select></label>
+        <label class="field"><span>Grup parlamentari</span><select id="party"><option value="">Tots els grups</option></select></label>
+      </div>
+      <div class="results-head"><p id="count" aria-live="polite"></p><button id="reset" class="text-btn" type="button">Neteja els filtres ×</button></div>
+      <div id="cards" class="cards"></div>
+      <p class="disclaimer">Els resums són síntesis editorials, no cites literals. Cap iniciativa de la selecció demostra per si sola què faria un partit si governàs.</p>
+    </section>
+    <section class="section soft" id="panorama">
+      <div class="wrap">
+        <section class="stats stats-inside" aria-label="Recompte de PNL de la legislatura">
       <div class="stat"><strong id="totalPnls">—</strong><span>PNL presentades</span></div>
       <div class="stat"><strong id="plePnls">—</strong><span>Al Ple</span></div>
       <div class="stat"><strong id="comPnls">—</strong><span>En comissió</span></div>
       <div class="stat"><strong id="cadPnls">—</strong><span>Caducades sense resoldre</span></div>
-      <p class="stats-source">Recompte de la XV legislatura, procedent d’<a href="https://agora.vedratic.com/es/learn/pnl/" target="_blank" rel="noopener noreferrer">Àgora</a>, elaborat a partir de dades parlamentàries. Una PNL aprovada no és una llei.</p>
+      <p class="stats-source">Aquests totals corresponen només a PNL de la XV legislatura, procedent d’<a href="https://agora.vedratic.com/es/learn/pnl/" target="_blank" rel="noopener noreferrer">Àgora</a>, elaborat a partir de dades parlamentàries. Una PNL aprovada no és una llei.</p>
     </section>
-    <section class="section wrap" id="explora">
-      <div class="section-head"><div><p class="eyebrow">01 / LES PROPOSTES</p><h2>Comença per un tema.</h2><p class="muted">Aquesta primera versió conté una <b>selecció de fitxes en revisió</b>, no totes les PNL. Els 20 àmbits temàtics sempre són visibles, encara que encara no s'hi hagin incorporat exemples. Les comparacions encara no són exhaustives.</p></div><span class="round-orn" aria-hidden="true">↗</span></div>
-      <div class="topic-explorer">
-        <div class="topic-header"><strong>Explora els 20 àmbits temàtics</strong><span>Les xifres indiquen només les fitxes incorporades fins ara, no el total de PNL.</span></div>
-        <div id="topics-grid" class="topics-grid" aria-label="Àmbits temàtics"></div>
-      </div>
-      <div class="controls" aria-label="Filtres de les iniciatives">
-        <label class="field field-search"><span>Què vols cercar?</span><input id="search" type="search" placeholder="habitatge, derogar, energies…" autocomplete="off"></label>
-        <label class="field"><span>Tema</span><select id="topic"><option value="">Tots els temes</option></select></label>
-        <label class="field"><span>Grup parlamentari</span><select id="party"><option value="">Tots els grups</option></select></label>
-        <label class="field"><span>Àmbit</span><select id="ambit"><option value="">Ple i comissions</option><option value="Ple">Ple</option><option value="Comissió">Comissió</option><option value="Comissió mixta">Comissió mixta</option></select></label>
-      </div>
-      <div class="results-head"><p id="count" aria-live="polite"></p><button id="reset" class="text-btn" type="button">Neteja els filtres ×</button></div>
-      <div id="cards" class="cards"></div>
-      <p class="disclaimer">Les etiquetes «què proposa» són síntesis redactades per a aquesta web, no cites literals. El text original és la referència definitiva.</p>
-    </section>
-    <section class="section soft" id="panorama">
-      <div class="wrap">
-        <div class="section-head"><div><p class="eyebrow">02 / PANORAMA</p><h2>Qui ha presentat més PNL?</h2><p class="muted">PNL d’autoria exclusiva d’un grup: Ple + comissió. No inclou les de coautoria ni les procedents del Senat.</p></div></div>
+    
+        <div class="section-head"><div><p class="eyebrow">02 / PANORAMA</p><h2>Les PNL en xifres.</h2><p class="muted">PNL d’autoria exclusiva d’un grup: Ple + comissió. No inclou les de coautoria ni les procedents del Senat.</p></div></div>
         <div class="chart-layout"><div id="bars" class="bars" role="list" aria-label="PNL presentades per grup"></div><aside class="chart-note"><div class="mini-label">COM LLEGIR-HO</div><h3>Més iniciatives no vol dir automàticament més resultats.</h3><p>El nombre de PNL depèn de l’estratègia parlamentària, la dimensió del grup i el tipus de proposta. Tampoc no és una mesura de qualitat o d’impacte real.</p><p>El <b>Grup Mixt</b> agrupa formacions diferents; les seves xifres no s’han d’atribuir a un sol partit.</p><a href="https://agora.vedratic.com/es/learn/pnl/" target="_blank" rel="noopener noreferrer">Veure la metodologia d’Àgora ↗</a></aside></div>
       </div>
     </section>
@@ -68,13 +68,13 @@
       <div class="section-head"><div><p class="eyebrow">03 / TRANSPARÈNCIA</p><h2>Què sabem, i què no?</h2></div></div>
       <div class="method-grid">
         <article><span class="method-index">01</span><h3>Proposta registrada</h3><p>Documenta què ha defensat públicament un grup, en una data i un context concrets. No demostra què faria necessàriament si governàs.</p></article>
-        <article><span class="method-index">02</span><h3>Aprovació ≠ llei</h3><p>Les PNL no creen normes jurídicament vinculants. Una proposta rebutjada pot ser molt explícita; una caducada no és una proposta rebutjada.</p></article>
-        <article><span class="method-index">03</span><h3>Mostra no representativa</h3><p>Els exemples d’aquesta maqueta estan triats per mostrar el funcionament. No es poden usar per deduir les prioritats temàtiques globals de cada grup.</p></article>
-        <article><span class="method-index">04</span><h3>Comprovació directa</h3><p>Cada fitxa enllaça a un expedient oficial. Una futura versió incorporarà el text dispositiu íntegre, les esmenes i el vot detallat.</p></article>
+        <article><span class="method-index">02</span><h3>Dos instruments diferents</h3><p>Una PNL no crea una llei. Una proposició de llei inicia un procediment legislatiu: presentar-la, prendre-la en consideració i aprovar-la són passos diferents.</p></article>
+        <article><span class="method-index">03</span><h3>Mostra no representativa</h3><p>Les fitxes són una selecció inicial, no representativa. Una categoria buida o un recompte baix no indiquen absència de propostes del grup.</p></article>
+        <article><span class="method-index">04</span><h3>Comprovació directa</h3><p>Cada fitxa enllaça a un expedient oficial. Encara cal completar la lectura dels punts dispositius, el text articulat de les lleis, les esmenes i els resultats.</p></article>
       </div>
       <div class="source-block"><div><b>Fonts principals</b><p>Congrés dels Diputats · Fitxes i butlletins oficials, i Àgora · recompte agregat.</p></div><div><a href="https://www.congreso.es/es/busqueda-de-iniciativas" target="_blank" rel="noopener noreferrer">Cercador del Congrés ↗</a><a href="https://agora.vedratic.com/es/learn/pnl/" target="_blank" rel="noopener noreferrer">Recompte i definició de PNL ↗</a></div></div>
     </section>
   </main>
-  <footer><div class="wrap foot"><div><strong>Què proposen<span>?</span></strong><p>Projecte independent de divulgació parlamentària · Prototip inicial</p></div><p>Sense afiliació institucional ni partidista.<br>Dades contrastables. Interpretacions identificades.</p></div></footer>
+  <footer><div class="wrap foot"><div><strong>Què proposen<span>?</span></strong><p>Projecte independent de divulgació parlamentària · Prototip inicial · mostres incompletes</p></div><p>Sense afiliació institucional ni partidista.<br>Dades contrastables. Interpretacions identificades.</p></div></footer>
 </body>
 </html>
