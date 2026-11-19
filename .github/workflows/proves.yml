@@ -41,7 +41,7 @@ jobs:
       pages: write
       id-token: write
     environment:
-      name: github-pages
+      name: proves-web
       url: ${{ steps.deployment.outputs.page_url }}
     steps:
       - name: Publica el web de proves
