@@ -12,6 +12,7 @@ const base = import.meta.env.BASE_URL.endsWith('/')
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="theme-color" content="#152b35" />
     <meta name="description" content={description} />
+    <meta name="robots" content="noindex, nofollow, noarchive" />
     <title>{title} · Què proposen?</title>
   </head>
   <body>
@@ -29,6 +30,13 @@ const base = import.meta.env.BASE_URL.endsWith('/')
         </nav>
       </div>
     </header>
+    <aside class="preview-ribbon" aria-label="Advertiment sobre la versió de proves">
+      <div class="container preview-ribbon-inner">
+        <strong>VERSIÓ DE PROVES</strong>
+        <span>Inventari incomplet i no representatiu. No utilitzis els recomptes per comparar partits.</span>
+        <a href={base + 'medi-ambient/metodologia/'}>Metodologia</a>
+      </div>
+    </aside>
     <main id="contingut">
       <slot />
     </main>
@@ -45,3 +53,11 @@ const base = import.meta.env.BASE_URL.endsWith('/')
     </footer>
   </body>
 </html>
+<style is:global>
+.preview-ribbon{background:#f3eee6;border-bottom:1px solid #ded0c1;color:#513b31}
+.preview-ribbon-inner{padding-block:10px;display:flex;flex-wrap:wrap;align-items:center;gap:8px 15px;font-size:12px;line-height:1.4}
+.preview-ribbon strong{font-weight:900;letter-spacing:.055em;font-size:10px}
+.preview-ribbon span{flex:1;min-width:190px}
+.preview-ribbon a{color:#80502f;font-weight:800;text-decoration:underline}
+@media(max-width:600px){.preview-ribbon-inner{padding-block:12px;gap:5px}.preview-ribbon a{margin-left:auto}}
+</style>
