@@ -1,0 +1,49 @@
+name: Web de proves · Què proposen
+
+on:
+  push:
+    branches:
+      - proves-web
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: pages-proves
+  cancel-in-progress: true
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Descarrega el repositori
+        uses: actions/checkout@v7
+      - name: Prepara Node
+        uses: actions/setup-node@v7
+        with:
+          node-version: '24'
+      - name: Instal·la dependències
+        run: npm install --no-audit --no-fund
+      - name: Valida el catàleg i construeix el web
+        run: npm run build
+      - name: Configura GitHub Pages
+        uses: actions/configure-pages@v5
+      - name: Puja els fitxers HTML compilats
+        uses: actions/upload-pages-artifact@v4
+        with:
+          path: dist
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    permissions:
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Publica el web de proves
+        id: deployment
+        uses: actions/deploy-pages@v5
