@@ -68,6 +68,32 @@ def main() -> int:
             errors.append(f"{context}: etiquetes ambientals duplicades.")
         if tags and record.get("subtemaAmbiental") not in tags:
             errors.append(f"{context}: el subtema principal no consta entre les etiquetes.")
+
+        rev = record.get("revisio")
+        if rev is not None:
+            if not isinstance(rev, dict):
+                errors.append(f"{context}: revisio ha de ser un objecte.")
+            else:
+                if rev.get("nivell") not in {"autoria", "contingut", "tramitacio", "resultat"}:
+                    errors.append(f"{context}: nivell de revisio desconegut.")
+                if not re.fullmatch(r"20\\d{2}-\\d{2}-\\d{2}", str(rev.get("data", ""))):
+                    errors.append(f"{context}: manca data ISO de revisio.")
+                if not isinstance(rev.get("nota"), str) or len(rev.get("nota", "")) < 30:
+                    errors.append(f"{context}: cal documentar el límit de la revisió.")
+                fs = rev.get("fonts")
+                if not isinstance(fs, list) or not fs:
+                    errors.append(f"{context}: la revisió no té fonts.")
+                else:
+                    for fuente in fs:
+                        parsed_source = urlparse(str(fuente))
+                        if parsed_source.scheme != "https" or parsed_source.hostname not in {
+                            "www.congreso.es", "congreso.es", "app.congreso.es",
+                            "www.boe.es", "boe.es"
+                        }:
+                            errors.append(f"{context}: font de revisió no oficial: {fuente}")
+                if rev.get("nivell") == "resultat" and record.get("estat") == "Resultat no incorporat":
+                    errors.append(f"{context}: resultat suposadament verificat, però no incorporat.")
+
         url = record.get("url", "")
         parsed = urlparse(str(url))
         if parsed.scheme != "https" or parsed.hostname not in {"www.congreso.es", "congreso.es"}:
