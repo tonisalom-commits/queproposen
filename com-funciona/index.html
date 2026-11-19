@@ -15,7 +15,7 @@
 .section{padding:47px 0 72px}.soft{background:#edf2f1}.section .sub{color:var(--muted);font-size:14px;max-width:760px;margin:0 0 28px}
 .explorer{display:grid;grid-template-columns:280px 1fr;border:1px solid #d7e0e0;border-radius:13px;background:#fff;overflow:hidden;min-height:435px}.selector{background:#f3f6f5;border-right:1px solid var(--border);padding:17px 12px;display:flex;flex-direction:column;gap:6px}
 .selector button{border:1px solid transparent;border-radius:7px;padding:13px 14px;display:flex;gap:9px;justify-content:space-between;align-items:center;background:transparent;color:#435d68;font-size:13px;font-weight:700;text-align:left}
-.selector button:hover{background:#e5eded}.selector button[aria-selected=true]{background:#193c4c;color:#fff}.selector button small{opacity:.68;font-size:11px}
+.selector button:hover{background:#e5eded}.selector button[aria-pressed=true]{background:#193c4c;color:#fff}.selector button small{opacity:.68;font-size:11px}
 .detail{padding:34px 40px}.detail-label{color:#a36a41;text-transform:uppercase;letter-spacing:.12em;font-weight:850;font-size:11px}.detail h3{font-size:30px;line-height:1.13;letter-spacing:-.04em;margin:10px 0 14px}.detail p{color:#4e6772;font-size:14px}.detail .facts{display:grid;grid-template-columns:1fr 1fr;gap:11px;margin:22px 0}.detail .fact{background:#f5f8f7;border:1px solid var(--border);padding:14px;border-radius:8px}.detail .fact span{display:block;font-size:10px;font-weight:800;color:#71848d;text-transform:uppercase;letter-spacing:.08em;margin-bottom:6px}.detail .fact strong{font-size:14px}
 .flow-title{font-size:12px;font-weight:850;margin:23px 0 10px}.timeline{list-style:none;padding:0;margin:0;display:grid;gap:9px}.timeline li{border-left:3px solid #b9cdd0;padding:8px 13px;display:flex;gap:14px;align-items:baseline;font-size:13px;color:#526a73}.timeline li b{font-variant-numeric:tabular-nums;color:#ab6d41;font-size:11px;white-space:nowrap}
 .caution{margin-top:18px;padding:12px 15px;border-radius:7px;background:#f8f0e5;border-left:3px solid #be8b64;color:#704b32;font-size:12px}
@@ -41,13 +41,13 @@
 <section class="section soft" id="guia"><div class="wrap">
 <h2>Tria una iniciativa i segueix-ne el recorregut</h2><p class="sub">Comença per qualsevol dels sis instruments. No tots han de passar pel mateix procediment, ni tots tenen força de llei.</p>
 <div class="explorer"><div class="selector" role="tablist" aria-label="Tipus d'iniciativa" aria-orientation="vertical">
-<button role="tab" type="button" id="tab-projecte" aria-controls="detall" aria-selected="true" data-type="projecte"><span>Projecte de llei</span><small>01</small></button>
-<button role="tab" type="button" id="tab-proposicio" aria-controls="detall" aria-selected="false" data-type="proposicio"><span>Proposició de llei</span><small>02</small></button>
-<button role="tab" type="button" id="tab-pnl" aria-controls="detall" aria-selected="false" data-type="pnl"><span>Proposició no de llei</span><small>03</small></button>
-<button role="tab" type="button" id="tab-decretllei" aria-controls="detall" aria-selected="false" data-type="decretllei"><span>Reial decret llei</span><small>04</small></button>
-<button role="tab" type="button" id="tab-decretleg" aria-controls="detall" aria-selected="false" data-type="decretleg"><span>Reial decret legislatiu</span><small>05</small></button>
-<button role="tab" type="button" id="tab-reialdecret" aria-controls="detall" aria-selected="false" data-type="reialdecret"><span>Reial decret</span><small>06</small></button>
-</div><div class="detail" role="tabpanel" id="detall" aria-labelledby="tab-projecte" tabindex="0" aria-live="polite"><div id="detail-content"></div></div></div>
+<button type="button" id="tab-projecte" aria-controls="detall" aria-pressed="true" data-type="projecte"><span>Projecte de llei</span><small>01</small></button>
+<button type="button" id="tab-proposicio" aria-controls="detall" aria-pressed="false" data-type="proposicio"><span>Proposició de llei</span><small>02</small></button>
+<button type="button" id="tab-pnl" aria-controls="detall" aria-pressed="false" data-type="pnl"><span>Proposició no de llei</span><small>03</small></button>
+<button type="button" id="tab-decretllei" aria-controls="detall" aria-pressed="false" data-type="decretllei"><span>Reial decret llei</span><small>04</small></button>
+<button type="button" id="tab-decretleg" aria-controls="detall" aria-pressed="false" data-type="decretleg"><span>Reial decret legislatiu</span><small>05</small></button>
+<button type="button" id="tab-reialdecret" aria-controls="detall" aria-pressed="false" data-type="reialdecret"><span>Reial decret</span><small>06</small></button>
+</div><div class="detail" role="region" id="detall" aria-label="Explicació de la iniciativa" tabindex="0" aria-live="polite"><div id="detail-content"></div></div></div>
 </div></section>
 <section class="section wrap" id="compara"><h2>Les diferències, d'un cop d'ull</h2><p class="sub">L'expressió «aprovat» no significa el mateix en tots els casos.</p>
 <div style="overflow-x:auto"><table class="comparison"><thead><tr><th>Instrument</th><th>Qui l'impulsa?</th><th>Té rang de llei?</th><th>Què significa l'aprovació?</th></tr></thead><tbody>
@@ -65,6 +65,14 @@
 <article><h3>Un reial decret no és el mateix que un reial decret llei</h3><p>El primer sol ser una norma reglamentària inferior a la llei; el segon té rang de llei, està reservat a situacions d'extraordinària i urgent necessitat i necessita convalidació del Congrés.</p></article>
 </div><p style="font-size:12px;color:#657982;margin-top:20px">També trobaràs <strong>lleis orgàniques</strong>: regulen matèries constitucionalment reservades, com certs drets fonamentals, i requereixen majoria absoluta del Congrés en una votació final de conjunt. No són una «llei superior» per a qualsevol matèria.</p>
 </div></section>
+<section class="section wrap" id="altres-iniciatives">
+<h2>I quan el Congrés no està fent una llei?</h2>
+<p class="sub">No tota l'activitat parlamentària serveix per aprovar normes. També s'utilitzen instruments de control, debat i modificació de les propostes.</p>
+<div class="tiles">
+<article><h3>Preguntes parlamentàries</h3><p>Un diputat demana informació o explicacions al Govern. Les respostes poden ser orals o escrites; no creen lleis.</p></article>
+<article><h3>Interpel·lacions i mocions</h3><p>Una interpel·lació reclama explicacions sobre la política general del Govern. Després pot donar lloc a una moció que el Congrés debat i vota. No s'ha de confondre amb una moció de censura.</p></article>
+<article><h3>Esmenes</h3><p>Propostes per modificar el text d'una iniciativa. Són decisives: la llei aprovada pot diferir força del text que es va presentar inicialment.</p></article>
+</div></section>
 <section class="quiz"><div class="wrap"><div class="eyebrow">Comprova si ho tens clar</div><h2>El Govern aprova una norma urgent amb rang de llei. Què ha de passar després?</h2><p>Tria la resposta que trobis correcta.</p><div class="answers" role="group" aria-label="Respostes possibles">
 <button data-answer="a" type="button" aria-pressed="false">Ja és definitiva, sense més tràmits</button>
 <button data-answer="b" type="button" aria-pressed="false">El Congrés l'ha de convalidar o derogar en 30 dies</button>
@@ -76,6 +84,7 @@
 <a target="_blank" rel="noopener noreferrer" href="https://www.congreso.es/es/cem/tit10">Reglament del Congrés — PNL, articles 193–195</a>
 <a target="_blank" rel="noopener noreferrer" href="https://www.congreso.es/es/cem/tit5">Reglament del Congrés — procediment legislatiu</a>
 <a target="_blank" rel="noopener noreferrer" href="https://www.congreso.es/es/web/guest/cem/tit6">Reglament del Congrés — control dels decrets llei</a>
+<a target="_blank" rel="noopener noreferrer" href="https://www.congreso.es/es/cem/fcontrol">Congrés dels Diputats — funció de control parlamentari</a>
 <a target="_blank" rel="noopener noreferrer" href="https://administracion.gob.es/espanaadmon/boletinesylegislacion/legislacion/saber-mas">Administració de l'Estat — jerarquia normativa i disposicions del Govern</a>
 </div></section>
 </main>
@@ -96,8 +105,8 @@ const target=document.getElementById('detail-content');
 function select(name){
  const d=items[name];if(!d)return;
  target.innerHTML='<div class="detail-label">'+text(d.label)+'</div><h3>'+text(d.title)+'</h3><p>'+text(d.description)+'</p><div class="facts"><div class="fact"><span>Qui el presenta?</span><strong>'+text(d.origin)+'</strong></div><div class="fact"><span>Quin valor té?</span><strong>'+text(d.force)+'</strong></div></div><div class="flow-title">Quin recorregut segueix?</div><ol class="timeline">'+d.steps.map((s,i)=>'<li><b>0'+(i+1)+'</b><span>'+text(s)+'</span></li>').join('')+'</ol><div class="caution">'+text(d.note)+'</div>';
- document.querySelectorAll('[data-type]').forEach(b=>b.setAttribute('aria-selected',String(b.dataset.type===name)));
- document.getElementById('detall').setAttribute('aria-labelledby','tab-'+name);
+ document.querySelectorAll('[data-type]').forEach(b=>b.setAttribute('aria-pressed',String(b.dataset.type===name)));
+ 
 }
 document.querySelectorAll('[data-type]').forEach(b=>b.addEventListener('click',()=>select(b.dataset.type)));
 select('projecte');
