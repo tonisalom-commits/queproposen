@@ -32,7 +32,7 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: "3.12"
-      - name: Consulta puntual als índexs oficials 161, 162, 120 i 122
+      - name: Recupera índexs oficials 161, 162, 120 i 122–125
         shell: bash
         run: |
           mkdir -p revisio-ambiental
