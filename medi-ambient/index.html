@@ -81,7 +81,7 @@ document.addEventListener('DOMContentLoaded',()=>{
  const normalize=v=>String(v||'').normalize('NFD').replace(/[\u0300-\u036f]/g,'').toLowerCase();
  const $=id=>document.getElementById(id);
  const name=g=>names[g]||g;
- const groupList=[...new Set(records.flatMap(x=>x.grups))].sort((a,b)=>name(a).localeCompare(name(b),'ca'));
+ const groupList=parties.map(g=>g.id).sort((a,b)=>name(a).localeCompare(name(b),'ca'));
  $('topic').innerHTML='<option value="">Tots els subtemes</option>'+taxonomy.map(t=>'<option>'+safe(t)+'</option>').join('');
  const partiesHTML=groupList.map(g=>'<option value="'+safe(g)+'">'+safe(g==='MIXT'?'Grup Mixt (diversos partits)':name(g))+'</option>').join('');
  $('party').innerHTML='<option value="">Tots els grups</option>'+partiesHTML;
