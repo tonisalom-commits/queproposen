@@ -12,7 +12,7 @@ import time
 from pathlib import Path
 from urllib.parse import urlencode, urlparse, parse_qsl, urlunparse
 from urllib.request import Request, urlopen
-from scripts.recull_index_congres import official_url, extract
+from recull_index_congres import official_url, extract
 
 
 def fetch(url: str) -> tuple[str, str]:
