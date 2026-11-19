@@ -574,7 +574,16 @@
     "etiquetesAmbientals": [
       "Biodiversitat i espais naturals",
       "Litoral i medi marí"
-    ]
+    ],
+    "impulsor": "Coalición Canaria",
+    "revisio": {
+      "data": "2026-11-19",
+      "nivell": "contingut",
+      "fonts": [
+        "https://www.congreso.es/ca/busqueda-de-publicaciones?_publicaciones_id_texto=%28BOCG-15-D-194.CODI.%29&_publicaciones_legislatura=XV&_publicaciones_mode=mostrarTextoIntegro&p_p_id=publicaciones&p_p_lifecycle=0&p_p_mode=view&p_p_state=normal"
+      ],
+      "nota": "El BOCG D-194 identifica Cristina Valido García de Coalición Canaria com a impulsora dins el Grup Mixt; la PNL demana criteris concrets per declarar parc nacional marí el mar de Las Calmas. Estat final no contrastat."
+    }
   },
   {
     "id": "162/000470",
@@ -626,7 +635,15 @@
     "url": "https://www.congreso.es/es/busqueda-de-iniciativas?_iniciativas_id=161%2F003420&_iniciativas_legislatura=XV&_iniciativas_mode=mostrarDetalle&p_p_id=iniciativas&p_p_lifecycle=0&p_p_mode=view&p_p_state=normal",
     "etiquetesAmbientals": [
       "Aigua i gestió hídrica"
-    ]
+    ],
+    "revisio": {
+      "data": "2026-11-19",
+      "nivell": "contingut",
+      "fonts": [
+        "https://www.congreso.es/eu/busqueda-de-publicaciones?_publicaciones_id_texto=BOCG-15-CG-A-242.CODI.&_publicaciones_legislatura=XV&_publicaciones_mode=mostrarTextoIntegro&p_p_id=publicaciones&p_p_lifecycle=0&p_p_mode=view&p_p_state=normal"
+      ],
+      "nota": "El BOCG de les Corts Generals A-242 confirma la PNL del PP sobre els estàndards de qualitat de l'aigua de la UE, debatuda a la Comissió Mixta per a la UE. Els textos d'esmenes i l'estat final encara s'han de contrastar."
+    }
   },
   {
     "id": "122/000170",
@@ -737,7 +754,15 @@
     "url": "https://www.congreso.es/es/busqueda-de-iniciativas?_iniciativas_id=162%2F000001&_iniciativas_legislatura=XV&_iniciativas_mode=mostrarDetalle&p_p_id=iniciativas&p_p_lifecycle=0&p_p_mode=view&p_p_state=normal",
     "etiquetesAmbientals": [
       "Boscos i incendis"
-    ]
+    ],
+    "revisio": {
+      "data": "2026-11-19",
+      "nivell": "contingut",
+      "fonts": [
+        "https://www.congreso.es/eu/publicaciones-organo?_publicaciones_id_texto=BOCG-15-D-7.CODI.&_publicaciones_legislatura=XV&_publicaciones_mode=mostrarTextoIntegro&_publicaciones_texto=&p_p_id=publicaciones&p_p_lifecycle=0&p_p_mode=view&p_p_state=normal"
+      ],
+      "nota": "El BOCG D-7 acredita la PNL del Grup Popular sobre els incendis de Tenerife d'agost de 2023 i la petició d'avaluar i quantificar els danys, entre altres mesures. Resultat final no comprovat."
+    }
   },
   {
     "id": "162/000348",
@@ -820,7 +845,15 @@
     "etiquetesAmbientals": [
       "Clima i emissions",
       "Recursos naturals"
-    ]
+    ],
+    "revisio": {
+      "data": "2026-11-19",
+      "nivell": "contingut",
+      "fonts": [
+        "https://www.congreso.es/ca/busqueda-de-publicaciones?_publicaciones_id_texto=%28BOCG-15-D-558.CODI.%29&_publicaciones_legislatura=XV&_publicaciones_mode=mostrarTextoIntegro&p_p_id=publicaciones&p_p_lifecycle=0&p_p_mode=view&p_p_state=normal"
+      ],
+      "nota": "El BOCG D-558 recull la PNL sobre transparència d'emissions militars de GEH. Hi ha publicacions posteriors de retirada de signatures: cal verificar els grups coautors abans d'atribuir-la només a Sumar, i el resultat final no està acreditat."
+    }
   },
   {
     "id": "162/000801",
