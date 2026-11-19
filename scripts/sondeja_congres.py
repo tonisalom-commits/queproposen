@@ -15,12 +15,12 @@ COMMON={
 "_iniciativas_legislatura":"15","_iniciativas_mode":"verListadoIndice",
 }
 report=[]
-for serie in ["161","162","122","120"]:
- for page in [1,2]:
+for serie in ["162"]:
+ for page in [4,5,6,7,8,9,10,20,30,34]:
   params={**COMMON,"_iniciativas_tipo":serie,"_iniciativas_paginaActual":str(page)}
   url=BASE+"?"+urllib.parse.urlencode(params)
   forms=[("GET",None)]
-  if page == 2: forms.append(("POST",urllib.parse.urlencode(params).encode("utf-8")))
+  if page in (6,7,8): forms.append(("POST",urllib.parse.urlencode(params).encode("utf-8")))
   for method,data in forms:
    row={"serie":serie,"pagina":page,"metode":method}
    try:
@@ -39,7 +39,7 @@ for serie in ["161","162","122","120"]:
     row["primer"]=vals[0].get("id_iniciativa") if vals else None
     row["darrer"]=vals[-1].get("id_iniciativa") if vals else None
     row["paginacion"]=obj.get("paginacion")
-    row["format_ok"]=True
+    row["format_ok"]=True;row["claus"]=list(obj.keys())
    except Exception as ex:
     row["error"]=f"{type(ex).__name__}: {str(ex)[:160]}"
    report.append(row)
