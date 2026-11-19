@@ -4,6 +4,10 @@ Web temàtica i divulgativa per conèixer què han proposat els grups al Congré
 
 **Estat: prototip, NO exhaustiu ni representatiu.** Actualment hi ha 55 expedients parlamentaris de mostra (44 PNL i 11 proposicions de llei). Medi ambient té 25 fitxes (24 PNL i 1 PL) i 4 documents governamentals addicionals, que no s'afegeixen als recomptes parlamentaris.
 
+## Auditoria dels indexs oficials (19/11/2026)
+
+Recuperats i contrastats 5.094 expedients de les series 161, 162, 120, 122, 123, 124 i 125: 206 pagines, totals coincidents amb el Congres i cap duplicat. El primer cribratge per títol ha identificat 410 candidats ambientals, **no verificats en contingut**. Les 25 fitxes ambientals inicials tenen metadades compatibles amb els indexs; no s'ha completat la lectura de les mesures, esmenes ni votacions. Consulteu `docs/inventari-ambient-xv-estat-2026-11-19.md` i `data/cobertura-ambiental.json`.
+
 ## Tecnologia
 
 - **Astro 7** genera HTML estàtic amb components compartits.
