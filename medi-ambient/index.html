@@ -58,7 +58,7 @@ main .intro{padding:48px 0 8px;display:grid;grid-template-columns:1fr 1fr;gap:35
 'use strict';
 document.addEventListener('DOMContentLoaded',()=>{
  const all=window.DADES?.iniciatives||[];
- const records=all.filter(p=>p.subtemaAmbiental);
+ const records=all.filter(p=>Array.isArray(p.etiquetesAmbientals)&&p.etiquetesAmbientals.length);
  const taxonomy=['Adaptació i riscos','Agricultura i sòls','Aigua i gestió hídrica','Biodiversitat i espais naturals','Boscos i incendis','Clima i emissions','Contaminació i residus','Energia i transició','Litoral i medi marí','Mobilitat i emissions','Recursos naturals','Salut ambiental'];
  const parties=window.DADES?.grups||[];
  const names=Object.fromEntries(parties.map(g=>[g.id,g.nom]));
@@ -84,7 +84,7 @@ document.addEventListener('DOMContentLoaded',()=>{
    '<span class="topic">'+safe(p.subtemaAmbiental)+'</span><h3>'+safe(p.titol)+'</h3><p>'+safe(p.resum)+'</p>'+
    '<span class="record-status '+(status.startsWith('Aprovada')?'decision':'')+'">'+safe(status)+'</span>'+
    '<p class="explainer"><b>Què demana?</b> '+safe(p.accio||'Consulta el text de la iniciativa')+'</p>'+
-   '<details><summary>Com està documentada?</summary><p>'+safe(p.qualitat||'Fitxa resumida a partir de l’expedient oficial; pendent d’anàlisi detallada.')+'</p>'+
+   '<details><summary>Com està documentada?</summary><p><strong>Àmbits:</strong> '+safe((p.etiquetesAmbientals||[]).join(' · '))+'</p><p>'+safe(p.qualitat||'Fitxa resumida a partir de l’expedient oficial; pendent d’anàlisi detallada.')+'</p>'+
    (p.notes?'<p><strong>Observació:</strong> '+safe(p.notes)+'</p>':'')+
    (p.lectura?'<p><strong>Lectura inicial:</strong> '+safe(p.lectura)+'</p>':'')+
    '<a href="../com-funciona/#guia">Què significa aquest tipus d’iniciativa?</a></details>'+
@@ -93,7 +93,7 @@ document.addEventListener('DOMContentLoaded',()=>{
  }
  function draw(){
   const q=normalize($('search').value),theme=$('topic').value,party=$('party').value;
-  const found=records.filter(p=>(!q||normalize([p.id,p.titol,p.resum,p.accio,p.subtemaAmbiental,p.lectura,p.impulsor,...p.grups].join(' ')).includes(q))&&(!theme||p.subtemaAmbiental===theme)&&(!party||p.grups.includes(party))&&(!kind||p.tipus===kind));
+  const found=records.filter(p=>(!q||normalize([p.id,p.titol,p.resum,p.accio,...p.etiquetesAmbientals,p.lectura,p.impulsor,...p.grups].join(' ')).includes(q))&&(!theme||p.etiquetesAmbientals.includes(theme))&&(!party||p.grups.includes(party))&&(!kind||p.tipus===kind));
   $('count').textContent=found.length+' de '+records.length+' fitxes de l’inventari provisional';
   $('cards').innerHTML=found.length?found.map(renderCard).join(''):'<div class="none">No hi ha cap fitxa de la mostra per a aquests filtres. Això no demostra que el grup no hagi presentat iniciatives sobre el tema.</div>';
   document.querySelectorAll('[data-kind]').forEach(b=>b.setAttribute('aria-pressed',String(b.dataset.kind===kind)));
@@ -104,7 +104,7 @@ document.addEventListener('DOMContentLoaded',()=>{
  function compare(){
   const a=$('compareA').value,b=$('compareB').value,t=$('compareTopic').value;
   for(const [id,g] of [['compareLeft',a],['compareRight',b]]){
-   const list=records.filter(p=>p.grups.includes(g)&&(!t||p.subtemaAmbiental===t));
+   const list=records.filter(p=>p.grups.includes(g)&&(!t||p.etiquetesAmbientals.includes(t)));
    const l='<h3>'+safe(name(g))+'</h3>';
    $(id).innerHTML=l+(list.length?list.map(p=>'<div class="compare-item"><span>'+safe(p.tipus)+' · '+safe(p.subtemaAmbiental)+' · '+safe(p.estat||'Resultat no incorporat')+'</span><b>'+safe(p.titol)+'</b><a href="'+safe(p.url)+'" target="_blank" rel="noopener noreferrer">Expedient '+safe(p.id)+' ↗</a></div>').join(''):'<p class="missing">Encara no hem incorporat cap expedient d’aquest grup per al filtre seleccionat. No és una prova d’absència de propostes.</p>');
   }
@@ -141,6 +141,6 @@ document.addEventListener('DOMContentLoaded',()=>{
 <div class="compare-grid"><div class="compare-col" id="compareLeft"></div><div class="compare-col" id="compareRight"></div></div>
 <div class="info-row"><div><h3>I què ha fet el Govern?</h3><p>És una altra pregunta. Els <strong>projectes de llei</strong>, <strong>reials decrets llei</strong> i <strong>reials decrets</strong> s'han d'inventariar separadament: no són PNL ni proposicions de llei dels grups. Aquesta capa encara està pendent de recopilar, i no la barrejarem amb les xifres parlamentàries.</p></div><div><h3>Què significa «aprovada»?</h3><p>Depèn del tipus d'iniciativa. Una PNL aprovada expressa una decisió política de la cambra, però no crea una obligació jurídica d'executar-la. <a href="../com-funciona/#guia">Consulta la guia dels procediments ↗</a></p></div></div>
 </div></section>
-<section id="metode" class="method"><div class="wrap"><h2>Perquè les dades siguin comprovables</h2><div class="method-grid"><div><strong>01 · Criteri ambiental explícit</strong><p>Inclourem clima i emissions, biodiversitat, aigua, contaminació, energia, mobilitat, recursos naturals i adaptació, amb categories múltiples quan calgui.</p></div><div><strong>02 · Tots els grups i tots els resultats</strong><p>La recopilació final ha d'incloure iniciatives aprovades, rebutjades, caducades i sense votació; cal identificar partits del Grup Mixt, coautories i esmenes.</p></div><div><strong>03 · Fet i interpretació separats</strong><p>El número d'expedient i el text original són la prova. Les valoracions sobre les implicacions polítiques aniran diferenciades i justificades. Consulta el <a href="../docs/metodologia-medi-ambient.md">document metodològic</a> del repositori.</p></div></div></div></section>
+<section id="metode" class="method"><div class="wrap"><h2>Perquè les dades siguin comprovables</h2><div class="method-grid"><div><strong>01 · Criteri ambiental explícit</strong><p>Inclourem clima i emissions, biodiversitat, aigua, contaminació, energia, mobilitat, recursos naturals i adaptació, amb categories múltiples quan calgui.</p></div><div><strong>02 · Tots els grups i tots els resultats</strong><p>La recopilació final ha d'incloure iniciatives aprovades, rebutjades, caducades i sense votació; cal identificar partits del Grup Mixt, coautories i esmenes.</p></div><div><strong>03 · Fet i interpretació separats</strong><p>El número d'expedient i el text original són la prova. Les valoracions sobre les implicacions polítiques aniran diferenciades i justificades. Consulta el <a href="https://github.com/tonisalom-commits/queproposen/blob/feat/prototip-atles-pnl/docs/metodologia-medi-ambient.md" target="_blank" rel="noopener noreferrer">document metodològic</a> del repositori.</p></div></div></div></section>
 </main><footer><div class="wrap"><span>Què proposen? · Projecte independent de divulgació parlamentària</span><a href="../">Torna al portal</a></div></footer>
 </body></html>
