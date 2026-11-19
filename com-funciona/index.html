@@ -108,8 +108,10 @@ function select(name){
  document.querySelectorAll('[data-type]').forEach(b=>b.setAttribute('aria-pressed',String(b.dataset.type===name)));
  
 }
-document.querySelectorAll('[data-type]').forEach(b=>b.addEventListener('click',()=>select(b.dataset.type)));
-select('projecte');
+document.querySelectorAll('[data-type]').forEach(b=>b.addEventListener('click',()=>{select(b.dataset.type);history.replaceState(null,'','#'+b.dataset.type);}));
+const inicial=location.hash.replace(/^#/,'');
+select(items[inicial]?inicial:'projecte');
+window.addEventListener('hashchange',()=>{const t=location.hash.replace(/^#/,'');if(items[t])select(t);});
 const feedback=document.getElementById('feedback');
 document.querySelectorAll('[data-answer]').forEach(b=>b.addEventListener('click',()=>{
  document.querySelectorAll('[data-answer]').forEach(x=>x.setAttribute('aria-pressed',String(x===b)));
