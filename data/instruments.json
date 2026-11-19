@@ -1,0 +1,85 @@
+[
+  {
+    "id": "pnl",
+    "nom": "Proposició no de llei (PNL)",
+    "qui": "Grup parlamentari",
+    "rang": "No té rang de llei",
+    "definicio": "És una petició o un posicionament formal que un grup porta al Congrés. Pot demanar al Govern que actuï, però el vot favorable no crea una llei.",
+    "passos": [
+      "Un grup registra el text i la Mesa n'ordena la tramitació.",
+      "Es publica i es debat al Ple o en una comissió; hi pot haver esmenes.",
+      "El Congrés vota el text, que pot quedar aprovat, rebutjat o sense resolució."
+    ],
+    "advertiment": "Una PNL aprovada no obliga jurídicament el Govern a executar-la. Una caducada no és una rebutjada.",
+    "article": "pnl/"
+  },
+  {
+    "id": "proposicio",
+    "nom": "Proposició de llei",
+    "qui": "Diputats, grups o altres subjectes legitimats",
+    "rang": "No és llei fins que culmina la tramitació",
+    "definicio": "És una proposta per crear, canviar o derogar una llei. Es diferencia del projecte de llei perquè no la presenta el Govern.",
+    "passos": [
+      "Es presenta el text i s'admet a tràmit quan correspon.",
+      "Habitualment el Congrés vota la presa en consideració.",
+      "Si prospera, segueixen esmenes, debats, votacions i tràmit al Senat.",
+      "Només la norma aprovada definitivament es publica com a llei."
+    ],
+    "advertiment": "La presa en consideració només obre el camí legislatiu: no és una llei aprovada.",
+    "article": "proposicio-llei/"
+  },
+  {
+    "id": "projecte",
+    "nom": "Projecte de llei",
+    "qui": "Govern",
+    "rang": "No és llei fins que culmina la tramitació",
+    "definicio": "El Govern aprova un text per demanar a les Corts que el converteixin en llei. Es tramita parlamentàriament, però no exigeix la presa en consideració inicial pròpia de moltes proposicions.",
+    "passos": [
+      "El Consell de Ministres aprova el projecte.",
+      "El Congrés el tramita i poden presentar-se esmenes.",
+      "Passa al Senat i, si escau, torna al Congrés.",
+      "El text definitivament aprovat se sanciona, promulga i publica."
+    ],
+    "advertiment": "Presentar un projecte de llei no significa que sigui vigent."
+  },
+  {
+    "id": "decretllei",
+    "nom": "Reial decret llei",
+    "qui": "Govern",
+    "rang": "Té rang de llei",
+    "definicio": "És una norma excepcional que el Govern dicta quan concorre extraordinària i urgent necessitat. Pot començar a tenir efectes abans de la votació parlamentària.",
+    "passos": [
+      "El Govern l'aprova i es publica al BOE.",
+      "El Congrés ha de convalidar-lo o derogar-lo en un termini de 30 dies.",
+      "Si es convalida, continua vigent; també es pot tramitar com a projecte de llei per urgència."
+    ],
+    "advertiment": "No es pot utilitzar per afectar determinades matèries excloses per l'article 86 de la Constitució.",
+    "article": "decret-llei/"
+  },
+  {
+    "id": "decretleg",
+    "nom": "Reial decret legislatiu",
+    "qui": "Govern, perquè les Corts l'hi han delegat",
+    "rang": "Té rang de llei",
+    "definicio": "Les Corts autoritzen prèviament el Govern a regular una matèria concreta dins uns límits i un termini establerts.",
+    "passos": [
+      "Les Corts aproven la llei de delegació.",
+      "El Govern redacta un text dins els límits de la delegació.",
+      "El Govern l'aprova i publica com a reial decret legislatiu."
+    ],
+    "advertiment": "No té la mateixa convalidació en 30 dies que un decret llei."
+  },
+  {
+    "id": "decret",
+    "nom": "Reial decret",
+    "qui": "Govern",
+    "rang": "Generalment, és una norma reglamentària",
+    "definicio": "Sovint concreta com s'aplica una llei. També pot formalitzar decisions administratives, com determinats nomenaments.",
+    "passos": [
+      "Se'n prepara el contingut i se segueixen els tràmits administratius aplicables.",
+      "El Govern o l'òrgan competent l'aprova.",
+      "Es publica quan correspon i queda subjecte al control de legalitat."
+    ],
+    "advertiment": "Un reial decret reglamentari no pot contradir una llei. El seu nom no indica per si mateix rang de llei."
+  }
+]
