@@ -9,11 +9,14 @@ el('totalPnls').textContent=fmt.format(resum.total);
 el('plePnls').textContent=fmt.format(resum.ple);
 el('comPnls').textContent=fmt.format(resum.comissio);
 el('cadPnls').textContent=fmt.format(resum.caducades);
-const topics=[...new Set(iniciatives.map(p=>p.tema))].sort((a,b)=>a.localeCompare(b,'ca'));
+const topics=window.DADES.temes;
 el('topic').insertAdjacentHTML('beforeend',topics.map(t=>'<option value="'+esc(t)+'">'+esc(t)+'</option>').join(''));
+const topicCounts=Object.fromEntries(topics.map(t=>[t,iniciatives.filter(p=>p.tema===t).length]));
+el('topics-grid').innerHTML=topics.map(t=>'<button type="button" class="topic-pill'+(topicCounts[t]?'':' awaiting')+'" data-topic="'+esc(t)+'" aria-pressed="false"><span>'+esc(t)+'</span><small>'+topicCounts[t]+' fitxes</small></button>').join('');
+el('topics-grid').addEventListener('click',e=>{const b=e.target.closest('button[data-topic]');if(!b)return;el('topic').value=(el('topic').value===b.dataset.topic?'':b.dataset.topic);draw();});
 el('party').insertAdjacentHTML('beforeend',grups.map(g=>'<option value="'+esc(g.id)+'">'+esc(g.id)+' · '+esc(g.nom)+'</option>').join(''));
 function card(p){
- const tags=p.grups.map(g=>'<span class="chip '+(g==='MIXT'?'emphasis':'')+'" title="'+esc(names[g]||g)+'">'+esc(g==='MIXT'?'GRUP MIXT':g)+'</span>').join('');
+ const tags=p.grups.map(g=>'<span class="chip '+(g==='MIXT'?'emphasis':'')+'" title="'+esc(names[g]||g)+'">'+esc(g==='MIXT'?(p.impulsor?'MIXT · '+p.impulsor:'GRUP MIXT'):g)+'</span>').join('');
  return '<article class="proposal"><div class="proposal-top">'+tags+'<span class="topic-chip">'+esc(p.tema)+'</span></div>'+
  '<span class="action-line">'+esc(p.accio)+'</span><h3>'+esc(p.titol)+'</h3>'+
  '<p class="summary">'+esc(p.resum)+'</p><p class="reading"><b>Què ens indica?</b> '+esc(p.lectura)+'</p>'+
@@ -26,6 +29,7 @@ function draw(){
  const found=iniciatives.filter(p=>(!q||clean([p.id,p.titol,p.resum,p.lectura,p.accio,p.tema,...p.grups].join(' ')).includes(q))&&(!topic||p.tema===topic)&&(!party||p.grups.includes(party))&&(!ambit||p.ambit===ambit));
  el('cards').innerHTML=found.length?found.map(card).join(''):'<div class="empty">No hi ha fitxes d’aquesta selecció que coincideixin amb els filtres. Això no significa que el grup no hagi presentat iniciatives sobre el tema.</div>';
  el('count').textContent=found.length+' de '+iniciatives.length+' fitxes de la selecció preliminar';
+ for(const b of el('topics-grid').querySelectorAll('button[data-topic]'))b.setAttribute('aria-pressed',String(b.dataset.topic===topic));
 }
 for(const id of ['search','topic','party','ambit'])el(id).addEventListener(id==='search'?'input':'change',draw);
 el('reset').addEventListener('click',()=>{for(const id of ['search','topic','party','ambit'])el(id).value='';draw();});
