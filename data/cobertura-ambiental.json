@@ -1,0 +1,73 @@
+{
+  "versio": 1,
+  "legislatura": "XV",
+  "data_tall": "2026-10-06",
+  "data_captura": "2026-11-19",
+  "font": "https://www.congreso.es/es/indice-de-iniciativas",
+  "series": [
+    {
+      "serie": "161",
+      "tipus": "PNL comissió",
+      "total": 3824,
+      "pagines": 153
+    },
+    {
+      "serie": "162",
+      "tipus": "PNL Ple",
+      "total": 850,
+      "pagines": 34
+    },
+    {
+      "serie": "122",
+      "tipus": "PL de grups",
+      "total": 306,
+      "pagines": 13
+    },
+    {
+      "serie": "120",
+      "tipus": "Iniciativa legislativa popular",
+      "total": 49,
+      "pagines": 2
+    },
+    {
+      "serie": "123",
+      "tipus": "PL de diputats",
+      "total": 2,
+      "pagines": 1
+    },
+    {
+      "serie": "124",
+      "tipus": "PL del Senat",
+      "total": 47,
+      "pagines": 2
+    },
+    {
+      "serie": "125",
+      "tipus": "PL autonòmiques",
+      "total": 16,
+      "pagines": 1
+    }
+  ],
+  "expedients_indexats": 5094,
+  "pagines_originals": 206,
+  "control": {
+    "totals_comprovats": true,
+    "sense_duplicats": true,
+    "sha256_per_pagina": true
+  },
+  "primera_seleccio": {
+    "candidats_per_titol": 410,
+    "per_serie": {
+      "120": 2,
+      "122": 12,
+      "124": 2,
+      "161": 320,
+      "162": 74
+    },
+    "ambientals_revisats_exhaustivament": false
+  },
+  "fitxes_contrastades": 25,
+  "discrepancies_automatiques": 0,
+  "exclusions_en_mostra_per_revisar": 160,
+  "advertiment": "Cobertura de l'índex completa, però selecció ambiental i textos encara NO auditats íntegrament."
+}
