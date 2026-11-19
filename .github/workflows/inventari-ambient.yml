@@ -26,7 +26,7 @@ jobs:
   recollida:
     needs: tests
     runs-on: ubuntu-latest
-    timeout-minutes: 7
+    timeout-minutes: 20
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
@@ -38,7 +38,7 @@ jobs:
           mkdir -p revisio-ambiental
           set +e
           python scripts/recull_index_congres.py \
-            --descarrega --sortida revisio-ambiental \
+            --descarrega --totes-les-pagines --pausa 1.0 --sortida revisio-ambiental \
             > revisio-ambiental/execucio.log 2>&1
           CODE=$?
           echo "codi_final=$CODE" >> revisio-ambiental/execucio.log
