@@ -87,7 +87,7 @@ document.addEventListener('DOMContentLoaded',()=>{
    '<details><summary>Com està documentada?</summary><p><strong>Àmbits:</strong> '+safe((p.etiquetesAmbientals||[]).join(' · '))+'</p><p>'+safe(p.qualitat||'Fitxa resumida a partir de l’expedient oficial; pendent d’anàlisi detallada.')+'</p>'+
    (p.notes?'<p><strong>Observació:</strong> '+safe(p.notes)+'</p>':'')+
    (p.lectura?'<p><strong>Lectura inicial:</strong> '+safe(p.lectura)+'</p>':'')+
-   '<a href="../com-funciona/#guia">Què significa aquest tipus d’iniciativa?</a></details>'+
+   '<a href="../com-funciona/#'+(p.tipus==='PL'?'proposicio':'pnl')+'">Què significa aquest tipus d’iniciativa?</a></details>'+
    '<div class="card-foot">Expedient <b>'+safe(p.id)+'</b><a href="'+safe(p.url)+'" target="_blank" rel="noopener noreferrer">Fitxa oficial del Congrés ↗</a>'+
    (source!==p.url?'<a href="'+safe(source)+'" target="_blank" rel="noopener noreferrer">Document o resolució oficial ↗</a>':'')+'</div></article>';
  }
