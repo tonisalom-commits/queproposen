@@ -71,7 +71,15 @@
     "etiquetesAmbientals": [
       "Mobilitat i emissions",
       "Clima i emissions"
-    ]
+    ],
+    "revisio": {
+      "data": "2026-11-19",
+      "nivell": "resultat",
+      "fonts": [
+        "https://www.congreso.es/es/iniciativas-organo?_iniciativas_codOrg=315&_iniciativas_codigoOrgano=315&_iniciativas_legislatura=XV&p_p_cacheability=cacheLevelPage&p_p_id=iniciativas&p_p_lifecycle=2&p_p_mode=view&p_p_resource_id=filtrarListado&p_p_state=normal"
+      ],
+      "nota": "La fitxa i la llista oficial de la Comissió Mixta ODS acrediten que Vox proposà revocar les zones de baixes emissions i que la iniciativa fou rebutjada."
+    }
   },
   {
     "id": "162/000580",
@@ -581,7 +589,15 @@
     "etiquetesAmbientals": [
       "Biodiversitat i espais naturals",
       "Litoral i medi marí"
-    ]
+    ],
+    "revisio": {
+      "data": "2026-11-19",
+      "nivell": "contingut",
+      "fonts": [
+        "https://www.congreso.es/es/busqueda-de-publicaciones?_publicaciones_id_texto=%28BOCG-15-D-317.CODI.%29&_publicaciones_legislatura=XV&_publicaciones_mode=mostrarTextoIntegro&p_p_id=publicaciones&p_p_lifecycle=0&p_p_mode=view&p_p_state=normal"
+      ],
+      "nota": "El BOCG D-317 acredita autoria del PSOE i l'objecte: protegir l'àrea de cria de catxalots al nord de Menorca. Resultat de tramitació no contrastat."
+    }
   },
   {
     "id": "161/003420",
@@ -623,7 +639,15 @@
     "etiquetesAmbientals": [
       "Clima i emissions",
       "Energia i transició"
-    ]
+    ],
+    "revisio": {
+      "data": "2026-11-19",
+      "nivell": "tramitacio",
+      "fonts": [
+        "https://www.congreso.es/es/busqueda-de-publicaciones?_publicaciones_id_texto=%28BOCG-15-B-193-4.CODI.%29&_publicaciones_legislatura=XV&_publicaciones_mode=mostrarTextoIntegro&p_p_id=publicaciones&p_p_lifecycle=0&p_p_mode=view&p_p_state=normal"
+      ],
+      "nota": "La proposició de llei de modificació del règim de comerç d'emissions fou presa en consideració. La documentació inicial inclou una signatura de Sumar que després fou retirada; no atribuïm un estat final no contrastat."
+    }
   },
   {
     "id": "161/000070",
@@ -646,7 +670,15 @@
     "etiquetesAmbientals": [
       "Mobilitat i emissions",
       "Clima i emissions"
-    ]
+    ],
+    "revisio": {
+      "data": "2026-11-19",
+      "nivell": "resultat",
+      "fonts": [
+        "https://www.congreso.es/ca/busqueda-de-publicaciones?_publicaciones_id_texto=%28BOCG-15-D-100.CODI.%29&_publicaciones_legislatura=XV&_publicaciones_mode=mostrarTextoIntegro&p_p_id=publicaciones&p_p_lifecycle=0&p_p_mode=view&p_p_state=normal"
+      ],
+      "nota": "La Comissió de Transició Ecològica aprovà amb modificacions la PNL de Sumar sobre vols curts el 21 de febrer de 2024. El text original no és idèntic a l'aprovat."
+    }
   },
   {
     "id": "162/000273",
@@ -710,7 +742,15 @@
     "etiquetesAmbientals": [
       "Energia i transició",
       "Clima i emissions"
-    ]
+    ],
+    "revisio": {
+      "data": "2026-11-19",
+      "nivell": "resultat",
+      "fonts": [
+        "https://www.congreso.es/es/busqueda-de-iniciativas?_iniciativas_id=162%2F000348&_iniciativas_legislatura=XV&_iniciativas_mode=mostrarDetalle&p_p_id=iniciativas&p_p_lifecycle=0&p_p_mode=view&p_p_state=normal"
+      ],
+      "nota": "El registre oficial identifica el PP i la PNL sobre transició energètica; el Ple la rebutjà. No s'han revisat totes les esmenes ni els vots individuals."
+    }
   },
   {
     "id": "162/000432",
@@ -725,14 +765,22 @@
     "fontEspecifica": "https://www.congreso.es/es/busqueda-de-iniciativas?_iniciativas_id=162%2F000432&_iniciativas_legislatura=XV&_iniciativas_mode=mostrarDetalle&p_p_id=iniciativas&p_p_lifecycle=0&p_p_mode=view&p_p_state=normal",
     "tipus": "PNL",
     "ambit": "Ple",
-    "estat": "Resultat no incorporat",
+    "estat": "Rebutjada",
     "lectura": "La proposta permet identificar una petició política formal, però cal llegir els punts dispositius abans d'interpretar-ne l'abast.",
     "qualitat": "Autoria i objecte comprovats a la font oficial; lectura del text complet pendent o parcial.",
     "url": "https://www.congreso.es/es/busqueda-de-iniciativas?_iniciativas_id=162%2F000432&_iniciativas_legislatura=XV&_iniciativas_mode=mostrarDetalle&p_p_id=iniciativas&p_p_lifecycle=0&p_p_mode=view&p_p_state=normal",
     "etiquetesAmbientals": [
       "Mobilitat i emissions",
       "Clima i emissions"
-    ]
+    ],
+    "revisio": {
+      "data": "2026-11-19",
+      "nivell": "resultat",
+      "fonts": [
+        "https://www.congreso.es/es/busqueda-de-iniciativas?_iniciativas_id=162%2F000432&_iniciativas_legislatura=XV&_iniciativas_mode=mostrarDetalle&p_p_id=iniciativas&p_p_lifecycle=0&p_p_mode=view&p_p_state=normal"
+      ],
+      "nota": "La PNL de Sumar pretenia un impost sobre les emissions de jets privats i iots de luxe. El Congrés la rebutjà el 14 de maig de 2025."
+    }
   },
   {
     "id": "162/000807",
@@ -776,7 +824,15 @@
     "url": "https://www.congreso.es/es/busqueda-de-iniciativas?_iniciativas_id=162%2F000801&_iniciativas_legislatura=XV&_iniciativas_mode=mostrarDetalle&p_p_id=iniciativas&p_p_lifecycle=0&p_p_mode=view&p_p_state=normal",
     "etiquetesAmbientals": [
       "Boscos i incendis"
-    ]
+    ],
+    "revisio": {
+      "data": "2026-11-19",
+      "nivell": "autoria",
+      "fonts": [
+        "https://www.congreso.es/es/proposiciones-no-de-ley?_iniciativas_id=162%2F000801&_iniciativas_legislatura=XV&_iniciativas_mode=mostrarDetalle&p_p_id=iniciativas&p_p_lifecycle=0&p_p_mode=view&p_p_state=normal"
+      ],
+      "nota": "El Congrés confirma el títol sobre prevenció d'incendis forestals i l'autoria de Vox; dispositiu i resultat no revisats."
+    }
   },
   {
     "id": "161/003639",
@@ -905,7 +961,15 @@
     "ambit": "Ple",
     "qualitat": "Objecte i autoria documentats en un Butlletí Oficial del Congrés; desglossament del text dispositiu pendent.",
     "lectura": "El registre confirma la proposta presentada; el seu abast precís exigeix revisar el text i les esmenes.",
-    "url": "https://www.congreso.es/es/busqueda-de-iniciativas?_iniciativas_id=162%2F000335&_iniciativas_legislatura=XV&_iniciativas_mode=mostrarDetalle&p_p_id=iniciativas&p_p_lifecycle=0&p_p_mode=view&p_p_state=normal"
+    "url": "https://www.congreso.es/es/busqueda-de-iniciativas?_iniciativas_id=162%2F000335&_iniciativas_legislatura=XV&_iniciativas_mode=mostrarDetalle&p_p_id=iniciativas&p_p_lifecycle=0&p_p_mode=view&p_p_state=normal",
+    "revisio": {
+      "data": "2026-11-19",
+      "nivell": "resultat",
+      "fonts": [
+        "https://www.congreso.es/es/busqueda-de-publicaciones?_publicaciones_id_texto=BOCG-15-D-236.CODI.&_publicaciones_legislatura=XV&_publicaciones_mode=mostrarTextoIntegro&p_p_id=publicaciones&p_p_lifecycle=0&p_p_mode=view&p_p_state=normal"
+      ],
+      "nota": "El BOCG D-236 documenta la retirada de la PNL de Junts sobre normativa del litoral."
+    }
   },
   {
     "id": "161/002045",
@@ -928,7 +992,15 @@
     "ambit": "Comissió",
     "qualitat": "Objecte i autoria documentats en un Butlletí Oficial del Congrés; desglossament del text dispositiu pendent.",
     "lectura": "El registre confirma la proposta presentada; el seu abast precís exigeix revisar el text i les esmenes.",
-    "url": "https://www.congreso.es/es/busqueda-de-iniciativas?_iniciativas_id=161%2F002045&_iniciativas_legislatura=XV&_iniciativas_mode=mostrarDetalle&p_p_id=iniciativas&p_p_lifecycle=0&p_p_mode=view&p_p_state=normal"
+    "url": "https://www.congreso.es/es/busqueda-de-iniciativas?_iniciativas_id=161%2F002045&_iniciativas_legislatura=XV&_iniciativas_mode=mostrarDetalle&p_p_id=iniciativas&p_p_lifecycle=0&p_p_mode=view&p_p_state=normal",
+    "revisio": {
+      "data": "2026-11-19",
+      "nivell": "resultat",
+      "fonts": [
+        "https://www.congreso.es/gl/busqueda-de-publicaciones?_publicaciones_id_texto=%28BOCG-15-D-434.CODI.%29&_publicaciones_legislatura=XV&_publicaciones_mode=mostrarTextoIntegro&p_p_id=publicaciones&p_p_lifecycle=0&p_p_mode=view&p_p_state=normal"
+      ],
+      "nota": "El BOCG D-434 documenta la retirada de la PNL del Grup Basc sobre el sistema de retorn d'envasos. Retirada no equival a rebutjada."
+    }
   },
   {
     "id": "162/000360",
@@ -950,7 +1022,15 @@
     "ambit": "Ple",
     "qualitat": "Objecte i autoria documentats en un Butlletí Oficial del Congrés; desglossament del text dispositiu pendent.",
     "lectura": "El registre confirma la proposta presentada; el seu abast precís exigeix revisar el text i les esmenes.",
-    "url": "https://www.congreso.es/es/busqueda-de-iniciativas?_iniciativas_id=162%2F000360&_iniciativas_legislatura=XV&_iniciativas_mode=mostrarDetalle&p_p_id=iniciativas&p_p_lifecycle=0&p_p_mode=view&p_p_state=normal"
+    "url": "https://www.congreso.es/es/busqueda-de-iniciativas?_iniciativas_id=162%2F000360&_iniciativas_legislatura=XV&_iniciativas_mode=mostrarDetalle&p_p_id=iniciativas&p_p_lifecycle=0&p_p_mode=view&p_p_state=normal",
+    "revisio": {
+      "data": "2026-11-19",
+      "nivell": "autoria",
+      "fonts": [
+        "https://www.congreso.es/es/busqueda-de-iniciativas?_iniciativas_id=162%2F000360&_iniciativas_legislatura=XV&_iniciativas_mode=mostrarDetalle&p_p_id=iniciativas&p_p_lifecycle=0&p_p_mode=view&p_p_state=normal"
+      ],
+      "nota": "La fitxa del Congrés i el BOCG acrediten una PNL de Sumar per introduir l'ecocidi com a delicte al Codi penal; resultat no revisat."
+    }
   },
   {
     "id": "161/003686",
@@ -974,7 +1054,15 @@
     "ambit": "Comissió",
     "qualitat": "Objecte i autoria documentats en un Butlletí Oficial del Congrés; desglossament del text dispositiu pendent.",
     "lectura": "El registre confirma la proposta presentada; el seu abast precís exigeix revisar el text i les esmenes.",
-    "url": "https://www.congreso.es/es/busqueda-de-iniciativas?_iniciativas_id=161%2F003686&_iniciativas_legislatura=XV&_iniciativas_mode=mostrarDetalle&p_p_id=iniciativas&p_p_lifecycle=0&p_p_mode=view&p_p_state=normal"
+    "url": "https://www.congreso.es/es/busqueda-de-iniciativas?_iniciativas_id=161%2F003686&_iniciativas_legislatura=XV&_iniciativas_mode=mostrarDetalle&p_p_id=iniciativas&p_p_lifecycle=0&p_p_mode=view&p_p_state=normal",
+    "revisio": {
+      "data": "2026-11-19",
+      "nivell": "autoria",
+      "fonts": [
+        "https://app.congreso.es/portales-api-margo/p1/acta-mesa?fecha=08%2F09%2F2026&sesion=1&tipoDocumento=2"
+      ],
+      "nota": "L'acta de la Mesa del 8 de setembre de 2026 registra la PNL de Sumar sobre ramaderia caprina extensiva, biodiversitat, incendis i adaptació. El resultat no és revisat."
+    }
   },
   {
     "id": "162/000366",
