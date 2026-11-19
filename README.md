@@ -29,7 +29,7 @@ Quan la sol·licitud de fusió s'hagi aprovat: **Settings → Pages → Deploy f
 
 ## Limitacions imprescindibles
 
-- Les 52 fitxes parlamentàries (42 PNL i 10 PL) són **exemples seleccionats, no mostra representativa** ni inventari exhaustiu. No permeten estimar prioritats temàtiques globals.
+- Les 52 fitxes parlamentàries (41 PNL i 11 proposicions de llei) són **exemples seleccionats, no mostra representativa** ni inventari exhaustiu. No permeten estimar prioritats temàtiques globals.
 - Els totals i el gràfic general corresponen només a les PNL i es basen en Àgora: https://agora.vedratic.com/es/learn/pnl/ .
 - La classificació té 20 àmbits accessibles en un selector, sense una capçalera d'etiquetes. Un filtre sense resultats només indica que encara no hi ha fitxes dins aquesta mostra, no que el grup no hagi presentat propostes.
 - Les barres per grup només compten iniciatives d'autoria exclusiva: exclouen les de coautoria i les procedents del Senat.
