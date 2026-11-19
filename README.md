@@ -15,8 +15,9 @@ Quan la sol·licitud de fusió s'hagi aprovat: **Settings → Pages → Deploy f
 
 ## Limitacions imprescindibles
 
-- Les 11 fitxes són **exemples seleccionats, no mostra representativa** ni inventari exhaustiu. No permeten estimar prioritats temàtiques globals.
+- Les 20 fitxes són **exemples seleccionats, no mostra representativa** ni inventari exhaustiu. No permeten estimar prioritats temàtiques globals.
 - Els totals es basen en Àgora: https://agora.vedratic.com/es/learn/pnl/ .
+- La classificació té 20 àmbits visibles amb independència del nombre de fitxes analitzades. Un àmbit amb 0 fitxes no significa que els grups no hagin presentat propostes sobre aquell assumpte.
 - Les barres per grup només compten iniciatives d'autoria exclusiva: exclouen les de coautoria i les procedents del Senat.
 - Els resums i interpretacions són editorials, no cites literals. Verificació de fitxes desigual i identificada expressament.
 - Les formacions del Grup Mixt no es poden equiparar al grup en conjunt.
