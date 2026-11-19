@@ -6,7 +6,7 @@ Web temàtica i divulgativa per conèixer què han proposat els grups al Congré
 
 ## Auditoria dels indexs oficials (19/11/2026)
 
-Recuperats i contrastats 5.094 expedients de les series 161, 162, 120, 122, 123, 124 i 125: 206 pagines, totals coincidents amb el Congres i cap duplicat. El primer cribratge per títol ha identificat 410 candidats ambientals, **no verificats en contingut**. Les 25 fitxes ambientals inicials tenen metadades compatibles amb els indexs; no s'ha completat la lectura de les mesures, esmenes ni votacions. Consulteu `docs/inventari-ambient-xv-estat-2026-11-19.md` i `data/cobertura-ambiental.json`.
+Recuperats i contrastats 5.094 expedients de les series 161, 162, 120, 122, 123, 124 i 125: 206 pagines, totals coincidents amb el Congres i cap duplicat. El primer cribratge per títol ha identificat 410 candidats; dos cribratges addicionals i una mostra d’exclusions han ampliat la **cua documental a 826 expedients**, dels quals **795 tenen un fragment BOCG localitzat**. Hi ha **34 decisions temàtiques inicials justificades**. Cap d’aquests totals equival al nombre final d’iniciatives ambientals. Les 25 fitxes ambientals inicials tenen metadades compatibles amb els indexs; no s'ha completat la lectura de les mesures, esmenes ni votacions. Consulteu `docs/inventari-ambient-xv-estat-2026-11-19.md` i `data/cobertura-ambiental.json`.
 
 ## Tecnologia
 
