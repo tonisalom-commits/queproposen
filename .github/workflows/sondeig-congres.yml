@@ -1,0 +1,24 @@
+name: Sondeig d'inventari del Congrés
+on:
+  workflow_dispatch:
+  push:
+    branches: [feat/prototip-atles-pnl]
+    paths:
+      - 'scripts/sondeja_congres.py'
+      - '.github/workflows/sondeig-congres.yml'
+permissions:
+  contents: read
+jobs:
+  sondeig:
+    runs-on: ubuntu-latest
+    timeout-minutes: 12
+    steps:
+      - uses: actions/checkout@v4
+      - name: Prova la paginació de les sèries oficials
+        run: python3 scripts/sondeja_congres.py
+      - name: Desa el diagnòstic
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: sondeig-congres
+          path: sondeig_congres.json
