@@ -45,7 +45,7 @@ def main() -> None:
     base=official_url("161")
     original,typ=fetch(base)
     variants=[
-        ("_iniciativas_docs_ini","26"),("_iniciativas_docs_fin","50"),
+        ("_iniciativas_paginaActual","2"),("_iniciativas_docs_ini","26"),("_iniciativas_docs_fin","50"),
         ("_iniciativas_doc_ini","26"),("_iniciativas_start","26"),
         ("_iniciativas_pagina","2"),("_iniciativas_page","2"),
         ("_iniciativas_doc","26-50"),("_iniciativas_paginacion","26-50"),
