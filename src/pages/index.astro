@@ -1,0 +1,107 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import IniciativaCard from '../components/IniciativaCard.astro';
+import records from '../../data/iniciatives.json';
+import catalog from '../../data/catalog.json';
+const base = import.meta.env.BASE_URL.endsWith('/')
+  ? import.meta.env.BASE_URL : import.meta.env.BASE_URL + '/';
+const environment = records.filter((r) => Array.isArray(r.etiquetesAmbientals) && r.etiquetesAmbientals.length > 0);
+const groups = catalog.grups;
+---
+<BaseLayout
+  title="Inici"
+  description="Iniciatives parlamentàries i guies pedagògiques per saber què proposen els grups al Congrés"
+  active="inici"
+>
+  <section class="hero">
+    <div class="container hero-grid">
+      <div>
+        <div class="hero-kicker">ATLES PARLAMENTARI · XV LEGISLATURA</div>
+        <h1>Del discurs<br />al <em>document.</em></h1>
+        <p class="hero-lead">
+          Una manera de comparar propostes polítiques a partir dels expedients originals.
+          Diferenciam els posicionaments parlamentaris dels canvis legislatius i dels actes del Govern.
+        </p>
+        <p class="hero-meta">Congrés dels Diputats · 2023–2026 · Inventari documental en construcció</p>
+      </div>
+      <aside class="hero-side" aria-label="Què hi trobaràs">
+        <div class="hero-side-item">
+          <b>01</b>
+          <div><strong>Seccions temàtiques</strong><p>Un espai propi per a cada qüestió política.</p></div>
+        </div>
+        <div class="hero-side-item">
+          <b>02</b>
+          <div><strong>Guia parlamentària</strong><p>Entén què és una PNL, una llei o un decret.</p></div>
+        </div>
+      </aside>
+    </div>
+  </section>
+
+  <section class="section" aria-labelledby="seccions">
+    <div class="container">
+      <p class="section-kicker">Dues portes d'entrada</p>
+      <h2 id="seccions">Explora i comprèn.</h2>
+      <p class="section-copy">Començam amb Medi ambient i una guia dels procediments. Les dues parts comparteixen criteris, però no confonen una proposta dels grups amb una decisió del Govern.</p>
+      <div class="feature-grid">
+        <a class="feature-card primary" href={base + 'medi-ambient/'}>
+          <span class="section-kicker">01 / PRIMERA SECCIÓ</span>
+          <strong>Medi ambient</strong>
+          <p>Clima, aigua, biodiversitat, energia, mobilitat i incendis. Filtra els expedients i confronta les propostes de dos grups.</p>
+          <span class="feature-link">Explora la selecció ambiental ({environment.length} expedients) ↗</span>
+        </a>
+        <a class="feature-card" href={base + 'com-funciona/'}>
+          <span class="section-kicker">GUIA PEDAGÒGICA</span>
+          <strong>Com funciona?</strong>
+          <p>Quina diferència hi ha entre una PNL i una proposició de llei? Quan un decret té rang de llei? Què passa després d'una votació?</p>
+          <span class="feature-link">Entén els instruments parlamentaris ↗</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section soft" id="expedients">
+    <div class="container">
+      <p class="section-kicker">Catàleg provisional de la legislatura</p>
+      <h2>Consulta els expedients.</h2>
+      <p class="section-copy">Aquí hi ha només {records.length} fitxes seleccionades per desenvolupar el portal. <strong>No són totes les iniciatives i no constitueixen una mostra representativa.</strong> Els recomptes d'aquestes fitxes no permeten comparar les prioritats dels grups.</p>
+      <div data-catalog>
+        <div class="catalog-tools">
+          <div class="filters">
+            <label>Cerca un assumpte o una mesura
+              <input data-filter-search type="search" autocomplete="off" placeholder="Ex.: habitatge, sanitat, drets…" />
+            </label>
+            <label>Tema
+              <select data-filter-theme>
+                <option value="">Tots els temes</option>
+                {catalog.temes.map((tema) => <option value={tema}>{tema}</option>)}
+              </select>
+            </label>
+            <label>Grup parlamentari
+              <select data-filter-group>
+                <option value="">Tots els grups</option>
+                {groups.map((g) => <option value={g.id}>{g.id} · {g.nom}</option>)}
+              </select>
+            </label>
+          </div>
+          <div class="type-tabs" role="group" aria-label="Filtra per tipus d'iniciativa">
+            <button data-kind="" aria-pressed="true" type="button">Totes</button>
+            <button data-kind="PL" aria-pressed="false" type="button">Proposicions de llei</button>
+            <button data-kind="PNL" aria-pressed="false" type="button">PNL</button>
+          </div>
+        </div>
+        <div class="result-summary">
+          <strong data-result-count aria-live="polite">{records.length} de {records.length} fitxes</strong>
+          <button data-filter-reset type="button">Neteja els filtres</button>
+        </div>
+        <div class="cards-grid">
+          {records.map((item) => <IniciativaCard item={item} />)}
+        </div>
+        <p class="empty-results" data-empty hidden>No hem incorporat cap fitxa amb aquests criteris. Això no significa que el grup no hagi presentat propostes sobre el tema.</p>
+      </div>
+      <p class="coverage-note">Font de referència: expedients del Congrés. Els títols, resums i etiquetes són editorials. Cada fitxa indica els límits de verificació disponibles.</p>
+    </div>
+  </section>
+</BaseLayout>
+<script>
+  import '../scripts/filtres.js';
+</script>
