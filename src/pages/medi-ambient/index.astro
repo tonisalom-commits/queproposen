@@ -1,0 +1,152 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import IniciativaCard from '../../components/IniciativaCard.astro';
+import records from '../../../data/iniciatives.json';
+import catalog from '../../../data/catalog.json';
+import government from '../../../data/govern-ambient.json';
+const base = import.meta.env.BASE_URL.endsWith('/')
+  ? import.meta.env.BASE_URL : import.meta.env.BASE_URL + '/';
+const ambient = records.filter((r) => Array.isArray(r.etiquetesAmbientals) && r.etiquetesAmbientals.length);
+const subtemes = catalog.subtemesAmbientals;
+const grups = catalog.grups;
+const pnls = ambient.filter((r) => r.tipus === 'PNL').length;
+const pls = ambient.filter((r) => r.tipus === 'PL').length;
+---
+<BaseLayout title="Medi ambient" description="Propostes parlamentàries ambientals de la XV legislatura, amb expedients i guia pedagògica" active="medi">
+  <section class="hero">
+    <div class="container">
+      <p class="hero-kicker">XV LEGISLATURA · PRIMERA SECCIÓ TEMÀTICA</p>
+      <h1>Medi ambient<span style="color:var(--sand)">.</span><br />Què proposen?</h1>
+      <p class="hero-lead">Clima, biodiversitat, aigua, incendis, energia i transport. Consulta les iniciatives registrades al Congrés i les seves fonts originals.</p>
+      <p class="hero-meta">PNL i proposicions de llei · Inventari encara incomplet · Sense rànquings de partits</p>
+    </div>
+  </section>
+
+  <div class="learning-tip">
+    <div class="container">
+      <p><strong>Abans de comparar:</strong> una PNL aprovada no es converteix en llei. Una proposició de llei només esdevé llei si culmina la tramitació parlamentària.</p>
+      <a href={base + 'com-funciona/'}>Descobreix la diferència ↗</a>
+    </div>
+  </div>
+  <div class="container">
+    <nav class="topic-nav" aria-label="Navegació dins la secció ambiental">
+      <a href="#iniciatives">Iniciatives</a>
+      <a href="#comparador">Compara grups</a>
+      <a href="#govern">Acció del Govern</a>
+      <a href="#criteris">Mètode</a>
+    </nav>
+  </div>
+
+  <section class="section" id="iniciatives">
+    <div class="container">
+      <p class="section-kicker">01 / DOCUMENTS PARLAMENTARIS</p>
+      <h2>Què han presentat els grups?</h2>
+      <p class="section-copy">Les propostes ambientals poden aparèixer en expedients de transport, agricultura, indústria o sanitat. Les classificam per contingut, amb <strong>diverses etiquetes per iniciativa</strong> quan és necessari.</p>
+      <p class="coverage-note"><strong>{ambient.length} expedients de mostra:</strong> {pnls} PNL i {pls} proposició de llei. <strong>No és el nombre total real d'iniciatives ambientals de la XV legislatura.</strong></p>
+      <div data-catalog>
+        <div class="catalog-tools">
+          <div class="filters">
+            <label>Cerca paraules o mesures
+              <input data-filter-search type="search" autocomplete="off" placeholder="Ex.: glifosat, aigua, Menorca…" />
+            </label>
+            <label>Subtema
+              <select data-filter-tag>
+                <option value="">Tots els subtemes</option>
+                {subtemes.map((tema) => <option value={tema}>{tema}</option>)}
+              </select>
+            </label>
+            <label>Grup parlamentari
+              <select data-filter-group>
+                <option value="">Tots els grups</option>
+                {grups.map((g) => <option value={g.id}>{g.id} · {g.nom}</option>)}
+              </select>
+            </label>
+          </div>
+          <div class="type-tabs" role="group" aria-label="Filtra les iniciatives">
+            <button type="button" data-kind="" aria-pressed="true">Totes</button>
+            <button type="button" data-kind="PNL" aria-pressed="false">PNL</button>
+            <button type="button" data-kind="PL" aria-pressed="false">Proposicions de llei</button>
+          </div>
+        </div>
+        <div class="result-summary">
+          <strong data-result-count aria-live="polite">{ambient.length} de {ambient.length} fitxes</strong>
+          <button data-filter-reset type="button">Neteja els filtres</button>
+        </div>
+        <div class="cards-grid">
+          {ambient.map((item) => <IniciativaCard item={item} />)}
+        </div>
+        <p class="empty-results" data-empty hidden>No hem incorporat cap fitxa amb aquests criteris. Això no demostra absència d'iniciatives al Congrés.</p>
+      </div>
+      <p class="coverage-note">Els textos originals, les esmenes i les votacions encara no s'han revisat exhaustivament. No confonguis «resultat no incorporat» amb «rebutjada».</p>
+    </div>
+  </section>
+
+  <section class="section soft" id="comparador" data-comparador>
+    <div class="container">
+      <p class="section-kicker">02 / COMPARACIÓ DOCUMENTAL</p>
+      <h2>Dos grups, una mateixa qüestió.</h2>
+      <p class="section-copy">Compara el contingut de les fitxes que hem incorporat. <strong>Els nombres no mesuren encara les prioritats polítiques reals:</strong> el nostre inventari no és complet.</p>
+      <div class="compare-controls">
+        <label>Primer grup
+          <select data-compare-a>
+            {grups.map((g) => <option value={g.id} selected={g.id === 'PP'}>{g.id} · {g.nom}</option>)}
+          </select>
+        </label>
+        <label>Segon grup
+          <select data-compare-b>
+            {grups.map((g) => <option value={g.id} selected={g.id === 'PSOE'}>{g.id} · {g.nom}</option>)}
+          </select>
+        </label>
+        <label>Subtema
+          <select data-compare-tag>
+            <option value="">Tots els subtemes</option>
+            {subtemes.map((tema) => <option value={tema}>{tema}</option>)}
+          </select>
+        </label>
+      </div>
+      <div class="comparison-grid">
+        <section class="comparison-panel" data-compare-output="a" aria-label="Fitxes del primer grup"><p class="comparison-empty">Carregant la comparació…</p></section>
+        <section class="comparison-panel" data-compare-output="b" aria-label="Fitxes del segon grup"><p class="comparison-empty">Carregant la comparació…</p></section>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="govern">
+    <div class="container">
+      <p class="section-kicker">03 / ACCIÓ GOVERNAMENTAL · CAPA SEPARADA</p>
+      <h2>Què ha impulsat el Govern?</h2>
+      <p class="section-copy">Els projectes de llei i els decrets del Govern no són PNL dels grups. Aquesta primera selecció de quatre documents il·lustra processos diferents: lleis aprovades, un projecte retirat i un decret llei convalidat.</p>
+      <div class="gov-grid">
+        {government.map((g) => (
+          <article class="gov-card">
+            <span class="gov-type">{g.tipus} · {g.id}</span>
+            <h3>{g.titol}</h3>
+            <p>{g.resum}</p>
+            <p class="gov-state">{g.estat}</p>
+            <a href={g.expedient} target="_blank" rel="noopener noreferrer">Expedient al Congrés ↗</a>
+            {g.norma && <a href={g.norma} target="_blank" rel="noopener noreferrer">Text al BOE ↗</a>}
+            {g.resultat && <a href={g.resultat} target="_blank" rel="noopener noreferrer">Acord de convalidació ↗</a>}
+          </article>
+        ))}
+      </div>
+      <p class="coverage-note">Aquests quatre documents són exemples, no una estadística sobre l'acció ambiental completa del Govern.</p>
+    </div>
+  </section>
+
+  <section class="section soft" id="criteris">
+    <div class="container">
+      <p class="section-kicker">04 / TRANSPARÈNCIA</p>
+      <h2>Com evitarem comparacions esbiaixades?</h2>
+      <div class="method-grid">
+        <article><b>Univers complet</b><p>Cal recuperar les iniciatives de totes les comissions i del Ple, no només les que inclouen «medi ambient» al títol.</p></article>
+        <article><b>Estat i autoria</b><p>Una retirada no és un rebuig. Identificarem les formacions del Grup Mixt, les coautories i les esmenes.</p></article>
+        <article><b>Fets i interpretació</b><p>Els expedients i les votacions són les proves. Els nostres resums seran distingibles dels textos i les dades oficials.</p></article>
+      </div>
+      <p class="coverage-note">Consulta el <a href="https://github.com/tonisalom-commits/queproposen/blob/feat/prototip-atles-pnl/docs/metodologia-medi-ambient.md" target="_blank" rel="noopener noreferrer">protocol de recopilació i auditoria de Medi ambient ↗</a>.</p>
+    </div>
+  </section>
+</BaseLayout>
+<script>
+  import '../../scripts/filtres.js';
+  import '../../scripts/comparador.js';
+</script>
