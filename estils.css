@@ -71,3 +71,15 @@ body>footer{background:var(--navy);color:#f7f9f7;padding:30px 0}.foot{display:fl
  .stats-inside{grid-template-columns:repeat(2,1fr)}
  #explora{padding-top:54px}
 }
+
+
+/* Secció temàtica destacada, sense etiquetes disperses */
+.topic-spotlight{margin-top:34px;margin-bottom:0;background:#f0f3f2;border:1px solid #d9e3e1;border-radius:12px;padding:24px 28px}
+.spotlight-header{display:flex;justify-content:space-between;gap:15px;font-size:10px;font-weight:850;letter-spacing:.1em}
+.spotlight-kicker{color:#925b36}.spotlight-number{color:#71848a}
+.spotlight-body{display:flex;align-items:end;justify-content:space-between;gap:28px;margin-top:13px}
+.spotlight-body h2{font-size:clamp(24px,3vw,36px);line-height:1.15;letter-spacing:-.05em;margin:0 0 9px}
+.spotlight-body p{font-size:13px;line-height:1.6;color:#60757c;max-width:640px;margin:0}
+.spotlight-link{display:inline-flex;gap:13px;white-space:nowrap;text-decoration:none;border:1px solid #395967;background:#1e3947;color:white;border-radius:5px;padding:12px 17px;font-size:12px;font-weight:800}
+.spotlight-link:hover{color:#f7d6b3;background:#172d3a}
+@media(max-width:700px){.topic-spotlight{padding:18px}.spotlight-body{display:block}.spotlight-link{margin-top:20px}.spotlight-number{display:none}}
