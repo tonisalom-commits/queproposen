@@ -19,8 +19,8 @@ from urllib.parse import urlencode
 from urllib.request import Request, urlopen
 
 SOURCE = "https://www.congreso.es/es/busqueda-de-iniciativas"
-SERIES = ("161", "162", "122", "120")
-ID = re.compile(r"(?<!\d)((?:161|162|122|120)/\d{6})(?:/\d{4})?(?!\d)")
+SERIES = ("161", "162", "122", "120", "123", "124", "125")
+ID = re.compile(r"(?<!\d)((?:161|162|122|120|123|124|125)/\d{6})(?:/\d{4})?(?!\d)")
 WORDS = (
     "clim", "emision", "emiss", "carbon", "descarbon", "ambient",
     "ecolog", "transicion energet", "energias renovables", "renovables",
@@ -184,7 +184,7 @@ def prepare(source_files: list[tuple[str, Path]], out: Path) -> dict:
             "El filtre de títols pot donar falsos positius i falsos negatius.",
             "Per a qualsevol candidat cal llegir el text dispositiu o articulat.",
             "No es publiquen fitxes automàticament a la web.",
-            "Les PNL 161 i 162 i les proposicions de llei 120 i 122 són universos diferents.",
+            "Les PNL 161/162, les PL de grups 122, les de diputats 123, les del Senat 124, les de comunitats autònomes 125 i les ILP 120 són orígens diferents.",
         ],
     }
     (out / "informe_cobertura.json").write_text(
