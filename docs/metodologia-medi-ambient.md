@@ -5,7 +5,7 @@
 ## Abast
 Incloure totes les iniciatives ambientals de l'origen parlamentari del Congrés:
 - Proposicions no de llei: **161** (comissió) i **162** (Ple).
-- Proposicions de llei: **122** (grups parlamentaris) i revisar les **120** (signades per diputats) per no ometre iniciatives imputables als diputats de grups.
+- Proposicions de llei: **122** (grups parlamentaris), **123** (diputats), **124** (Senat), **125** (parlaments autonòmics); les **120** són iniciatives legislatives populars (ILP) i tenen una procedència diferent.
 - Distingir les iniciatives traslladades del Senat i les d'altres orígens. No barrejar **121**, projectes de llei d'origen governamental, amb propostes registrades pels grups. Es poden mostrar com a context diferenciat.
 - Incloure els expedients acabats per aprovació, rebuig, retirada, inadmissió, caducitat o pendents en el moment del tancament.
 
@@ -68,3 +68,7 @@ Actualment, les fitxes de mostra tenen graus desiguals i moltes continuen al niv
 Un registre ha de sortir d'un **univers recuperat per tipus d'expedient i legislatura**, no de cerques temàtiques parcials. El catàleg s'auditarà també contra expedients d'agricultura, indústria, transport, sanitat i altres comissions, i contra una mostra d'iniciatives descartades. Publicarem `total recuperat / total revisat / total inclòs` amb els criteris de les exclusions i la data de tall. **El portal no pot afirmar que Medi ambient és complet abans d'acabar aquests passos.**
 
 Font de dades obertes per a proposicions de llei: https://www.congreso.es/es/opendata/iniciativas . Per a les PNL, el cercador oficial i les publicacions parlamentàries són la font principal: https://www.congreso.es/es/busqueda-de-iniciativas .
+
+## Cobertura real de l'auditoria (19/11/2026)
+
+S'han recuperat 5.094 registres de set sèries oficials, 826 fitxes d'expedient i 795 passatges dels seus textos originals. Només 34 expedients tenen una primera decisió temàtica documentada. L'inventari de Medi ambient **no és encara exhaustiu ni auditat integralment**. Per a la situació actual vegeu `docs/inventari-ambient-xv-estat-2026-11-19.md`.
