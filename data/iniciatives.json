@@ -545,7 +545,15 @@
     "url": "https://www.congreso.es/es/busqueda-de-iniciativas?_iniciativas_id=162%2F000299&_iniciativas_legislatura=XV&_iniciativas_mode=mostrarDetalle&p_p_id=iniciativas&p_p_lifecycle=0&p_p_mode=view&p_p_state=normal",
     "etiquetesAmbientals": [
       "Contaminació i residus"
-    ]
+    ],
+    "revisio": {
+      "data": "2026-11-19",
+      "nivell": "contingut",
+      "fonts": [
+        "https://www.congreso.es/es/busqueda-de-publicaciones?_publicaciones_id_texto=%28BOCG-15-D-194.CODI.%29&_publicaciones_legislatura=XV&_publicaciones_mode=mostrarTextoIntegro&p_p_id=publicaciones&p_p_lifecycle=0&p_p_mode=view&p_p_state=normal"
+      ],
+      "nota": "El BOCG D-194 confirma autoria del Grup Plurinacional Sumar i petició de prohibir l'ús del glifosat. No hem reconstruït la votació o esmenes."
+    }
   },
   {
     "id": "162/000287",
@@ -699,7 +707,16 @@
     "etiquetesAmbientals": [
       "Adaptació i riscos",
       "Clima i emissions"
-    ]
+    ],
+    "impulsor": "Podemos",
+    "revisio": {
+      "data": "2026-11-19",
+      "nivell": "contingut",
+      "fonts": [
+        "https://www.congreso.es/en/busqueda-de-publicaciones?_publicaciones_id_texto=%28BOCG-15-D-181.CODI.%29&_publicaciones_legislatura=XV&_publicaciones_mode=mostrarTextoIntegro&p_p_id=publicaciones&p_p_lifecycle=0&p_p_mode=view&p_p_state=normal"
+      ],
+      "nota": "El BOCG D-181 identifica Ione Belarra i Javier Sánchez Serna (Podemos, Grup Mixt) i la petició d'una llei d'adaptació i mitigació climàtica a les ciutats. Resultat no revisat."
+    }
   },
   {
     "id": "162/000001",
@@ -917,7 +934,15 @@
     "etiquetesAmbientals": [
       "Aigua i gestió hídrica",
       "Adaptació i riscos"
-    ]
+    ],
+    "revisio": {
+      "data": "2026-11-19",
+      "nivell": "resultat",
+      "fonts": [
+        "https://www.congreso.es/eu/publicaciones-organo?_publicaciones_id_texto=DSCD-15-CO-175.CODI.&_publicaciones_legislatura=XV&_publicaciones_mode=mostrarTextoIntegro&_publicaciones_texto=&p_p_id=publicaciones&p_p_lifecycle=0&p_p_mode=view&p_p_state=normal"
+      ],
+      "nota": "El Diari de Sessions de la comissió de 25/09/2024 recull el debat de la PNL del Grup Mixt contra la sequera (161/000296) i el rebuig expressament proclamat per la presidència."
+    }
   },
   {
     "id": "161/001819",
@@ -1084,7 +1109,16 @@
     "ambit": "Ple",
     "qualitat": "Objecte i autoria documentats en un Butlletí Oficial del Congrés; desglossament del text dispositiu pendent.",
     "lectura": "El registre confirma la proposta presentada; el seu abast precís exigeix revisar el text i les esmenes.",
-    "url": "https://www.congreso.es/es/busqueda-de-iniciativas?_iniciativas_id=162%2F000366&_iniciativas_legislatura=XV&_iniciativas_mode=mostrarDetalle&p_p_id=iniciativas&p_p_lifecycle=0&p_p_mode=view&p_p_state=normal"
+    "url": "https://www.congreso.es/es/busqueda-de-iniciativas?_iniciativas_id=162%2F000366&_iniciativas_legislatura=XV&_iniciativas_mode=mostrarDetalle&p_p_id=iniciativas&p_p_lifecycle=0&p_p_mode=view&p_p_state=normal",
+    "impulsor": "Podemos",
+    "revisio": {
+      "data": "2026-11-19",
+      "nivell": "contingut",
+      "fonts": [
+        "https://www.congreso.es/es/busqueda-de-publicaciones?_publicaciones_id_texto=BOCG-15-D-236.CODI.&_publicaciones_legislatura=XV&_publicaciones_mode=mostrarTextoIntegro&p_p_id=publicaciones&p_p_lifecycle=0&p_p_mode=view&p_p_state=normal"
+      ],
+      "nota": "El BOCG D-236 identifica Ione Belarra (Podemos) com a signant pel Grup Mixt i recull les peticions relatives a la COP29 de Bakú. Estat final no acreditat en aquesta revisió."
+    }
   },
   {
     "id": "162/000826",
