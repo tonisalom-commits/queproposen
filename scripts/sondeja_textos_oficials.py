@@ -24,3 +24,24 @@ for code in IDS:
  except Exception as e:d["error"]=repr(e)
  print(json.dumps(d,ensure_ascii=False),flush=True)
  time.sleep(1.0)
+
+# Comprovam si el text íntegre del BOCG conté els paràgrafs de la iniciativa.
+for code,publication in [
+ ("162/000470","BOCG-15-D-317.CODI."),
+ ("161/002045","BOCG-15-D-328.CODI."),
+ ("122/000170","BOCG-15-B-193-1.CODI.")]:
+ from urllib.parse import urlencode
+ url="https://www.congreso.es/busqueda-de-publicaciones?"+urlencode({
+  "p_p_id":"publicaciones","p_p_lifecycle":"0","p_p_state":"normal",
+  "p_p_mode":"view","_publicaciones_mode":"mostrarTextoIntegro",
+  "_publicaciones_legislatura":"XV","_publicaciones_id_texto":"("+publication+")"})
+ try:
+  req=Request(url,headers={"User-Agent":"Mozilla/5.0 (compatible; QueProposenEducation/1.0)"})
+  with urlopen(req,timeout=24) as response:
+   raw=response.read(2500000)
+  soup=BeautifulSoup(raw,"html.parser")
+  txt=soup.get_text(" ",strip=True)
+  positions=[m.start() for m in re.finditer(re.escape(code),txt)]
+  print(json.dumps({"doc":publication,"id":code,"bytes":len(raw),"textlength":len(txt),
+   "occurrences":len(positions),"near":[txt[max(0,p-180):p+2400] for p in positions[:3]]},ensure_ascii=False),flush=True)
+ except Exception as e:print(json.dumps({"doc":publication,"error":repr(e)}),flush=True)
