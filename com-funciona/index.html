@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="ca">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#142a31">
+<meta name="description" content="Guia clara i interactiva per entendre els projectes de llei, proposicions de llei, PNL, reials decrets, decrets llei i decrets legislatius.">
+<title>Com funciona? · Què proposen?</title>
+<style>
+:root{font-family:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;--ink:#233a44;--dark:#142a31;--muted:#657982;--border:#dae3e4;--paper:#fafbf9;--cream:#f4efe6;--teal:#285c62;--orange:#ad653e;color:var(--ink);background:var(--paper)}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;line-height:1.55}a{color:inherit}a:hover{color:#a45d38}button{font:inherit;cursor:pointer}.wrap{width:min(1080px,calc(100% - 36px));margin:auto}a:focus-visible,button:focus-visible,summary:focus-visible{outline:3px solid #cb8052;outline-offset:3px}
+.topbar{background:var(--dark);color:#f3f7f5}.topbar .wrap{min-height:66px;display:flex;justify-content:space-between;align-items:center;gap:18px}.brand{font-size:18px;font-weight:850;letter-spacing:-.045em;text-decoration:none}.brand i{font-style:normal;color:#ecb68d}.topbar nav{display:flex;align-items:center;gap:22px}.topbar nav a{font-size:12px;text-decoration:none;color:#d2dfe0}
+.hero{background:var(--dark);color:white;padding:65px 0 75px}.eyebrow{font-size:11px;text-transform:uppercase;letter-spacing:.14em;color:#ecbb93;font-weight:800}.hero h1{font-size:clamp(45px,6.2vw,75px);line-height:1.07;letter-spacing:-.065em;max-width:790px;margin:16px 0 20px}.hero h1 em{font-style:normal;color:#f0bd92}.hero p{max-width:740px;font-size:17px;color:#c9d8dc;margin:0}.hero-foot{border-top:1px solid #445d67;margin-top:31px;padding-top:16px;color:#9fb8bb;font-size:12px}
+.intro{padding:52px 0 33px}.intro h2,.section h2{font-size:clamp(26px,3vw,39px);line-height:1.2;letter-spacing:-.048em;margin:0 0 14px}.intro>p{font-size:15px;color:var(--muted);max-width:770px}.overview{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin:26px 0}.overview article{border:1px solid var(--border);border-radius:12px;background:#fff;padding:25px}.overview article:first-child{border-top:4px solid #31646c}.overview article:nth-child(2){border-top:4px solid #b47d55}.overview h3{font-size:23px;letter-spacing:-.04em;margin:9px 0}.overview p{color:#607681;font-size:14px;margin:0}.kind-note{color:#9c673d;font-size:11px;font-weight:850;letter-spacing:.1em;text-transform:uppercase}
+.section{padding:47px 0 72px}.soft{background:#edf2f1}.section .sub{color:var(--muted);font-size:14px;max-width:760px;margin:0 0 28px}
+.explorer{display:grid;grid-template-columns:280px 1fr;border:1px solid #d7e0e0;border-radius:13px;background:#fff;overflow:hidden;min-height:435px}.selector{background:#f3f6f5;border-right:1px solid var(--border);padding:17px 12px;display:flex;flex-direction:column;gap:6px}
+.selector button{border:1px solid transparent;border-radius:7px;padding:13px 14px;display:flex;gap:9px;justify-content:space-between;align-items:center;background:transparent;color:#435d68;font-size:13px;font-weight:700;text-align:left}
+.selector button:hover{background:#e5eded}.selector button[aria-selected=true]{background:#193c4c;color:#fff}.selector button small{opacity:.68;font-size:11px}
+.detail{padding:34px 40px}.detail-label{color:#a36a41;text-transform:uppercase;letter-spacing:.12em;font-weight:850;font-size:11px}.detail h3{font-size:30px;line-height:1.13;letter-spacing:-.04em;margin:10px 0 14px}.detail p{color:#4e6772;font-size:14px}.detail .facts{display:grid;grid-template-columns:1fr 1fr;gap:11px;margin:22px 0}.detail .fact{background:#f5f8f7;border:1px solid var(--border);padding:14px;border-radius:8px}.detail .fact span{display:block;font-size:10px;font-weight:800;color:#71848d;text-transform:uppercase;letter-spacing:.08em;margin-bottom:6px}.detail .fact strong{font-size:14px}
+.flow-title{font-size:12px;font-weight:850;margin:23px 0 10px}.timeline{list-style:none;padding:0;margin:0;display:grid;gap:9px}.timeline li{border-left:3px solid #b9cdd0;padding:8px 13px;display:flex;gap:14px;align-items:baseline;font-size:13px;color:#526a73}.timeline li b{font-variant-numeric:tabular-nums;color:#ab6d41;font-size:11px;white-space:nowrap}
+.caution{margin-top:18px;padding:12px 15px;border-radius:7px;background:#f8f0e5;border-left:3px solid #be8b64;color:#704b32;font-size:12px}
+.comparison{width:100%;border-collapse:collapse;background:white;border:1px solid var(--border);border-radius:10px;overflow:hidden}.comparison th,.comparison td{padding:17px;text-align:left;border-bottom:1px solid var(--border);font-size:13px;vertical-align:top}.comparison th{background:#e4eceb;color:#35515e;font-size:11px;text-transform:uppercase;letter-spacing:.04em}.comparison tr:last-child td{border-bottom:0}
+.tiles{display:grid;grid-template-columns:repeat(3,1fr);gap:15px}.tiles article{background:white;border:1px solid var(--border);padding:24px;border-radius:10px}.tiles h3{font-size:19px;letter-spacing:-.03em;margin:0 0 8px}.tiles p{font-size:13px;color:var(--muted);margin:0}
+.quiz{background:var(--dark);color:#fff;padding:46px 0}.quiz h2{font-size:30px;letter-spacing:-.045em;margin:0 0 10px}.quiz p{color:#c1d1d4}.answers{display:flex;flex-wrap:wrap;gap:10px;margin:20px 0}.answers button{background:#254550;border:1px solid #667e85;color:white;padding:11px 15px;border-radius:7px;font-size:13px}.answers button:hover,.answers button[aria-pressed=true]{background:#f1c39b;border-color:#f1c39b;color:#182d37}.feedback{font-size:14px;min-height:35px;max-width:760px}
+.sources{padding:54px 0 65px}.sources h2{font-size:28px;letter-spacing:-.04em}.sources p{color:var(--muted);font-size:13px}.source-list{display:flex;flex-direction:column;gap:11px}.source-list a{color:#985a37;font-size:13px;font-weight:750}footer{background:#142a31;color:#b9cccf;padding:24px 0;font-size:12px}footer .wrap{display:flex;justify-content:space-between;gap:20px}footer a{color:#eed1b6}
+@media(max-width:760px){.hero{padding:52px 0 60px}.hero p{font-size:15px}.overview,.tiles{grid-template-columns:1fr}.explorer{grid-template-columns:1fr}.selector{border-right:0;border-bottom:1px solid var(--border);display:grid;grid-template-columns:1fr 1fr;gap:7px}.selector button{font-size:11px;padding:10px;min-height:46px}.selector button small{display:none}.detail{padding:25px 20px}.detail h3{font-size:27px}.detail .facts{grid-template-columns:1fr}.topbar nav{gap:11px}.topbar nav a{font-size:11px}.comparison th,.comparison td{padding:12px 10px;font-size:12px}.answers{display:grid;grid-template-columns:1fr 1fr}footer .wrap{flex-direction:column}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+<header class="topbar"><div class="wrap"><a class="brand" href="../">Què proposen<i>?</i></a><nav aria-label="Navegació principal"><a href="../">Inici</a><a href="../medi-ambient/">Medi ambient</a><a href="#fonts">Fonts</a></nav></div></header>
+<section class="hero"><div class="wrap"><div class="eyebrow">Entendre abans de comparar</div><h1>Una proposta no és <em>sempre una llei.</em></h1><p>Què pot fer un govern? Què poden proposar els diputats? I què vol dir que el Congrés ha aprovat una iniciativa? Una guia breu per no confondre discursos, votacions i normes.</p><div class="hero-foot">Una guia divulgativa sobre el sistema estatal espanyol · Basada en la Constitució i el Reglament del Congrés</div></div></section>
+<main>
+<section class="intro wrap">
+<h2>Dues preguntes per començar: qui ho proposa i què passa després?</h2><p>El Govern pot redactar normes i presentar lleis al Parlament. Els grups parlamentaris poden intentar canviar les lleis, controlar el Govern i aprovar posicionaments polítics. Però cada instrument té unes conseqüències diferents.</p>
+<div class="overview">
+<article><span class="kind-note">Govern · Poder executiu</span><h3>Governar i regular</h3><p>Pot presentar <strong>projectes de llei</strong>, aprovar <strong>reials decrets</strong> i, en casos previstos per la Constitució, dictar normes amb rang de llei: <strong>reials decrets llei</strong> o <strong>reials decrets legislatius</strong>.</p></article>
+<article><span class="kind-note">Corts Generals · Poder legislatiu</span><h3>Legislar i controlar</h3><p>Les cambres tramiten lleis i controlen el Govern. Els grups poden registrar <strong>proposicions de llei</strong>, <strong>PNL</strong>, preguntes i altres iniciatives. També existeix la iniciativa legislativa popular.</p></article>
+</div>
+</section>
+<section class="section soft" id="guia"><div class="wrap">
+<h2>Tria una iniciativa i segueix-ne el recorregut</h2><p class="sub">Comença per qualsevol dels sis instruments. No tots han de passar pel mateix procediment, ni tots tenen força de llei.</p>
+<div class="explorer"><div class="selector" role="tablist" aria-label="Tipus d'iniciativa" aria-orientation="vertical">
+<button role="tab" type="button" id="tab-projecte" aria-controls="detall" aria-selected="true" data-type="projecte"><span>Projecte de llei</span><small>01</small></button>
+<button role="tab" type="button" id="tab-proposicio" aria-controls="detall" aria-selected="false" data-type="proposicio"><span>Proposició de llei</span><small>02</small></button>
+<button role="tab" type="button" id="tab-pnl" aria-controls="detall" aria-selected="false" data-type="pnl"><span>Proposició no de llei</span><small>03</small></button>
+<button role="tab" type="button" id="tab-decretllei" aria-controls="detall" aria-selected="false" data-type="decretllei"><span>Reial decret llei</span><small>04</small></button>
+<button role="tab" type="button" id="tab-decretleg" aria-controls="detall" aria-selected="false" data-type="decretleg"><span>Reial decret legislatiu</span><small>05</small></button>
+<button role="tab" type="button" id="tab-reialdecret" aria-controls="detall" aria-selected="false" data-type="reialdecret"><span>Reial decret</span><small>06</small></button>
+</div><div class="detail" role="tabpanel" id="detall" aria-labelledby="tab-projecte" tabindex="0" aria-live="polite"><div id="detail-content"></div></div></div>
+</div></section>
+<section class="section wrap" id="compara"><h2>Les diferències, d'un cop d'ull</h2><p class="sub">L'expressió «aprovat» no significa el mateix en tots els casos.</p>
+<div style="overflow-x:auto"><table class="comparison"><thead><tr><th>Instrument</th><th>Qui l'impulsa?</th><th>Té rang de llei?</th><th>Què significa l'aprovació?</th></tr></thead><tbody>
+<tr><td><strong>Projecte de llei</strong></td><td>Govern</td><td>Només si culmina aprovat com a llei</td><td>La tramitació parlamentària pot acabar amb una llei</td></tr>
+<tr><td><strong>Proposició de llei</strong></td><td>Grups/diputats i altres titulars d'iniciativa</td><td>Només si culmina aprovada com a llei</td><td>La presa en consideració només obre la tramitació</td></tr>
+<tr><td><strong>PNL</strong></td><td>Grups parlamentaris</td><td>No</td><td>Pronunciament polític, sense obligació jurídica d'executar-lo</td></tr>
+<tr><td><strong>Reial decret llei</strong></td><td>Govern</td><td>Sí</td><td>El Congrés l'ha de convalidar o derogar en 30 dies</td></tr>
+<tr><td><strong>Reial decret legislatiu</strong></td><td>Govern, per delegació de les Corts</td><td>Sí</td><td>Exercici d'una delegació legislativa prèvia, no convalidació ordinària en 30 dies</td></tr>
+<tr><td><strong>Reial decret</strong></td><td>Govern</td><td>En general, no: és reglamentari</td><td>No necessita votació ordinària del Congrés per aprovar-se</td></tr>
+</tbody></table></div>
+</section>
+<section class="section soft" id="lectura"><div class="wrap"><h2>Tres idees que eviten moltes confusions</h2><div class="tiles">
+<article><h3>Una PNL pot aprovar-se i no canviar cap llei</h3><p>Serveix per saber què ha defensat públicament un grup i què ha recolzat la cambra; el Govern no queda obligat jurídicament a executar-la.</p></article>
+<article><h3>«Presa en consideració» no vol dir «llei aprovada»</h3><p>És un primer filtre per a moltes proposicions de llei. Després encara poden venir esmenes, comissió, Ple, Senat i una decisió final.</p></article>
+<article><h3>Un reial decret no és el mateix que un reial decret llei</h3><p>El primer sol ser una norma reglamentària inferior a la llei; el segon té rang de llei, està reservat a situacions d'extraordinària i urgent necessitat i necessita convalidació del Congrés.</p></article>
+</div><p style="font-size:12px;color:#657982;margin-top:20px">També trobaràs <strong>lleis orgàniques</strong>: regulen matèries constitucionalment reservades, com certs drets fonamentals, i requereixen majoria absoluta del Congrés en una votació final de conjunt. No són una «llei superior» per a qualsevol matèria.</p>
+</div></section>
+<section class="quiz"><div class="wrap"><div class="eyebrow">Comprova si ho tens clar</div><h2>El Govern aprova una norma urgent amb rang de llei. Què ha de passar després?</h2><p>Tria la resposta que trobis correcta.</p><div class="answers" role="group" aria-label="Respostes possibles">
+<button data-answer="a" type="button" aria-pressed="false">Ja és definitiva, sense més tràmits</button>
+<button data-answer="b" type="button" aria-pressed="false">El Congrés l'ha de convalidar o derogar en 30 dies</button>
+<button data-answer="c" type="button" aria-pressed="false">És només una declaració política</button>
+</div><p class="feedback" id="feedback" role="status" aria-live="polite"> </p></div></section>
+<section class="sources wrap" id="fonts"><h2>Fonts i com interpretar aquesta guia</h2><p>És una síntesi divulgativa del funcionament general del procediment estatal; no substitueix el text legal ni recull totes les excepcions reglamentàries. Per a cada iniciativa de «Què proposen?», el text oficial i les votacions són la referència.</p><div class="source-list">
+<a target="_blank" rel="noopener noreferrer" href="https://www.boe.es/buscar/act.php?id=BOE-A-1978-31229">Constitució espanyola — especialment articles 81–90 i 97</a>
+<a target="_blank" rel="noopener noreferrer" href="https://www.congreso.es/es/cem/fleg">Congrés dels Diputats — funció legislativa</a>
+<a target="_blank" rel="noopener noreferrer" href="https://www.congreso.es/es/cem/tit10">Reglament del Congrés — PNL, articles 193–195</a>
+<a target="_blank" rel="noopener noreferrer" href="https://www.congreso.es/es/cem/tit5">Reglament del Congrés — procediment legislatiu</a>
+<a target="_blank" rel="noopener noreferrer" href="https://www.congreso.es/es/web/guest/cem/tit6">Reglament del Congrés — control dels decrets llei</a>
+<a target="_blank" rel="noopener noreferrer" href="https://administracion.gob.es/espanaadmon/boletinesylegislacion/legislacion/saber-mas">Administració de l'Estat — jerarquia normativa i disposicions del Govern</a>
+</div></section>
+</main>
+<footer><div class="wrap"><span>Què proposen? · Entendre, comparar i comprovar</span><a href="../">Torna al portal</a></div></footer>
+<script>
+(function(){
+'use strict';
+const items={
+ projecte:{title:'Projecte de llei',label:'Una proposta legislativa del Govern',origin:'Govern (Consell de Ministres)',force:'No és llei fins a la seva aprovació final',description:'El Govern redacta un text amb la voluntat que les Corts l’aprovin com a llei. Es diferencia de la proposició de llei principalment per qui presenta la iniciativa.',steps:['El Govern aprova el projecte i el remet al Congrés.','S’obre el període d’esmenes; la comissió i, segons el procediment, el Ple debaten i aproven el text.','El text passa al Senat, que pot introduir esmenes o un veto.','El Congrés resol les discrepàncies i, si prospera, la llei es sanciona, es promulga i es publica al BOE.'],note:'Els projectes del Govern no passen per una votació inicial de presa en consideració.'},
+ proposicio:{title:'Proposició de llei',label:'Una proposta per crear o modificar una llei',origin:'Diputats, grups i altres subjectes habilitats',force:'No és llei fins a la seva aprovació final',description:'És una iniciativa legislativa que no parteix del Govern. Pot tenir un articulat molt concret, però registrar-la no significa que s’hagi aprovat.',steps:['Es registra la iniciativa i la Mesa en qualifica i ordena la tramitació.','Habitualment el Congrés vota si la pren en consideració; una proposició procedent del Senat ja presa en consideració té una via diferent.','Si supera aquest primer pas, pot rebre esmenes i seguir la tramitació parlamentària al Congrés.','Passa pel Senat i, si escau, torna al Congrés; només el text definitivament aprovat pot esdevenir llei.'],note:'La presa en consideració és una porta d’entrada, no el final del procediment. La iniciativa legislativa popular també pot donar lloc a proposicions de llei.'},
+ pnl:{title:'Proposició no de llei (PNL)',label:'Una posició o petició política formal',origin:'Grup parlamentari',force:'No té rang de llei ni obliga jurídicament el Govern a executar-la',description:'Un grup pot demanar al Govern que actuï, expressar una posició o defensar un canvi. És útil per comparar prioritats polítiques, però no és una ordre jurídica.',steps:['Un grup registra la PNL a la Mesa del Congrés.','Es publica i es tramita al Ple o en una comissió competent.','Els grups poden presentar esmenes i es produeix el debat.','La cambra vota el text. Si s’aprova, és un pronunciament polític, no una llei.'],note:'Una PNL pot caducar sense debatre’s. No és correcte comptar-la com a «rebutjada» si no ha estat votada.'},
+ decretllei:{title:'Reial decret llei',label:'Una norma urgent del Govern amb rang de llei',origin:'Govern (Consell de Ministres)',force:'Té rang de llei des que entra en vigor',description:'La Constitució el reserva a casos d’extraordinària i urgent necessitat. Pot tenir efectes abans que el Parlament el voti, però necessita control posterior.',steps:['El Govern l’aprova en una situació d’extraordinària i urgent necessitat.','Es publica al BOE i entra en vigor segons el que disposi la norma.','En els 30 dies següents a la promulgació, el Congrés ha de votar-ne la convalidació o derogació.','Si es convalida, continua vigent; la cambra pot decidir tramitar-lo també com a projecte de llei pel procediment d’urgència.'],note:'No pot afectar determinades matèries constitucionalment excloses, com el règim de les comunitats autònomes o el dret electoral general (article 86).'},
+ decretleg:{title:'Reial decret legislatiu',label:'Una norma del Govern per delegació de les Corts',origin:'Govern, perquè les Corts li han delegat aquesta potestat',force:'Sí, té rang de llei',description:'Les Corts autoritzen expressament el Govern perquè elabori una norma sobre una matèria i dins uns límits i un termini. S’utilitza, entre altres casos, per aprovar textos refosos.',steps:['Les Corts aproven una llei que concedeix una delegació legislativa concreta.','El Govern elabora la norma dins els límits i el termini de la delegació.','El Govern aprova i publica el reial decret legislatiu.','Pot ser objecte del control previst per la delegació i del control jurisdiccional corresponent.'],note:'No es convalida en 30 dies com un decret llei: el seu fonament és una delegació legislativa prèvia.'},
+ reialdecret:{title:'Reial decret',label:'Una disposició del Govern, generalment reglamentària',origin:'Govern o Presidència del Govern, segons el cas',force:'En general, és inferior a la llei',description:'S’utilitza sovint per desenvolupar o aplicar lleis. No és equivalent a un reial decret llei. També hi ha reials decrets que formalitzen decisions com determinats nomenaments.',steps:['La iniciativa es prepara al si de l’executiu i segueix la tramitació administrativa que correspongui.','L’òrgan competent l’aprova en forma de reial decret.','Si és una norma reglamentària, es publica oficialment i entra en vigor segons les regles aplicables.','No necessita una convalidació ordinària del Congrés; està sotmès al control de legalitat.'],note:'Un reglament no pot contradir una llei. El nom «reial decret» no implica per si sol rang de llei.'}
+};
+const text=(v)=>String(v).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+const target=document.getElementById('detail-content');
+function select(name){
+ const d=items[name];if(!d)return;
+ target.innerHTML='<div class="detail-label">'+text(d.label)+'</div><h3>'+text(d.title)+'</h3><p>'+text(d.description)+'</p><div class="facts"><div class="fact"><span>Qui el presenta?</span><strong>'+text(d.origin)+'</strong></div><div class="fact"><span>Quin valor té?</span><strong>'+text(d.force)+'</strong></div></div><div class="flow-title">Quin recorregut segueix?</div><ol class="timeline">'+d.steps.map((s,i)=>'<li><b>0'+(i+1)+'</b><span>'+text(s)+'</span></li>').join('')+'</ol><div class="caution">'+text(d.note)+'</div>';
+ document.querySelectorAll('[data-type]').forEach(b=>b.setAttribute('aria-selected',String(b.dataset.type===name)));
+ document.getElementById('detall').setAttribute('aria-labelledby','tab-'+name);
+}
+document.querySelectorAll('[data-type]').forEach(b=>b.addEventListener('click',()=>select(b.dataset.type)));
+select('projecte');
+const feedback=document.getElementById('feedback');
+document.querySelectorAll('[data-answer]').forEach(b=>b.addEventListener('click',()=>{
+ document.querySelectorAll('[data-answer]').forEach(x=>x.setAttribute('aria-pressed',String(x===b)));
+ feedback.textContent=b.dataset.answer==='b'?'Correcte. És la convalidació (o derogació) del reial decret llei, prevista a l’article 86 de la Constitució.':'No ben bé. Un reial decret llei té rang de llei, però el Congrés ha de decidir si el convalida o el deroga dins els 30 dies.';
+}));
+})();
+</script>
+</body>
+</html>
