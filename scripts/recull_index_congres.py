@@ -25,7 +25,7 @@ WORDS = (
     "clim", "emision", "emiss", "carbon", "descarbon", "ambient",
     "ecolog", "transicion energet", "energias renovables", "renovables",
     "biodivers", "ecosistem", "especie", "fauna", "flora", "forest",
-    "incendio", "bosque", "sequ", "agua", "hidric", "acuifer", "rio ",
+    "incendio", "bosque", "sequia", "agua", "hidric", "acuifer",
     "humedal", "litoral", "costa", "marino", "marina", "plastico", "residuo",
     "recicl", "vertido", "contamina", "microplastic", "glifosat",
     "agricultura ecologic", "suelo", "desertific", "movilidad sosten",
@@ -113,7 +113,7 @@ def extract(obj: object) -> list[dict]:
 
 def candidate(row: dict) -> bool:
     title = normalize(row["titol_oficial"])
-    return any(word in title for word in WORDS)
+    return any(word in title for word in WORDS) or bool(re.search(r"\brio(?:s)?\b", title))
 
 
 def record_url(id: str) -> str:
@@ -141,8 +141,11 @@ def prepare(source_files: list[tuple[str, Path]], out: Path) -> dict:
                                       "possible_ambiental": candidate(row),
                                       "font": record_url(row["id"]),
                                       "verificacio": "PENDENT: revisar text íntegre, autoria i estat"}
+        total_declared = int(payload.get("iniciativas_encontradas", 0)) if isinstance(payload, dict) else 0
         series_info[serie] = {
             "registres_visibles": len(rows),
+            "registres_declarats_pel_Congres": total_declared,
+            "pagines_pendents": bool(total_declared and len(rows) < total_declared),
             "font": official_url(serie),
             "completitud_no_acreditada": True,
             "fitxer_brut": path.name,
@@ -167,7 +170,7 @@ def prepare(source_files: list[tuple[str, Path]], out: Path) -> dict:
         "candidats_per_titol": len(queue),
         "univers_exhaustiu_verificat": False,
         "limitacions": [
-            "L'índex pot estar paginat; cap recompte acredita per si sol la cobertura.",
+            "L'índex oficial retorna 25 registres per pàgina; cal recuperar les restants abans d'acreditar cobertura.",
             "El filtre de títols pot donar falsos positius i falsos negatius.",
             "Per a qualsevol candidat cal llegir el text dispositiu o articulat.",
             "No es publiquen fitxes automàticament a la web.",
