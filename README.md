@@ -64,6 +64,28 @@ La sol·licitud de fusió es compila i es comprova automàticament, però **no e
 
 Els paràmetres de la ruta són a astro.config.mjs.
 
+
+## Recuperació i revisió sistemàtica del medi ambient
+
+Hem afegit eines per passar de les fitxes seleccionades a una recerca amb traçabilitat:
+
+- `scripts/recull_index_congres.py`: consulta els índexs oficials per sèries **161, 162, 120 i 122**, desa la resposta original i genera un CSV d'expedients i una cua de candidats ambientals. **No insereix candidats automàticament al portal**: els títols no basten per determinar pertinència o resultat. Accepta també fitxers JSON ja descarregats per revisar-los fora de línia.
+- `scripts/audita_mediambient.py`: informa dels expedients introduïts i del grau de revisió, sense fabricar un percentatge de cobertura.
+- `tests/test_recull_index_congres.py`: proves de deduplicació, validació dels codis, selecció provisional i segregació de les dades candidates.
+- `.github/workflows/inventari-ambient.yml`: consulta de les dades com a **artefacte de revisió**, mai com a fitxes públiques de forma automàtica.
+
+Execució amb Python (sense dependències):
+
+~~~bash
+python3 -m unittest discover -s tests -v
+python3 scripts/recull_index_congres.py --descarrega --sortida revisio-ambiental
+python3 scripts/audita_mediambient.py --sortida revisio-ambiental/estat_fitxes.json
+~~~
+
+**Important:** els índexs oficials poden estar paginats, i el catàleg d'opendata del Congrés no publica una descàrrega global equivalent per a totes les PNL. La recuperació automàtica inicial és una **cua de treball**. La cobertura completa requereix comprovar paginació, descarregar els texts, auditar els casos negatius i contrastar els tràmits, els partits concrets del Grup Mixt i les votacions. No publicarem cap xifra d'exhaustivitat fins haver fet aquestes comprovacions.
+
+**Revisió parcial documentada:** 11 de les 22 fitxes ambientals de mostra tenen a `data/iniciatives.json` una `revisio` amb grau (autoria, contingut, tràmit o resultat), data, observació i enllaç oficial. La resta es mostren com a pendents de comprovació detallada. L'aspecte de les fitxes s'actualitza a partir del **mateix component Astro**; no es reescriu cada pàgina HTML.
+
 ## Rigor i límits
 
 - Una PNL no és una llei. Una retirada o caducada no és una rebutjada.
