@@ -21,13 +21,15 @@ Quan la sol·licitud de fusió s'hagi aprovat: **Settings → Pages → Deploy f
 
 ## Primera secció temàtica
 
-- `medi-ambient/index.html`: secció ambiental amb portada pròpia, filtres, fitxes i connexió a la **mateixa** `dades.js` del portal. No és un repositori independent.
+- `medi-ambient/index.html`: secció ambiental amb portada pròpia, filtres, expedients, **comparador de dos grups**, classificació multietiqueta i enllaços contextuals a la guia pedagògica. Comparteix la **mateixa** `dades.js` del portal. No és un repositori independent.
 - `docs/metodologia-medi-ambient.md`: criteris d'inclusió i full de ruta per fer un inventari exhaustiu.
-- La secció ambiental té només una **mostra preliminar** de propostes i no justifica encara rànquings ni comparacions quantitatives.
+- La secció ambiental conté, en aquesta revisió, **22 expedients parlamentaris** seleccionats i dos documents governamentals oficials d'exemple (projecte de llei 121/000025 i RDL 20/2026). No s'han de sumar els dos universos ni utilitzar-ne les xifres per classificar grups.
+- La guia permet anar directament a l'explicació de PNL o proposició de llei des de cada expedient.
+- No són justificables rànquings ni comparacions quantitatives de prioritats mentre no s'hagi recuperat i revisat l'inventari complet.
 
 ## Limitacions imprescindibles
 
-- Les 37 fitxes (27 PNL i 10 PL) són **exemples seleccionats, no mostra representativa** ni inventari exhaustiu. No permeten estimar prioritats temàtiques globals.
+- Les 52 fitxes parlamentàries (42 PNL i 10 PL) són **exemples seleccionats, no mostra representativa** ni inventari exhaustiu. No permeten estimar prioritats temàtiques globals.
 - Els totals i el gràfic general corresponen només a les PNL i es basen en Àgora: https://agora.vedratic.com/es/learn/pnl/ .
 - La classificació té 20 àmbits accessibles en un selector, sense una capçalera d'etiquetes. Un filtre sense resultats només indica que encara no hi ha fitxes dins aquesta mostra, no que el grup no hagi presentat propostes.
 - Les barres per grup només compten iniciatives d'autoria exclusiva: exclouen les de coautoria i les procedents del Senat.
