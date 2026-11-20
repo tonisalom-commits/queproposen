@@ -1,0 +1,74 @@
+name: Prepara lots i controla omissions ambientals (XV)
+
+on:
+  push:
+    branches: [feat/prototip-atles-pnl]
+    paths:
+      - ".github/workflows/pla-auditoria-ambiental.yml"
+      - "scripts/gestiona_auditoria_ambiental.py"
+      - "tests/test_gestiona_auditoria_ambiental.py"
+      - "data/treball/auditoria_mediambient_lot*.csv"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: auditoria-ambiental-lots-xv
+  cancel-in-progress: false
+
+jobs:
+  prepara:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: Consulta la branca de treball
+        uses: actions/checkout@v4
+        with:
+          ref: feat/prototip-atles-pnl
+          persist-credentials: true
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Proves unitàries de l'inventari
+        run: python -m unittest discover -s tests -v
+      - name: Integra decisions i crea lots i controls d'omissions
+        run: python scripts/gestiona_auditoria_ambiental.py
+      - name: Verifica invariants crítics
+        run: |
+          python - <<'PY'
+          import csv,json
+          from pathlib import Path
+          w=Path('data/treball')
+          s=json.loads((w/'estat_auditoria_ambient_xv.json').read_text())
+          assert s['univers']==5094 and s['cua']==830
+          assert s['fora_cua_no_exclosos']==4264
+          assert s['decisions_amb_id']+s['pendents_cua']==830
+          assert not s['cobertura_ambiental_exhaustiva']
+          assert not s['comparacions_partidistes_permeses']
+          for file, count in [('registre_auditoria_ambient_xv.csv',830),
+                              ('pla_lots_ambient_xv.csv',s['pendents_cua']),
+                              ('control_omissions_ambient_xv.csv',s['controls_omissions_seleccionats'])]:
+              with (w/file).open(encoding='utf-8-sig',newline='') as f:
+                  rows=list(csv.DictReader(f))
+              assert len(rows)==count,(file,len(rows),count)
+              ids=[r['expedient'] for r in rows]
+              assert len(set(ids))==len(ids),file
+          print('VALIDAT:',json.dumps(s,ensure_ascii=False,indent=2))
+          PY
+      - name: Desa resultats només a la branca de revisió
+        run: |
+          set -euo pipefail
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/treball/registre_auditoria_ambient_xv.csv \
+                  data/treball/pla_lots_ambient_xv.csv \
+                  data/treball/control_omissions_ambient_xv.csv \
+                  data/treball/estat_auditoria_ambient_xv.json
+          if git diff --cached --quiet; then
+            echo "Dades idèntiques: no cal cap commit."
+          else
+            git commit -m "Genera registre i lots ambientals amb control de falsos negatius"
+            git pull --rebase origin feat/prototip-atles-pnl
+            git push origin HEAD:feat/prototip-atles-pnl
+          fi
