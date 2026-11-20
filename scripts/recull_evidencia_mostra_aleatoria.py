@@ -74,7 +74,7 @@ def extract_section(text, code):
     if not indices:
         return "", 0
     for pos in indices[1:] + indices[:1]:
-        snippet = text[pos: pos + 16000]
+        snippet = text[pos: pos + 32000]
         # La capçalera o índex no és el dispositiu. Es prefereix el passatge
         # que segueix l'expedient amb un encapçalament de proposta.
         head = snippet[:2600].casefold()
@@ -85,8 +85,8 @@ def extract_section(text, code):
             next_code = EXP_RE.search(snippet, len(code) + 200)
             if next_code and next_code.start() > 1100:
                 snippet = snippet[:next_code.start()]
-            return snippet[:11000], len(indices)
-    return text[indices[-1]: indices[-1] + 11000], len(indices)
+            return snippet[:22000], len(indices)
+    return text[indices[-1]: indices[-1] + 22000], len(indices)
 
 
 def capture(row):
