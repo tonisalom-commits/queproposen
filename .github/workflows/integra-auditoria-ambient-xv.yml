@@ -48,13 +48,16 @@ jobs:
               with (root/p).open(encoding='utf-8-sig',newline='') as f:
                   return list(csv.DictReader(f))
           rows=read('inventari_ambient_xv_revisat.csv')
-          assert len(rows)==830 and len({x['expedient'] for x in rows})==830
+          assert len({x['expedient'] for x in rows})==len(rows)
           assert sum(bool(x['decisio_auditoria']) for x in rows)>=4
           assert len(read('control_omissions_fora_cua_xv.csv'))==4264
           assert len(read('mostra_control_fora_cua_xv_100.csv'))==100
+          assert len(read('cua_omissions_prioritaries_xv.csv'))>=1
           assert len(read('cua_lot02_40.csv'))==40
           report=json.loads((root/'resum_auditoria_ambient_xv.json').read_text())
           assert report['univers']==5094 and report['fora_cua']==4264
+          assert len(rows)==report['total_inventari_revisat']
+          assert report['total_inventari_revisat']==830+report['decisions_recuperades_de_fora_cua']
           print(json.dumps(report,ensure_ascii=False,indent=2))
           PY
       - name: Desa dades només a la branca de treball
@@ -66,6 +69,7 @@ jobs:
           git add data/treball/inventari_ambient_xv_revisat.csv \
             data/treball/cua_lot02_40.csv \
             data/treball/control_omissions_fora_cua_xv.csv \
+            data/treball/cua_omissions_prioritaries_xv.csv \
             data/treball/mostra_control_fora_cua_xv_100.csv \
             data/treball/resum_auditoria_ambient_xv.json
           if git diff --cached --quiet; then
