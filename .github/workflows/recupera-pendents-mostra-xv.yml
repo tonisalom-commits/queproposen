@@ -1,0 +1,56 @@
+name: Comprova els quatre textos pendents de la mostra XV
+
+on:
+  push:
+    branches: [feat/prototip-atles-pnl]
+    paths:
+      - "scripts/recupera_textos_pendents_mostra_xv.py"
+      - ".github/workflows/recupera-pendents-mostra-xv.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: quatre-pendents-mostra-xv
+  cancel-in-progress: false
+
+jobs:
+  consulta:
+    runs-on: ubuntu-latest
+    timeout-minutes: 7
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: feat/prototip-atles-pnl
+          persist-credentials: true
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Contrasta fitxes i publicacions oficials, sense decisions tematiques
+        run: |
+          set -euo pipefail
+          python scripts/recupera_textos_pendents_mostra_xv.py
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          p=Path('data/treball/recuperacio_4_pendents_xv_2026-11-20.json')
+          d=json.loads(p.read_text(encoding='utf-8'))
+          assert len(d['expedients'])==4
+          assert len(d['consultes'])==6
+          assert all(not r['lectura_dispositiu_certificada'] for r in d['consultes'])
+          assert all('https://www.congreso.es/' in r['url'] for r in d['consultes'])
+          print('CONSULTES DOCUMENTADES', sum(x['obtingut'] for x in d['consultes']))
+          PY
+      - name: Desa traces a la branca de treball
+        run: |
+          set -euo pipefail
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/treball/recuperacio_4_pendents_xv_2026-11-20.json
+          if git diff --cached --quiet; then
+            echo "Sense nous resultats"
+          else
+            git commit -m "Conserva resposta de fonts oficials dels quatre casos pendents"
+            git push
+          fi

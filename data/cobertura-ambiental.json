@@ -1,0 +1,93 @@
+{
+  "versio": 1,
+  "legislatura": "XV",
+  "data_tall": "2026-10-06",
+  "data_captura": "2026-11-19",
+  "font": "https://www.congreso.es/es/indice-de-iniciativas",
+  "series": [
+    {
+      "serie": "161",
+      "tipus": "PNL comissió",
+      "total": 3824,
+      "pagines": 153
+    },
+    {
+      "serie": "162",
+      "tipus": "PNL Ple",
+      "total": 850,
+      "pagines": 34
+    },
+    {
+      "serie": "122",
+      "tipus": "PL de grups",
+      "total": 306,
+      "pagines": 13
+    },
+    {
+      "serie": "120",
+      "tipus": "Iniciativa legislativa popular",
+      "total": 49,
+      "pagines": 2
+    },
+    {
+      "serie": "123",
+      "tipus": "PL de diputats",
+      "total": 2,
+      "pagines": 1
+    },
+    {
+      "serie": "124",
+      "tipus": "PL del Senat",
+      "total": 47,
+      "pagines": 2
+    },
+    {
+      "serie": "125",
+      "tipus": "PL autonòmiques",
+      "total": 16,
+      "pagines": 1
+    }
+  ],
+  "expedients_indexats": 5094,
+  "pagines_originals": 206,
+  "control": {
+    "totals_comprovats": true,
+    "sense_duplicats": true,
+    "sha256_per_pagina": true
+  },
+  "primera_seleccio": {
+    "candidats_per_titol": 410,
+    "per_serie": {
+      "120": 2,
+      "122": 12,
+      "124": 2,
+      "161": 320,
+      "162": 74
+    },
+    "ambientals_revisats_exhaustivament": false
+  },
+  "fitxes_contrastades": 25,
+  "discrepancies_automatiques": 0,
+  "exclusions_en_mostra_per_revisar": 160,
+  "advertiment": "Cobertura dels índexs parlamentaris verificada; classificació ambiental, text dispositiu, esmenes i votacions NO auditats exhaustivament.",
+  "auditoria_documental": {
+    "data": "2026-11-19",
+    "expedients_a_revisio": 826,
+    "fitxes_oficials_recuperades": 826,
+    "fragments_BOCG_localitzats": 795,
+    "incidencies_localitzacio": 31,
+    "primeres_decisions_amb_lectura": 34,
+    "inclusions_amb_lectura": 19,
+    "exclusions_amb_lectura": 10,
+    "frontereres_o_pendents": 5,
+    "pendents_lectura_dins_cua": 792,
+    "expedients_fora_cua_sense_auditoria_individual": 4268,
+    "esmenes_i_votacions_revisades_exhaustivament": false,
+    "auditoria_ambiental_exhaustiva": false,
+    "fonts_recuperades": [
+      "https://github.com/tonisalom-commits/queproposen/actions/runs/44630938748",
+      "https://github.com/tonisalom-commits/queproposen/actions/runs/44632672066"
+    ],
+    "nota": "Els 826 registres són una cua provisional; les 34 decisions són lectures inicials amb fonts primàries, sense segona auditoria independent. No se'n poden derivar recomptes representatius per partit."
+  }
+}

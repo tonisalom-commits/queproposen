@@ -1,0 +1,74 @@
+name: Recupera documents dels 30 primers indicis ambientals
+
+on:
+  push:
+    branches: [feat/prototip-atles-pnl]
+    paths:
+      - "scripts/recupera_fragments_prioritzats_xv.py"
+      - "tests/test_recupera_fragments_prioritzats_xv.py"
+      - ".github/workflows/fragments-pilot-xv.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: fragments-pilot-xv
+  cancel-in-progress: false
+
+jobs:
+  recupera:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: feat/prototip-atles-pnl
+          persist-credentials: true
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Proves de recuperacio i seguretat de les URL
+        run: python -m unittest tests.test_recupera_fragments_prioritzats_xv -v
+      - name: Consulta fonts del Congres en prova pilot de trenta
+        run: |
+          set -euo pipefail
+          python -m scripts.recupera_fragments_prioritzats_xv --max 30
+          python - <<'PY'
+          import csv, json
+          from pathlib import Path
+          d=Path('data/treball')
+          with (d/'fragments_pilot_fora_cua_xv_30.csv').open(encoding='utf-8-sig',newline='') as fh:
+              records=list(csv.DictReader(fh))
+          assert len(records)==30
+          assert len({r['id'] for r in records})==30
+          assert all(not r['decisio_ambiental'] for r in records)
+          assert all(r['url_expedient'].startswith('https://www.congreso.es/') for r in records)
+          assert all(not r['url_bocg'] or r['url_bocg'].startswith('https://www.congreso.es/') for r in records)
+          meta=json.loads((d/'resum_fragments_pilot_fora_cua_xv.json').read_text())
+          assert sum(meta['estats'].values())==30
+          PY
+      - name: Desa fragments com a material de lectura, no com a decisions
+        run: |
+          set -euo pipefail
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/treball/fragments_pilot_fora_cua_xv_30.csv \
+            data/treball/resum_fragments_pilot_fora_cua_xv.json
+          if git diff --cached --quiet; then
+            echo "Sense nova evidencia"
+          else
+            git commit -m "Recupera indicis documentals oficials de 30 expedients"
+            # Altres fluxos poden haver afegit dades a la mateixa branca.
+            # Rebasam i repetim davant canvis concurrents, sense force-push.
+            publicat=0
+            for intent in 1 2 3 4; do
+              git pull --rebase origin feat/prototip-atles-pnl
+              if git push origin HEAD:feat/prototip-atles-pnl; then
+                publicat=1
+                break
+              fi
+              sleep 2
+            done
+            test "$publicat" -eq 1
+          fi

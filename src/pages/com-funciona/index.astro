@@ -1,0 +1,96 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import instruments from '../../../data/instruments.json';
+const base = import.meta.env.BASE_URL.endsWith('/')
+  ? import.meta.env.BASE_URL : import.meta.env.BASE_URL + '/';
+---
+<BaseLayout title="Com funciona?" description="Guia planera del funcionament legislatiu espanyol" active="guia">
+  <section class="hero">
+    <div class="container">
+      <p class="hero-kicker">ENTENDRE ABANS DE COMPARAR</p>
+      <h1>Una proposta no és<br /><em>sempre una llei.</em></h1>
+      <p class="hero-lead">Què pot aprovar el Govern? Què proposen els grups parlamentaris? I què significa que una iniciativa hagi estat aprovada? Una guia pensada per interpretar les notícies i els expedients originals.</p>
+      <p class="hero-meta">Procediment estatal espanyol · Constitució i Reglament del Congrés · Explicacions divulgatives</p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <h2>Qui actua i amb quin objectiu?</h2>
+      <p class="section-copy">Distingim qui presenta la iniciativa, si té força jurídica i què ha de passar abans que una proposta es converteixi en norma.</p>
+      <div class="guide-intro">
+        <article><p class="section-kicker">Govern · Poder executiu</p><h3>Governar i regular</h3><p>Pot impulsar projectes de llei, aprovar reials decrets i, en els casos previstos constitucionalment, dictar reials decrets llei i legislatius.</p></article>
+        <article><p class="section-kicker">Corts · Poder legislatiu</p><h3>Legislar i controlar</h3><p>Tramiten les lleis, debaten PNL, fiscalitzen el Govern i poden presentar esmenes, preguntes i altres iniciatives.</p></article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section soft" id="instruments">
+    <div class="container">
+      <p class="section-kicker">01 / ELS INSTRUMENTS</p>
+      <h2>Tria un procediment.</h2>
+      <p class="section-copy">Obre qualsevol apartat per veure els passos que segueix. Pots tornar aquí des de qualsevol fitxa de Medi ambient.</p>
+      <div class="instrument-grid">
+        {instruments.map((item, i) => (
+          <details id={item.id} class="instrument" open={i === 0}>
+            <summary>{item.nom}</summary>
+            <div class="instrument-body">
+              <p>{item.definicio}</p>
+              <div class="instrument-tags"><span><b>Impulsor:</b> {item.qui}</span><span><b>Valor:</b> {item.rang}</span></div>
+              <h4>Quins passos ha de seguir?</h4>
+              <ol>{item.passos.map((pas) => <li>{pas}</li>)}</ol>
+              <p class="key-point"><strong>Recorda:</strong> {item.advertiment}</p>
+              {item.article && <p><a href={base + 'com-funciona/' + item.article}>Llegeix-ne l'explicació amb més detall ↗</a></p>}
+            </div>
+          </details>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="taula">
+    <div class="container">
+      <p class="section-kicker">02 / COMPARACIÓ RÀPIDA</p>
+      <h2>Què vol dir «aprovat»?</h2>
+      <div class="table-scroll">
+        <table class="compare-table">
+          <thead><tr><th>Instrument</th><th>Qui l'impulsa?</th><th>Força jurídica</th></tr></thead>
+          <tbody>
+            {instruments.map((item) => <tr><td><strong>{item.nom}</strong></td><td>{item.qui}</td><td>{item.rang}</td></tr>)}
+          </tbody>
+        </table>
+      </div>
+      <p class="coverage-note">Altres instruments: les <strong>preguntes i interpel·lacions</strong> controlen el Govern, les <strong>mocions</strong> expressen posicionaments i les <strong>esmenes</strong> poden canviar el text d'una proposta. No totes produeixen normes.</p>
+      <p class="coverage-note">Les <strong>lleis orgàniques</strong> regulen matèries reservades per la Constitució i exigeixen majoria absoluta del Congrés en una votació final de conjunt. No són una categoria superior a qualsevol altra llei.</p>
+    </div>
+  </section>
+
+  <section class="quiz">
+    <div class="container">
+      <p class="section-kicker">03 / COMPROVA-HO</p>
+      <h2>El Govern aprova una norma urgent amb rang de llei. Què passa després?</h2>
+      <p>Tria la resposta que consideris correcta.</p>
+      <div class="quiz-options" role="group" aria-label="Respostes de la pregunta">
+        <button type="button" data-answer="no1" aria-pressed="false">Ja és definitiva i no necessita control parlamentari</button>
+        <button type="button" data-answer="correcte" aria-pressed="false">El Congrés l'ha de convalidar o derogar en 30 dies</button>
+        <button type="button" data-answer="no2" aria-pressed="false">És una simple declaració sense força jurídica</button>
+      </div>
+      <p class="quiz-feedback" role="status" aria-live="polite" data-feedback></p>
+    </div>
+  </section>
+
+  <section class="section soft">
+    <div class="container">
+      <p class="section-kicker">04 / FONTS</p>
+      <h2>Comprovam el procediment.</h2>
+      <div class="method-grid">
+        <article><b>Constitució espanyola</b><p>Articles 81–90 i 97: iniciatives legislatives, decrets llei, delegació i funcions del Govern.</p><a href="https://www.boe.es/buscar/act.php?id=BOE-A-1978-31229" target="_blank" rel="noopener noreferrer">Text constitucional al BOE ↗</a></article>
+        <article><b>Reglament del Congrés</b><p>Tramitació de lleis, esmenes i PNL (articles 193–195).</p><a href="https://www.congreso.es/es/cem/tit10" target="_blank" rel="noopener noreferrer">Reglament del Congrés ↗</a></article>
+        <article><b>Expedients originals</b><p>Cap resum editorial substitueix el document registrat, les modificacions, els acords ni les votacions.</p><a href="https://www.congreso.es/es/busqueda-de-iniciativas" target="_blank" rel="noopener noreferrer">Cercador oficial ↗</a></article>
+      </div>
+    </div>
+  </section>
+<script>
+  import '../../scripts/guia.js';
+</script>
+</BaseLayout>

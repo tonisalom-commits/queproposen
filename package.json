@@ -1,0 +1,16 @@
+{
+  "name": "queproposen",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "astro dev --host",
+    "build": "astro build",
+    "preview": "astro preview --host",
+    "check:data": "python3 scripts/valida_dades.py",
+    "prebuild": "python3 scripts/valida_dades.py"
+  },
+  "dependencies": {
+    "astro": "7.4.12"
+  }
+}

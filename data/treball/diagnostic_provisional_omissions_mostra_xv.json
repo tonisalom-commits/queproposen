@@ -1,0 +1,113 @@
+{
+  "marc": "4264 expedients fora de cua de l'univers XV",
+  "llavor": 20261120,
+  "mostra_total": 100,
+  "mostra_revisada": 96,
+  "repartiment": {
+    "incloses": 8,
+    "excloses": 82,
+    "frontereres": 6,
+    "pendents": 4
+  },
+  "escenaris_d_expansio_condicional": {
+    "si_totes_les_ambigues_i_pendents_fossin_excloses": 357.98,
+    "si_totes_les_ambigues_i_pendents_fossin_incloses": 715.11,
+    "unitat": "expedients fora de la cua inicial",
+    "interpretacio": "Dues expansions de les freqüències observades ponderades per sèrie, sota escenaris alternatius de classificació de la mostra. NO són cotes poblacionals, ni estimacions amb interval de confiança."
+  },
+  "estrats": {
+    "120": {
+      "poblacio_fora_cua": 42,
+      "mostra": 2,
+      "incloses": 0,
+      "excloses": 0,
+      "frontereres": 0,
+      "pendents": 2,
+      "pes_disseny": 21.0,
+      "expansio_inclusions_confirmades": 0.0,
+      "expansio_si_ambigues_i_pendents_fossin_incloses": 42.0,
+      "variancia_dins_estrat_estimable": true
+    },
+    "122": {
+      "poblacio_fora_cua": 274,
+      "mostra": 7,
+      "incloses": 0,
+      "excloses": 7,
+      "frontereres": 0,
+      "pendents": 0,
+      "pes_disseny": 39.142857,
+      "expansio_inclusions_confirmades": 0.0,
+      "expansio_si_ambigues_i_pendents_fossin_incloses": 0.0,
+      "variancia_dins_estrat_estimable": true
+    },
+    "123": {
+      "poblacio_fora_cua": 2,
+      "mostra": 1,
+      "incloses": 0,
+      "excloses": 0,
+      "frontereres": 1,
+      "pendents": 0,
+      "pes_disseny": 2.0,
+      "expansio_inclusions_confirmades": 0.0,
+      "expansio_si_ambigues_i_pendents_fossin_incloses": 2.0,
+      "variancia_dins_estrat_estimable": false
+    },
+    "124": {
+      "poblacio_fora_cua": 42,
+      "mostra": 2,
+      "incloses": 0,
+      "excloses": 2,
+      "frontereres": 0,
+      "pendents": 0,
+      "pes_disseny": 21.0,
+      "expansio_inclusions_confirmades": 0.0,
+      "expansio_si_ambigues_i_pendents_fossin_incloses": 0.0,
+      "variancia_dins_estrat_estimable": true
+    },
+    "125": {
+      "poblacio_fora_cua": 15,
+      "mostra": 1,
+      "incloses": 0,
+      "excloses": 1,
+      "frontereres": 0,
+      "pendents": 0,
+      "pes_disseny": 15.0,
+      "expansio_inclusions_confirmades": 0.0,
+      "expansio_si_ambigues_i_pendents_fossin_incloses": 0.0,
+      "variancia_dins_estrat_estimable": false
+    },
+    "161": {
+      "poblacio_fora_cua": 3184,
+      "mostra": 71,
+      "incloses": 7,
+      "excloses": 58,
+      "frontereres": 4,
+      "pendents": 2,
+      "pes_disseny": 44.84507,
+      "expansio_inclusions_confirmades": 313.92,
+      "expansio_si_ambigues_i_pendents_fossin_incloses": 582.99,
+      "variancia_dins_estrat_estimable": true
+    },
+    "162": {
+      "poblacio_fora_cua": 705,
+      "mostra": 16,
+      "incloses": 1,
+      "excloses": 14,
+      "frontereres": 1,
+      "pendents": 0,
+      "pes_disseny": 44.0625,
+      "expansio_inclusions_confirmades": 44.06,
+      "expansio_si_ambigues_i_pendents_fossin_incloses": 88.12,
+      "variancia_dins_estrat_estimable": true
+    }
+  },
+  "advertiments": [
+    "No es pot estimar la variància de disseny dins dels estrats amb un sol cas: 123, 125.",
+    "Els casos frontera i els pendents no tenen classificació resolta.",
+    "L'atzar del mostreig no demostra que les decisions temàtiques siguin correctes.",
+    "La precisió i l'error de classificació no han estat estimats.",
+    "La selecció inicial de 830 pot contenir falsos positius i encara té molts casos sense classificar.",
+    "No usar els escenaris com a nombre verificat d'omissions ni publicar comparacions de partits."
+  ],
+  "grau": "DIAGNOSTIC_PROVISIONAL_SENSE_INTERVAL_DE_CONFIANCA"
+}

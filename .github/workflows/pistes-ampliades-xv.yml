@@ -1,0 +1,84 @@
+name: Amplia pistes d'omissions de Medi Ambient XV
+
+on:
+  push:
+    branches: [feat/prototip-atles-pnl]
+    paths:
+      - "scripts/prioritza_omissions_fora_cua_xv.py"
+      - "tests/test_prioritza_omissions_fora_cua_xv.py"
+      - ".github/workflows/pistes-ampliades-xv.yml"
+      - "data/treball/auditoria_mediambient_lot*.csv"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: pistes-ampliades-ambient-xv
+  cancel-in-progress: false
+
+jobs:
+  prioritzacio:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: Recupera branca de treball
+        uses: actions/checkout@v4
+        with:
+          ref: feat/prototip-atles-pnl
+          persist-credentials: true
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Proves dels criteris de cerca
+        run: |
+          python -m unittest tests.test_prioritza_omissions_fora_cua_xv -v
+      - name: Cribratge de pistes sense classificacions automatiques
+        run: |
+          set -euo pipefail
+          python -m scripts.prioritza_omissions_fora_cua_xv
+          python - <<'PY'
+          import csv, json
+          from pathlib import Path
+          root=Path("data/treball")
+          def read(p):
+              with (root/p).open(encoding="utf-8-sig",newline="") as f:
+                  return list(csv.DictReader(f))
+          all_rows=read("pistes_ampliades_fora_cua_xv.csv")
+          selected=read("cua_ampliada_fora_cua_xv_250.csv")
+          meta=json.loads((root/"resum_pistes_ampliades_xv.json").read_text())
+          assert meta["univers_fora_cua_original"]==4264
+          assert meta["suma_verificada"]==4264
+          assert meta["tipus"]=="CRIBRATGE_LEXIC_DE_TITOLS_SENSE_CLASSIFICACIO"
+          assert meta["mostra_aleatoria_independent"]=="NO ALTERADA"
+          assert len(all_rows)==meta["amb_pistes_i_sense_revisar"]
+          assert len(selected)==meta["cua_prioritaria"]
+          assert len(selected)<=250
+          assert len({r["id"] for r in all_rows})==len(all_rows)
+          assert all(r["revisio_actual"].startswith("PENDENT:") for r in all_rows)
+          PY
+      - name: Desa cues no publicables a la branca de treball
+        run: |
+          set -euo pipefail
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/treball/pistes_ampliades_fora_cua_xv.csv \
+            data/treball/cua_ampliada_fora_cua_xv_250.csv \
+            data/treball/resum_pistes_ampliades_xv.json
+          if git diff --cached --quiet; then
+            echo "Cap canvi a les pistes"
+          else
+            git commit -m "Genera cua ampliada d'omissions per revisar sense decisions tematiques"
+            # Altres fluxos poden haver afegit dades a la mateixa branca.
+            # Rebasam i repetim davant canvis concurrents, sense force-push.
+            publicat=0
+            for intent in 1 2 3 4; do
+              git pull --rebase origin feat/prototip-atles-pnl
+              if git push origin HEAD:feat/prototip-atles-pnl; then
+                publicat=1
+                break
+              fi
+              sleep 2
+            done
+            test "$publicat" -eq 1
+          fi

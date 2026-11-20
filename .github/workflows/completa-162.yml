@@ -1,0 +1,29 @@
+name: Completa PNL del Ple (162) — inventari XV
+on:
+  workflow_dispatch:
+  push:
+    branches: [feat/prototip-atles-pnl]
+    paths:
+      - scripts/completa_162.py
+      - .github/workflows/completa-162.yml
+permissions:
+  contents: read
+jobs:
+  captura:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - name: Importa pàgines amb reintents i comprova cobertura
+        run: |
+          python3 -m scripts.completa_162 > execucio_162.log 2>&1 || echo "ATENCIÓ: revisa estat_162.json" >> execucio_162.log
+          tail -30 execucio_162.log
+      - name: Desa fonts i controls
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: serie-162-recollida-auditada
+          path: |
+            revisio-162/
+            execucio_162.log
+          retention-days: 14

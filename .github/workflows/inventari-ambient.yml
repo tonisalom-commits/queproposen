@@ -1,0 +1,58 @@
+name: Inventari ambiental — verificació de fonts
+
+on:
+  pull_request:
+    paths:
+      - "scripts/recull_index_congres.py"
+      - "scripts/prova_paginacio.py"
+      - "tests/test_recull_index_congres.py"
+      - ".github/workflows/inventari-ambient.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  tests:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Proves de la ingesta sense accés a Internet
+        run: python -m unittest discover -s tests -v
+
+  recollida:
+    if: github.event_name == 'workflow_dispatch'
+    needs: tests
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Recupera índexs oficials 161, 162, 120 i 122–125
+        shell: bash
+        run: |
+          mkdir -p revisio-ambiental
+          set +e
+          python scripts/recull_index_congres.py \
+            --descarrega --totes-les-pagines --pausa 1.0 --sortida revisio-ambiental \
+            > revisio-ambiental/execucio.log 2>&1
+          CODE=$?
+          echo "codi_final=$CODE" >> revisio-ambiental/execucio.log
+          if [ "$CODE" -ne 0 ]; then
+            echo "AVÍS: el servidor no ha proporcionat un índex utilitzable; no s'ha generat un catàleg complet"
+          fi
+          python scripts/prova_paginacio.py \
+            > revisio-ambiental/diagnostic_paginacio.log 2>&1 || true
+          exit 0
+      - name: Conserva dades brutes i informe per a revisió, no per a publicació
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: inventari-ambiental-per-a-revisio
+          path: revisio-ambiental/
+          retention-days: 14

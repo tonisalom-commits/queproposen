@@ -1,0 +1,67 @@
+---
+const { item } = Astro.props;
+const base = import.meta.env.BASE_URL.endsWith('/')
+  ? import.meta.env.BASE_URL
+  : import.meta.env.BASE_URL + '/';
+const groups = Array.isArray(item.grups) ? item.grups : [];
+const tags = Array.isArray(item.etiquetesAmbientals) ? item.etiquetesAmbientals : [];
+const guide = item.tipus === 'PL' ? 'proposicio' : 'pnl';
+const status = item.estat || 'Resultat no incorporat';
+const review = item.revisio || null;
+const reviewText = review ? {"autoria":"Autoria i títol contrastats","contingut":"Petició principal contrastada","tramitacio":"Tràmit contrastat, resultat final pendent","resultat":"Resultat parlamentari contrastat"}[review.nivell] || 'Revisió parcial' : 'Verificació documental pendent';
+const corpus = [
+  item.id, item.titol, item.resum, item.accio, item.lectura,
+  item.tema, item.impulsor, ...groups, ...tags
+].filter(Boolean).join(' ');
+---
+<article
+  class="proposal-card"
+  data-card
+  data-id={item.id}
+  data-title={item.titol}
+  data-status={status}
+  data-url={item.url}
+  data-type={item.tipus}
+  data-groups={groups.join('|')}
+  data-tags={tags.join('|')}
+  data-theme={item.tema}
+  data-search={corpus}
+>
+  <div class="card-upper">
+    <span class:list={['type-label', item.tipus === 'PL' && 'type-law']}>
+      {item.tipus === 'PL' ? 'Proposició de llei' : 'PNL'}
+    </span>
+    <span class="group-label">{groups.join(' · ')}{item.impulsor ? ' · ' + item.impulsor : ''}</span>
+  </div>
+  <p class="card-topic">{item.subtemaAmbiental || item.tema}</p>
+  <h3>{item.titol}</h3>
+  <p class="card-summary">{item.resum}</p>
+  <p class="review-marker"><strong>Revisió:</strong> {reviewText}</p>
+  <div class="card-tail">
+    <p class="card-action"><strong>Acció resumida:</strong> {item.accio}</p>
+    <div class="card-meta">
+      <span>Exp. {item.id}</span>
+      <span class:list={['state', (status.includes('Aprovada') || status.includes('Rebutjada') || status.includes('Retirada')) && 'state-known']}>{status}</span>
+    </div>
+    <div class="card-links">
+      <a href={item.url} target="_blank" rel="noopener noreferrer">Expedient oficial ↗</a>
+      {item.fontEspecifica && item.fontEspecifica !== item.url && (
+        <a href={item.fontEspecifica} target="_blank" rel="noopener noreferrer">Publicació original ↗</a>
+      )}
+    </div>
+    <details class="card-details">
+      <summary>Fonts, límits i interpretació</summary>
+      <p>{item.qualitat}</p>
+      {review && (
+        <div class="verification-notes">
+          <p><strong>Comprovat el {review.data}:</strong> {review.nota}</p>
+          {review.fonts?.map((url) => <p><a href={url} target="_blank" rel="noopener noreferrer">Font primària d'aquesta comprovació ↗</a></p>)}
+        </div>
+      )}
+      {!review && <p><strong>Pendent:</strong> contrastar l'autoria, el text exacte i/o l'estat de tramitació amb les fonts originals.</p>}
+      {item.notes && <p><strong>Observació:</strong> {item.notes}</p>}
+      {item.lectura && <p><strong>Lectura editorial:</strong> {item.lectura}</p>}
+      <p><a href={base + 'com-funciona/#' + guide}>Què significa {item.tipus === 'PL' ? 'aquesta proposició de llei' : 'una PNL'}?</a></p>
+    </details>
+  </div>
+</article>

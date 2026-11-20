@@ -1,0 +1,197 @@
+<!doctype html>
+<html lang="ca">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#142a31">
+<meta name="description" content="Comparador d'iniciatives de medi ambient de la XV legislatura: què proposen els grups al Congrés?">
+<title>Medi ambient · Què proposen?</title>
+<style>
+:root{font-family:system-ui,-apple-system,"Segoe UI",sans-serif;color:#21333c;background:#fcfcfa;--line:#dce4e2;--muted:#627882;--dark:#142a31;--accent:#a15e3a}*{box-sizing:border-box}body{margin:0}a{color:inherit}a:hover{color:var(--accent)}button,input,select{font:inherit}button{cursor:pointer}.wrap{max-width:1120px;width:calc(100% - 42px);margin:auto}
+header{background:var(--dark);color:#f8f9f6}header .wrap{display:flex;align-items:center;justify-content:space-between;gap:18px;min-height:65px}header a{text-decoration:none}header strong{letter-spacing:-.045em;font-size:19px}header nav{display:flex;gap:20px;font-size:13px;color:#c4d1d1}
+.hero{background:var(--dark);color:#fafbf8;padding:72px 0 74px}.eyebrow{color:#e4b28a;letter-spacing:.13em;font-size:11px;font-weight:800;text-transform:uppercase}h1{font-size:clamp(48px,7.6vw,94px);line-height:1;letter-spacing:-.073em;margin:17px 0 21px;font-weight:800;max-width:800px}h1 span{color:#f0ba8b}.lead{max-width:660px;font-size:17px;line-height:1.6;color:#d3dee0}.hero-meta{border-top:1px solid #38505a;margin-top:36px;padding-top:21px;color:#acbfc4;font-size:12px}.hero-meta b{color:#f1ebe3;font-weight:700}
+main .intro{padding:48px 0 8px;display:grid;grid-template-columns:1fr 1fr;gap:35px}.intro h2{font-size:clamp(24px,3.5vw,38px);line-height:1.13;letter-spacing:-.045em;margin:0}.intro p{margin:0;color:var(--muted);font-size:14px;line-height:1.7}.intro p strong{color:#253b48}
+.browse{padding:27px 0 82px}.browse h2{font-size:27px;letter-spacing:-.04em;margin:0 0 6px}.sub{font-size:13px;color:var(--muted);margin:0 0 19px}.filters{display:grid;grid-template-columns:2fr 1.3fr 1.2fr;gap:11px;background:#f4f7f6;padding:16px;border:1px solid var(--line);border-radius:10px}
+.filters label{font-size:11px;font-weight:750;color:#425c69;display:block}.filters label input,.filters label select{margin-top:6px;width:100%;padding:11px;border:1px solid #d5e1e1;background:#fff;border-radius:6px;color:#243c47;font-size:13px;min-width:0}
+.switch{display:flex;flex-wrap:wrap;gap:7px;margin:18px 0 14px}.switch button{background:#fff;border:1px solid #cddcdd;padding:9px 16px;border-radius:6px;color:#425b68;font-size:12px;font-weight:700}.switch button[aria-pressed=true]{background:var(--dark);border-color:var(--dark);color:#fff}
+.results-info{display:flex;justify-content:space-between;gap:10px;align-items:center;margin-bottom:15px;font-size:12px;color:var(--muted)}.results-info button{border:0;background:transparent;color:#90532c;font-weight:750}
+.cards{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:13px}.card{background:white;border:1px solid var(--line);border-radius:10px;padding:22px;display:flex;flex-direction:column;min-width:0}.card-top{display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px;margin-bottom:20px}.type{background:#f1e7da;color:#855430;font-size:10px;font-weight:850;border-radius:4px;padding:5px 8px}.type.pnl{background:#eaf2f1;color:#315c61}.party{font-size:12px;font-weight:850;color:#365261}.topic{font-size:10px;color:#98705c;font-weight:800;letter-spacing:.04em;text-transform:uppercase}.card h3{font-size:21px;letter-spacing:-.04em;line-height:1.23;margin:9px 0 12px}.card p{font-size:13px;color:#526973;line-height:1.6;margin:0 0 20px}.card-foot{border-top:1px solid var(--line);margin-top:auto;padding-top:13px;font-size:11px;color:var(--muted)}.card-foot a{display:block;margin-top:11px;color:#975932;font-weight:800;text-decoration:none}.note{font-size:12px;color:#6d828b;margin-top:16px}.none{grid-column:1/-1;text-align:center;padding:40px;border:1px dashed #cbd7d6;color:var(--muted);border-radius:8px}
+.method{background:#f0f3f2;padding:56px 0}.method h2{font-size:31px;letter-spacing:-.045em;margin:0 0 15px}.method-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}.method-grid p{font-size:13px;line-height:1.7;color:#536b74}.method-grid strong{font-size:14px}footer{background:var(--dark);color:#c5d3d4;font-size:12px;padding:25px 0}footer .wrap{display:flex;justify-content:space-between;gap:15px}footer a{color:#edbf9a}
+:focus-visible{outline:2px solid #cf8855;outline-offset:3px}
+@media(max-width:740px){header nav{gap:11px;font-size:11px}.hero{padding:55px 0}.lead{font-size:15px}.intro{grid-template-columns:1fr!important;gap:14px!important}.filters{grid-template-columns:1fr}.cards{grid-template-columns:1fr}.method-grid{grid-template-columns:1fr;gap:0}footer .wrap{flex-direction:column}.switch button{flex:1;padding:9px 10px}}
+
+/* Integració temàtica i comparació documental */
+.context{background:#f1e8da;border-bottom:1px solid #e3d8c8}.context .wrap{display:flex;justify-content:space-between;align-items:center;gap:30px;padding-block:15px}
+.context p{font-size:12px;color:#4a5960;margin:0;line-height:1.6}.context a{font-size:12px;color:#86522f;font-weight:850;text-decoration:none;white-space:nowrap}
+.sect-nav{display:flex;gap:25px;overflow-x:auto;border-bottom:1px solid var(--line);padding:13px 0}.sect-nav a{font-size:12px;font-weight:700;text-decoration:none;color:#53717e;white-space:nowrap}
+.metric-line{display:flex;gap:10px;align-items:center;flex-wrap:wrap;font-size:11px;color:#65808a;margin-bottom:24px}.metric-line b{color:#2d4957}
+.card .record-status{display:inline-flex;align-items:center;padding:5px 7px;border-radius:4px;background:#f0f4f4;color:#55707a;font-size:10px;font-weight:800;margin-top:4px}
+.card .record-status.decision{background:#e6eeea;color:#336357}
+.card .explainer{padding:13px 0;border-top:1px solid var(--line);font-size:12px;color:#496473}
+.card details{border-top:1px solid var(--line);padding:11px 0;font-size:12px;color:#55717d}
+.card details summary{font-weight:750;cursor:pointer}
+.card details p{font-size:12px;margin:8px 0}
+.card details a{font-size:12px;font-weight:750;color:#9a5e38}
+.compare{background:#f1f5f3;padding:60px 0;border-top:1px solid #e0e8e5}
+.compare h2{font-size:clamp(26px,3.2vw,38px);letter-spacing:-.045em;margin:0 0 10px}
+.compare p{max-width:730px;font-size:13px;color:#5d7681}
+.compare-form{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;margin:23px 0}
+.compare-form label{font-size:11px;font-weight:800;color:#4a6470}
+.compare-form select{display:block;width:100%;min-width:0;padding:12px 11px;background:white;border:1px solid #cbdad8;border-radius:6px;margin-top:6px;color:#28404d;font-size:13px}
+.compare-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px}
+.compare-col{border:1px solid #d4dfdc;background:white;border-radius:10px;padding:20px;min-height:180px}
+.compare-col h3{margin:0 0 17px;font-size:20px;letter-spacing:-.04em}
+.compare-item{border-top:1px solid #e2e9e8;padding:12px 0}.compare-item b{font-size:13px;display:block}.compare-item span{font-size:11px;color:#73858d}.compare-item a{display:block;margin-top:5px;color:#925832;font-size:11px;font-weight:800}
+.compare-col .missing{font-size:12px;color:#6c7e88;line-height:1.65}
+.info-row{display:grid;grid-template-columns:1.3fr 1fr;gap:30px;border-top:1px solid #dce6e4;padding-top:22px;margin-top:30px}
+.info-row h3{margin:0 0 8px;font-size:22px;letter-spacing:-.04em}
+.info-row p{margin:0;color:#647780;font-size:13px}.info-row a{font-weight:850;color:#955b3b;text-decoration:none}
+@media(max-width:740px){
+.context .wrap{align-items:flex-start;display:block}.context a{display:inline-block;margin-top:8px}
+.sect-nav{gap:16px}.compare-form{grid-template-columns:1fr}
+.compare-grid,.info-row{grid-template-columns:1fr}.compare-col{min-height:0}
+}
+
+
+.govern-section{padding:66px 0 68px;background:#fdfaf6;border-top:1px solid #ece0d3}
+.section-kicker{font-size:10px;color:#945a33;letter-spacing:.12em;font-weight:850}
+.govern-section h2{font-size:clamp(28px,3.5vw,40px);letter-spacing:-.047em;margin:10px 0}
+.govern-intro{font-size:14px;color:#60727a;max-width:760px;line-height:1.7}
+.govern-cards{display:grid;grid-template-columns:repeat(2,1fr);gap:18px;margin-top:25px}
+.govern-card{border:1px solid #e6ded4;background:#fff;padding:25px;border-radius:11px}
+.gov-type{display:inline-block;color:#935f3b;font-size:10px;text-transform:uppercase;letter-spacing:.07em;font-weight:850}
+.govern-card h3{font-size:22px;line-height:1.2;letter-spacing:-.035em;margin:13px 0}
+.govern-card p{font-size:13px;line-height:1.65;color:#576d77}
+.govern-card .gov-diff{color:#233e4a;font-weight:750}
+.govern-card a{display:block;margin-top:12px;color:#925936;font-size:12px;font-weight:800;text-decoration:none}
+.gov-note{margin-top:18px;font-size:12px;color:#65757c}
+.gov-note a{color:#925936;font-weight:800}
+@media(max-width:740px){.govern-cards{grid-template-columns:1fr}}
+</style>
+<script src="../dades.js" defer></script>
+<script defer>
+'use strict';
+document.addEventListener('DOMContentLoaded',()=>{
+ const all=window.DADES?.iniciatives||[];
+ const records=all.filter(p=>Array.isArray(p.etiquetesAmbientals)&&p.etiquetesAmbientals.length);
+ const taxonomy=['Adaptació i riscos','Agricultura i sòls','Aigua i gestió hídrica','Biodiversitat i espais naturals','Boscos i incendis','Clima i emissions','Contaminació i residus','Energia i transició','Litoral i medi marí','Mobilitat i emissions','Recursos naturals','Salut ambiental'];
+ const parties=window.DADES?.grups||[];
+ const names=Object.fromEntries(parties.map(g=>[g.id,g.nom]));
+ const safe=v=>String(v??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+ const normalize=v=>String(v||'').normalize('NFD').replace(/[\u0300-\u036f]/g,'').toLowerCase();
+ const $=id=>document.getElementById(id);
+ const name=g=>names[g]||g;
+ const groupList=parties.map(g=>g.id).sort((a,b)=>name(a).localeCompare(name(b),'ca'));
+ $('topic').innerHTML='<option value="">Tots els subtemes</option>'+taxonomy.map(t=>'<option>'+safe(t)+'</option>').join('');
+ const partiesHTML=groupList.map(g=>'<option value="'+safe(g)+'">'+safe(g==='MIXT'?'Grup Mixt (diversos partits)':name(g))+'</option>').join('');
+ $('party').innerHTML='<option value="">Tots els grups</option>'+partiesHTML;
+ $('compareA').innerHTML=partiesHTML;$('compareB').innerHTML=partiesHTML;
+ $('compareTopic').innerHTML='<option value="">Tots els subtemes</option>'+taxonomy.map(t=>'<option>'+safe(t)+'</option>').join('');
+ $('compareA').value=groupList.includes('PP')?'PP':groupList[0]||'';
+ $('compareB').value=groupList.includes('PSOE')?'PSOE':groupList[1]||groupList[0]||'';
+ $('subsetCount').textContent=records.length+' fitxes identificades en aquesta versió';
+ let kind='';
+ function renderCard(p){
+  const status=p.estat||'Resultat no incorporat';
+  const source=p.fontEspecifica||p.url;
+  const kindName=p.tipus==='PL'?'Proposició de llei':'Proposició no de llei';
+  return '<article class="card"><div class="card-top"><span class="type '+(p.tipus==='PNL'?'pnl':'')+'">'+safe(kindName)+'</span><span class="party">'+safe(p.grups.join(' · '))+(p.impulsor?' · '+safe(p.impulsor):'')+'</span></div>'+
+   '<span class="topic">'+safe(p.subtemaAmbiental)+'</span><h3>'+safe(p.titol)+'</h3><p>'+safe(p.resum)+'</p>'+
+   '<span class="record-status '+(status.startsWith('Aprovada')?'decision':'')+'">'+safe(status)+'</span>'+
+   '<p class="explainer"><b>Què demana?</b> '+safe(p.accio||'Consulta el text de la iniciativa')+'</p>'+
+   '<details><summary>Com està documentada?</summary><p><strong>Àmbits:</strong> '+safe((p.etiquetesAmbientals||[]).join(' · '))+'</p><p>'+safe(p.qualitat||'Fitxa resumida a partir de l’expedient oficial; pendent d’anàlisi detallada.')+'</p>'+
+   (p.notes?'<p><strong>Observació:</strong> '+safe(p.notes)+'</p>':'')+
+   (p.lectura?'<p><strong>Lectura inicial:</strong> '+safe(p.lectura)+'</p>':'')+
+   '<a href="../com-funciona/#'+(p.tipus==='PL'?'proposicio':'pnl')+'">Què significa aquest tipus d’iniciativa?</a></details>'+
+   '<div class="card-foot">Expedient <b>'+safe(p.id)+'</b><a href="'+safe(p.url)+'" target="_blank" rel="noopener noreferrer">Fitxa oficial del Congrés ↗</a>'+
+   (source!==p.url?'<a href="'+safe(source)+'" target="_blank" rel="noopener noreferrer">Document o resolució oficial ↗</a>':'')+'</div></article>';
+ }
+ function draw(){
+  const q=normalize($('search').value),theme=$('topic').value,party=$('party').value;
+  const found=records.filter(p=>(!q||normalize([p.id,p.titol,p.resum,p.accio,...p.etiquetesAmbientals,p.lectura,p.impulsor,...p.grups].join(' ')).includes(q))&&(!theme||p.etiquetesAmbientals.includes(theme))&&(!party||p.grups.includes(party))&&(!kind||p.tipus===kind));
+  $('count').textContent=found.length+' de '+records.length+' fitxes de l’inventari provisional';
+  $('cards').innerHTML=found.length?found.map(renderCard).join(''):'<div class="none">No hi ha cap fitxa de la mostra per a aquests filtres. Això no demostra que el grup no hagi presentat iniciatives sobre el tema.</div>';
+  document.querySelectorAll('[data-kind]').forEach(b=>b.setAttribute('aria-pressed',String(b.dataset.kind===kind)));
+ }
+ for(const id of ['search','topic','party'])$(id).addEventListener(id==='search'?'input':'change',draw);
+ document.querySelectorAll('[data-kind]').forEach(b=>b.addEventListener('click',()=>{kind=b.dataset.kind;draw()}));
+ $('reset').addEventListener('click',()=>{$('search').value='';$('topic').value='';$('party').value='';kind='';draw()});
+ function compare(){
+  const a=$('compareA').value,b=$('compareB').value,t=$('compareTopic').value;
+  for(const [id,g] of [['compareLeft',a],['compareRight',b]]){
+   const list=records.filter(p=>p.grups.includes(g)&&(!t||p.etiquetesAmbientals.includes(t)));
+   const l='<h3>'+safe(name(g))+'</h3>';
+   $(id).innerHTML=l+(list.length?list.map(p=>'<div class="compare-item"><span>'+safe(p.tipus)+' · '+safe(p.subtemaAmbiental)+' · '+safe(p.estat||'Resultat no incorporat')+'</span><b>'+safe(p.titol)+'</b><a href="'+safe(p.url)+'" target="_blank" rel="noopener noreferrer">Expedient '+safe(p.id)+' ↗</a></div>').join(''):'<p class="missing">Encara no hem incorporat cap expedient d’aquest grup per al filtre seleccionat. No és una prova d’absència de propostes.</p>');
+  }
+ }
+ for(const id of ['compareA','compareB','compareTopic'])$(id).addEventListener('change',compare);
+ draw();compare();
+});
+</script>
+</head>
+<body>
+<header><div class="wrap"><a href="../"><strong>Què proposen<span style="color:#edb88d">?</span></strong></a><nav aria-label="Navegació"><a href="../">Inici</a><a href="../com-funciona/">Com funciona?</a><a href="#iniciatives">Iniciatives</a></nav></div></header>
+<section class="hero"><div class="wrap"><div class="eyebrow">XV legislatura · Àmbit temàtic 01</div><h1>Medi ambient<span>.</span><br>Què proposen?</h1><p class="lead">Del canvi climàtic a la biodiversitat, de l'aigua al transport: consulta què han proposat formalment els grups al Congrés i contrasta-ho amb els documents originals.</p><p class="hero-meta"><b>PNL + proposicions de llei</b> · 2023–2026 · Contingut en construcció, inventari no exhaustiu</p></div></section>
+<div class="context"><div class="wrap"><p><strong>Abans de comparar:</strong> una PNL aprovada no es converteix en llei. Una proposició de llei pot modificar normes si acaba tota la tramitació.</p><a href="../com-funciona/#guia">Entén les diferències ↗</a></div></div>
+<main>
+<div class="wrap"><nav class="sect-nav" aria-label="Seccions de medi ambient"><a href="#iniciatives">Explora expedients</a><a href="#compara">Compara grups</a><a href="#govern">Acció del Govern</a><a href="#metode">Metodologia</a><a href="../com-funciona/">Com funciona?</a></nav></div>
+<section class="intro wrap"><h2>Un tema, moltes decisions polítiques.</h2><p>No totes les propostes ambientals inclouen les paraules «medi ambient». També tracten de mobilitat, gestió de l'aigua, energia, salut o agricultura. Aquí classificam aquestes iniciatives pel que proposen, no només pel títol. <strong>Les fitxes actuals no són representatives</strong> del conjunt de la legislatura.</p></section>
+<section id="iniciatives" class="browse wrap"><h2>Explora les iniciatives</h2><p class="sub">Filtra per grup, subtema o tipus. Cada fitxa du a l'expedient original.</p>
+<div class="metric-line"><strong id="subsetCount">Carregant dades…</strong> · <span>La cobertura encara no és completa</span></div><div class="filters">
+<label>Cerca paraules o mesures<input id="search" type="search" autocomplete="off" placeholder="Ex.: aigua, emissions, Menorca…"></label>
+<label>Subtema<select id="topic"></select></label>
+<label>Grup parlamentari<select id="party"></select></label>
+</div>
+<div class="switch" role="group" aria-label="Tipus d'iniciativa"><button type="button" data-kind="" aria-pressed="true">Totes</button><button type="button" data-kind="PNL" aria-pressed="false">PNL</button><button type="button" data-kind="PL" aria-pressed="false">Proposicions de llei</button></div>
+<div class="results-info"><strong id="count" aria-live="polite"></strong><button type="button" id="reset">Neteja els filtres</button></div>
+<div id="cards" class="cards"></div><p class="note">Aquest conjunt és provisional. Una fitxa no és una prova de què faria un partit si governàs; és una proposta parlamentària registrada. Els resultats de tramitació pendents d'incorporar no s'han d'interpretar com a rebutjos.</p></section>
+<section class="compare" id="compara"><div class="wrap">
+<h2>Què ha proposat cada grup?</h2>
+<p>Comparador documental de les fitxes que ja hem incorporat. Les diferències en el nombre de resultats <b>no mesuren encara</b> l'activitat real de cada grup ni les seves prioritats: el catàleg no és complet.</p>
+<div class="compare-form">
+<label>Primer grup<select id="compareA"></select></label>
+<label>Segon grup<select id="compareB"></select></label>
+<label>Àmbit de comparació<select id="compareTopic"></select></label>
+</div>
+<div class="compare-grid"><div class="compare-col" id="compareLeft"></div><div class="compare-col" id="compareRight"></div></div>
+<div class="info-row"><div><h3>I què ha fet el Govern?</h3><p>És una altra pregunta. Els <strong>projectes de llei</strong>, <strong>reials decrets llei</strong> i <strong>reials decrets</strong> s'han d'inventariar separadament: no són PNL ni proposicions de llei dels grups. Només hi ha quatre documents governamentals d’exemple a la secció següent, i no els barrejarem amb les xifres parlamentàries.</p></div><div><h3>Què significa «aprovada»?</h3><p>Depèn del tipus d'iniciativa. Una PNL aprovada expressa una decisió política de la cambra, però no crea una obligació jurídica d'executar-la. <a href="../com-funciona/#guia">Consulta la guia dels procediments ↗</a></p></div></div>
+</div></section>
+<section class="govern-section" id="govern"><div class="wrap">
+ <span class="section-kicker">UNA ALTRA CAPA D'ANÀLISI</span>
+ <h2>Què ha impulsat el Govern?</h2>
+ <p class="govern-intro">Les propostes dels grups no s'han de confondre amb les iniciatives del Govern. Aquests són quatre documents oficials d'exemple, <strong>no un inventari complet de l'acció governamental</strong> durant la legislatura.</p>
+ <div class="govern-cards">
+  <article class="govern-card"><span class="gov-type">Projecte de llei · 121/000025</span>
+   <h3>Comerç de drets d'emissió</h3>
+   <p>El Govern presenta un projecte de llei per modificar la Llei 1/2005, que regula el règim de comerç dels drets d'emissió de gasos amb efecte d'hivernacle. És un <strong>projecte legislatiu</strong>, no una norma aprovada només pel fet de presentar-se.</p>
+   <p class="gov-diff">El projecte fou retirat, segons el registre oficial del Congrés. No es convertí en llei per aquest expedient.</p>
+   <a href="https://www.congreso.es/es/busqueda-de-iniciativas?_iniciativas_id=121%2F000025&_iniciativas_legislatura=XV&_iniciativas_mode=mostrarDetalle&p_p_id=iniciativas&p_p_lifecycle=0&p_p_mode=view&p_p_state=normal" target="_blank" rel="noopener noreferrer">Consulta el projecte de llei al Congrés ↗</a>
+  </article>
+
+  <article class="govern-card"><span class="gov-type">Projecte de llei · 121/000014</span>
+   <h3>Agents forestals i mediambientals</h3>
+   <p>El projecte del Govern culminà en la <strong>Llei 4/2024, de 8 de novembre</strong>, que regula el marc bàsic dels agents encarregats de la vigilància, custòdia i protecció del medi natural.</p>
+   <p class="gov-diff">Llei aprovada i publicada al BOE.</p>
+   <a href="https://www.congreso.es/es/busqueda-de-iniciativas?_iniciativas_id=121%2F000014&_iniciativas_legislatura=XV&_iniciativas_mode=mostrarDetalle&p_p_id=iniciativas&p_p_lifecycle=0&p_p_mode=view&p_p_state=normal" target="_blank" rel="noopener noreferrer">Projecte del Congrés ↗</a>
+   <a href="https://www.boe.es/buscar/act.php?id=BOE-A-2024-23271" target="_blank" rel="noopener noreferrer">Llei aprovada al BOE ↗</a>
+  </article>
+  <article class="govern-card"><span class="gov-type">Projecte de llei · 121/000015</span>
+   <h3>Bombers forestals</h3>
+   <p>El projecte del Govern culminà en la <strong>Llei 5/2024, de 8 de novembre</strong>, sobre el marc bàsic dels bombers forestals i les seves funcions de prevenció, vigilància i extinció.</p>
+   <p class="gov-diff">Llei aprovada i publicada al BOE.</p>
+   <a href="https://www.congreso.es/es/busqueda-de-iniciativas?_iniciativas_id=121%2F000015&_iniciativas_legislatura=XV&_iniciativas_mode=mostrarDetalle&p_p_id=iniciativas&p_p_lifecycle=0&p_p_mode=view&p_p_state=normal" target="_blank" rel="noopener noreferrer">Projecte del Congrés ↗</a>
+   <a href="https://www.boe.es/diario_boe/txt.php?id=BOE-A-2024-23272" target="_blank" rel="noopener noreferrer">Llei aprovada al BOE ↗</a>
+  </article>
+  <article class="govern-card"><span class="gov-type">Reial decret llei · 20/2026</span>
+   <h3>Protecció social davant incendis forestals</h3>
+   <p>El Govern adopta mesures urgents laborals i de Seguretat Social per protegir persones treballadores i empreses afectades pels incendis forestals. <strong>No és una norma de prevenció ecològica dels incendis</strong>, sinó una resposta als seus efectes socials.</p>
+   <p class="gov-diff">Convalidat pel Congrés el 9 de setembre de 2026.</p>
+   <a href="https://www.boe.es/buscar/doc.php?id=BOE-A-2026-16543" target="_blank" rel="noopener noreferrer">Consulta la norma al BOE ↗</a>
+   <a href="https://www.boe.es/buscar/doc.php?id=BOE-A-2026-18994" target="_blank" rel="noopener noreferrer">Comprova la convalidació ↗</a>
+  </article>
+ </div>
+ <div class="gov-note">Com es diferencia un projecte de llei d'un reial decret llei? <a href="../com-funciona/#projecte">Consulta la guia dels procediments</a>.</div>
+ </div></section>
+<section id="metode" class="method"><div class="wrap"><h2>Perquè les dades siguin comprovables</h2><div class="method-grid"><div><strong>01 · Criteri ambiental explícit</strong><p>Inclourem clima i emissions, biodiversitat, aigua, contaminació, energia, mobilitat, recursos naturals i adaptació, amb categories múltiples quan calgui.</p></div><div><strong>02 · Tots els grups i tots els resultats</strong><p>La recopilació final ha d'incloure iniciatives aprovades, rebutjades, caducades i sense votació; cal identificar partits del Grup Mixt, coautories i esmenes.</p></div><div><strong>03 · Fet i interpretació separats</strong><p>El número d'expedient i el text original són la prova. Les valoracions sobre les implicacions polítiques aniran diferenciades i justificades. Consulta el <a href="https://github.com/tonisalom-commits/queproposen/blob/feat/prototip-atles-pnl/docs/metodologia-medi-ambient.md" target="_blank" rel="noopener noreferrer">document metodològic</a> del repositori.</p></div></div></div></section>
+</main><footer><div class="wrap"><span>Què proposen? · Projecte independent de divulgació parlamentària</span><a href="../">Torna al portal</a></div></footer>
+</body></html>

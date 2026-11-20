@@ -1,0 +1,79 @@
+{
+  "versio": 1,
+  "data_consolidacio": "2026-11-20",
+  "legislatura": "XV",
+  "univers_total": 5094,
+  "expedients_consolidats": 830,
+  "amb_fitxa_recuperada": 826,
+  "rescatats_del_web": 4,
+  "expedients_rescatats": [
+    "161/000070",
+    "161/003542",
+    "162/000360",
+    "162/000825"
+  ],
+  "fragments_BOCG_localitzats": 795,
+  "incidencies_total": 35,
+  "incidencies_corpus": 31,
+  "sense_registre_individual_en_corpus_ni_web": 4264,
+  "sense_duplicats": true,
+  "fitxes_mostra_web_localitzades": 25,
+  "per_serie": {
+    "161": {
+      "univers": 3824,
+      "cua": 640
+    },
+    "162": {
+      "univers": 850,
+      "cua": 145
+    },
+    "122": {
+      "univers": 306,
+      "cua": 32
+    },
+    "120": {
+      "univers": 49,
+      "cua": 7
+    },
+    "123": {
+      "univers": 2,
+      "cua": 0
+    },
+    "124": {
+      "univers": 47,
+      "cua": 5
+    },
+    "125": {
+      "univers": 16,
+      "cua": 1
+    }
+  },
+  "fonts": {
+    "fase_1": {
+      "run": 44630938748,
+      "artifact": 14582681187,
+      "sha256_json": "bd9d331fc2995f5d0554490f323a6efe6b6f4c2e6c17d4f3f26ba0bbe9b73f41",
+      "n": 621
+    },
+    "fase_2": {
+      "run": 44632672066,
+      "artifact": 14581873661,
+      "sha256_json": "8af359b23a758973748fbb42b4b6b8ec02c312f338e0eb5daf96d5ea24e16611",
+      "n": 205
+    }
+  },
+  "decisions_informe_previ": {
+    "total": 34,
+    "incloses": 19,
+    "excloses": 10,
+    "especials": 5,
+    "nota": "Les decisions per ID no consten als dos corpus; no s'han assignat sense font."
+  },
+  "advertiments": [
+    "La cua de 830 no equival a 830 propostes ambientals confirmades.",
+    "Els 206 indexs originals no s'inclouen en aquests dos artefactes; el total global prové del control de cobertura previ.",
+    "L'extraccio de fragments no acredita contingut, esmenes, text aprovat ni votacions.",
+    "Les fitxes web rescatades tenen menor nivell d'evidencia que les 826 fitxes recuperades.",
+    "No publicar estadistiques per partit ni percentatges ambientals d'aquesta cua."
+  ]
+}

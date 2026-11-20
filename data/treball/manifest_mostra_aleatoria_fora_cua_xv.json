@@ -1,0 +1,54 @@
+{
+  "legislatura": "XV",
+  "data_tall": "2026-11-20",
+  "marc_mostral": "4264 expedients fora de cua de l'univers XV",
+  "tipus": "Mostra aleatoria estratificada per serie, sense reemplaçament",
+  "llavor": 20261120,
+  "mida": 100,
+  "estrats": {
+    "120": {
+      "poblacio": 42,
+      "seleccionats": 2,
+      "probabilitat": 0.04761905,
+      "pes": 21.0
+    },
+    "122": {
+      "poblacio": 274,
+      "seleccionats": 7,
+      "probabilitat": 0.02554745,
+      "pes": 39.142857
+    },
+    "123": {
+      "poblacio": 2,
+      "seleccionats": 1,
+      "probabilitat": 0.5,
+      "pes": 2.0
+    },
+    "124": {
+      "poblacio": 42,
+      "seleccionats": 2,
+      "probabilitat": 0.04761905,
+      "pes": 21.0
+    },
+    "125": {
+      "poblacio": 15,
+      "seleccionats": 1,
+      "probabilitat": 0.06666667,
+      "pes": 15.0
+    },
+    "161": {
+      "poblacio": 3184,
+      "seleccionats": 71,
+      "probabilitat": 0.02229899,
+      "pes": 44.84507
+    },
+    "162": {
+      "poblacio": 705,
+      "seleccionats": 16,
+      "probabilitat": 0.02269504,
+      "pes": 44.0625
+    }
+  },
+  "control": "Mostra separada dels candidats prioritzats per titol",
+  "advertiment": "L'aleatorietat de la seleccio no valida les decisions ni garanteix exhaustivitat; cal llegir i auditar el contingut dels expedients i quantificar incertesa de la mostra."
+}

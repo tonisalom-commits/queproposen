@@ -1,0 +1,12 @@
+---
+import BaseLayout from './BaseLayout.astro';
+const { frontmatter = {} } = Astro.props;
+const base = import.meta.env.BASE_URL.endsWith('/')
+  ? import.meta.env.BASE_URL : import.meta.env.BASE_URL + '/';
+---
+<BaseLayout title={frontmatter.title || 'Guia parlamentària'} description={frontmatter.description || 'Procediments parlamentaris explicats'} active="guia">
+  <article class="article-shell">
+    <p><a href={base + 'com-funciona/'}>← Torna a «Com funciona?»</a></p>
+    <slot />
+  </article>
+</BaseLayout>

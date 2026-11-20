@@ -1,0 +1,24 @@
+{
+  "data": "2026-11-20T18:28:39.291548+00:00",
+  "poblacio_fora_cua": 4264,
+  "mostra": 100,
+  "ja_auditats": 13,
+  "pendents_al_comencament": 87,
+  "fitxes_recuperades": 87,
+  "fragments_obtinguts": 84,
+  "incidencies": [
+    {
+      "id": "161/001122",
+      "error": "Cap enllaç de BOCG dins la fitxa original"
+    },
+    {
+      "id": "161/003710",
+      "error": "Cap enllaç de BOCG dins la fitxa original"
+    },
+    {
+      "id": "161/003820",
+      "error": "Text oficial obtingut però fragment no atribuïble"
+    }
+  ],
+  "advertiment": "Evidència automàtica de fonts oficials, no revisió humana. Cap fila sense lectura i decisió individual no es considera auditada."
+}

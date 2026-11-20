@@ -1,0 +1,30 @@
+{
+  "univers_fora_cua_original": 4264,
+  "ja_revisats_fora_cua": 125,
+  "sense_pistes_noves_i_sense_revisar": 3630,
+  "amb_pistes_i_sense_revisar": 509,
+  "cua_prioritaria": 250,
+  "suma_verificada": 4264,
+  "categories": {
+    "industria_i_energia_sectorial": 163,
+    "transport_i_infraestructura": 131,
+    "ordenacio_territorial_i_turisme": 124,
+    "agricultura_i_alimentacio": 58,
+    "energia_i_electrificacio": 40,
+    "proteccio_ecologica": 13,
+    "contaminacio_acustica": 2,
+    "mobilitat_sostenible": 2,
+    "gestio_del_litoral": 2,
+    "aigua_i_inundacions": 1,
+    "economia_i_industria_verda": 1
+  },
+  "tipus": "CRIBRATGE_LEXIC_DE_TITOLS_SENSE_CLASSIFICACIO",
+  "mostra_aleatoria_independent": "NO ALTERADA",
+  "limitacions": [
+    "Algunes iniciatives ambientals no tenen cap pista ambiental al titol.",
+    "La coincidencia lexical no significa que les mesures siguin ambientals.",
+    "La cua de lectura no es una mostra estadistica representativa.",
+    "L'ambientalitat directa i secundaria exigeix dispositius llegits.",
+    "Els expedients revisats queden fora de la nova cua per evitar duplicats."
+  ]
+}

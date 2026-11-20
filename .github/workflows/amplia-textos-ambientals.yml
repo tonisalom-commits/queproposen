@@ -1,0 +1,35 @@
+name: Auditoria ambiental · segon cribratge d'omissions
+on:
+  push:
+    branches: [feat/prototip-atles-pnl]
+    paths:
+      - scripts/amplia_textos_ambientals.py
+      - .github/workflows/amplia-textos-ambientals.yml
+  workflow_dispatch:
+permissions:
+  contents: read
+  actions: read
+jobs:
+  recupera:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@v4
+      - name: Instal·la analitzador HTML
+        run: python -m pip install --quiet requests beautifulsoup4
+      - name: Descarrega les fonts de les set sèries
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          mkdir -p fonts1 fonts162
+          gh run download 44623442503 -n inventari-ambiental-per-a-revisio -D fonts1
+          gh run download 44624902860 -n serie-162-recollida-auditada -D fonts162
+      - name: Recupera fonts dels casos omesos pel primer cribratge
+        run: python -m scripts.amplia_textos_ambientals
+      - name: Desa corpus i informes sense considerar-lo verificat
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: corpus-ambiental-segon-cribratge
+          path: evidencia-ampliada/
+          retention-days: 14
