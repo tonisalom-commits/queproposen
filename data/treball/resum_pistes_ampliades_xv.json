@@ -1,8 +1,8 @@
 {
   "univers_fora_cua_original": 4264,
   "ja_revisats_fora_cua": 112,
-  "sense_pistes_noves_i_sense_revisar": 3603,
-  "amb_pistes_i_sense_revisar": 549,
+  "sense_pistes_noves_i_sense_revisar": 3630,
+  "amb_pistes_i_sense_revisar": 522,
   "cua_prioritaria": 250,
   "suma_verificada": 4264,
   "categories": {
@@ -11,9 +11,8 @@
     "ordenacio_territorial_i_turisme": 127,
     "agricultura_i_alimentacio": 58,
     "energia_i_electrificacio": 46,
-    "gestio_del_litoral": 20,
-    "riscos_i_emergencia": 15,
     "proteccio_ecologica": 13,
+    "gestio_del_litoral": 4,
     "contaminacio_acustica": 4,
     "economia_i_industria_verda": 3,
     "mobilitat_sostenible": 2,
