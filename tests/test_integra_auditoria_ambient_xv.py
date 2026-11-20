@@ -56,9 +56,10 @@ class AuditoriaXvTests(unittest.TestCase):
             dump(path / "univers_congres_xv_5094.csv", list(univ[0]), univ)
             dump(path / "fora_cua_xv_4264.csv", list(outside[0]), outside)
             audit = []
-            for i in [0, 1, 2, 3, 900]:
+            for i in [0, 1, 2, 3, 900, 950]:
                 audit.append({
-                    "expedient": ids[i], "decisio_ambiental": "INCLOURE",
+                    "expedient": ids[i],
+                    "decisio_ambiental": "EXCLOURE" if i == 950 else "INCLOURE",
                     "grau_revision": "TEXT_ORIGINAL_I_RESULTAT", "instrument": "PNL",
                     "subtemes": "Biodiversitat", "mesures_identificades": "Mesura contrastada",
                     "font_text_inicial": "https://www.congreso.es/bocg/original",
@@ -71,11 +72,16 @@ class AuditoriaXvTests(unittest.TestCase):
             self.assertEqual(report["cua"], 830)
             self.assertEqual(report["inclusions_identificades"], 5)
             self.assertEqual(report["decisions_recuperades_de_fora_cua"], 1)
+            self.assertEqual(report["decisions_revisades_fora_cua"], 2)
+            self.assertEqual(report["exclusions_a_fora_cua"], 1)
+            self.assertEqual(report["decisions_dins_cua_inicial"], 4)
+            self.assertEqual(report["exclusions_identificades"], 1)
             self.assertEqual(report["total_inventari_revisat"], 831)
             self.assertEqual(report["cua_pendent_de_decisio"], 826)
             self.assertEqual(report["mostra_fora_cua_per_llegir"], 100)
             rows = list(csv.DictReader((path / "inventari_ambient_xv_revisat.csv").open(encoding="utf-8-sig")))
             self.assertEqual(len(rows), 831)
+            self.assertNotIn(ids[950], {r["expedient"] for r in rows})
             self.assertTrue(all(x["decisio_auditoria"] == "INCLOURE" for x in rows[:4]))
             self.assertEqual(rows[4]["decisio_auditoria"], "")
             self.assertEqual(rows[4]["decisio_ambiental"], "PENDENT")
@@ -84,6 +90,8 @@ class AuditoriaXvTests(unittest.TestCase):
             self.assertEqual(rescued["decisio_auditoria"], "INCLOURE")
             check = list(csv.DictReader((path / "control_omissions_fora_cua_xv.csv").open(encoding="utf-8-sig")))
             self.assertEqual(len(check), 4264)
+            self.assertEqual(next(r["estat_revisio"] for r in check
+                                  if r["id"] == ids[950]), "AUDITAT: EXCLOURE")
             self.assertIn("biodiversitat", next(x["pistes_pel_titol"] for x in check if x["id"] == ids[900]))
             self.assertEqual(len(list(csv.DictReader((path / "cua_lot02_40.csv").open(encoding="utf-8-sig")))), 40)
             self.assertEqual(json.loads((path / "resum_auditoria_ambient_xv.json").read_text())["inclusions_identificades"], 5)
