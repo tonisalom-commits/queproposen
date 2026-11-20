@@ -43,7 +43,7 @@ class AuditoriaXvTests(unittest.TestCase):
                 univ.append(entry)
                 if i < 830:
                     queue.append({
-                        "expedient": code, "serie": "161", "tipus": "PNL",
+                        "expedient": code, "serie": "161", "tipus": "PNL", "procedencia": "fase_1",
                         "titol_index": "Propuesta medioambiental" if i < 10 else title,
                         "autor_index": "Grup", "text_BOCG_localitzat": "SI",
                         "url_expedient": "https://www.congreso.es/iniciativa",
