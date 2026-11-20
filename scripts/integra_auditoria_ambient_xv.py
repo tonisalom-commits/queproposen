@@ -364,6 +364,8 @@ def process(data: Path = DATA) -> dict:
     (data / "manifest_mostra_aleatoria_fora_cua_xv.json").write_text(
         json.dumps(random_metadata, ensure_ascii=False, indent=2) + "\n",
         encoding="utf-8")
+    random_verified = [r for r in random_sample if r["id"] in decisions]
+    random_counts = Counter(decisions[r["id"]]["decisio_ambiental"] for r in random_verified)
     counts = Counter(a["decisio_ambiental"] for a in decisions.values())
     manifest = {
         "versio": 1, "legislatura": "XV", "data_tall": "2026-11-20",
@@ -383,6 +385,13 @@ def process(data: Path = DATA) -> dict:
         "fora_cua_amb_pistes_encara_pendents": len(alerts_pending),
         "mostra_fora_cua_per_llegir": len(chosen),
         "mostra_aleatoria_fora_cua": len(random_sample),
+        "mostra_aleatoria_revisats": len(random_verified),
+        "mostra_aleatoria_pendents": len(random_sample) - len(random_verified),
+        "mostra_aleatoria_decisions": {
+            "incloses": random_counts["INCLOURE"],
+            "excloses": random_counts["EXCLOURE"],
+            "frontereres": random_counts["FRONTERER"],
+        },
         "metode_mostra_aleatoria": "estratificada_per_serie_llavor_20261120",
         "lots_conservats": sorted({r["lot_auditoria"] for r in decisions.values()}),
         "decisions_historic_19nov": {
