@@ -1,5 +1,12 @@
 # Què proposen? — atles parlamentari en català
 
+## Consolidació documental (20/11/2026)
+
+La cua de revisió ambiental està **consolidada en 830 expedients únics**: 826 fitxes oficials dels dos corpus (621 + 205) i 4 fitxes del web anterior que havien quedat fora del cribratge. D'aquests, 795 tenen un fragment del BOCG localitzat; queden 35 incidències documentals (31 sense fragment i 4 sense còpia oficial als corpus). El total de **5.094** és el recompte oficial agregat de les set sèries, **no** el nombre d'iniciatives ambientals confirmades. Les 34 primeres decisions temàtiques anteriors no es poden atribuir individualment sense recuperar el fitxer de revisió.
+
+**Dades conservades:** [CSV consolidat (830)](data/treball/inventari_ambient_xv_830.csv), [incidències (35)](data/treball/incidencies_ambient_xv_35.csv), [manifest](data/treball/manifest_ambient_xv.json) i [informe metodològic](docs/inventari-ambient-xv-consolidacio-2026-11-20.md). La web continua sent un **prototip de mostra**, sense estadístiques representatives.
+
+
 Web temàtica i divulgativa per conèixer què han proposat els grups al Congrés i distingir-ho de l'acció del Govern.
 
 **Estat: prototip, NO exhaustiu ni representatiu.** Actualment hi ha 55 expedients parlamentaris de mostra (44 PNL i 11 proposicions de llei). Medi ambient té 25 fitxes (24 PNL i 1 PL) i 4 documents governamentals addicionals, que no s'afegeixen als recomptes parlamentaris.
