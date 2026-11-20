@@ -92,5 +92,16 @@ jobs:
             echo "Resultats regenerats sense canvis"
           else
             git commit -m "Integra decisions ambientals auditades i conserva control d'omissions"
-            git push
+            # Altres fluxos poden haver afegit dades a la mateixa branca.
+            # Rebasam i repetim davant canvis concurrents, sense force-push.
+            publicat=0
+            for intent in 1 2 3 4; do
+              git pull --rebase origin feat/prototip-atles-pnl
+              if git push origin HEAD:feat/prototip-atles-pnl; then
+                publicat=1
+                break
+              fi
+              sleep 2
+            done
+            test "$publicat" -eq 1
           fi
