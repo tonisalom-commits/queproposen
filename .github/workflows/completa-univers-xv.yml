@@ -1,0 +1,48 @@
+name: Recupera univers XV íntegre i desa índexs originals
+on:
+  push:
+    branches: [feat/prototip-atles-pnl]
+    paths:
+      - ".github/workflows/completa-univers-xv.yml"
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  indexs:
+    runs-on: ubuntu-latest
+    timeout-minutes: 35
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: feat/prototip-atles-pnl
+          persist-credentials: true
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Recupera 206 pàgines i valida els 5094 expedients
+        shell: bash
+        run: |
+          set -euo pipefail
+          python scripts/recupera_univers_xv.py > /tmp/univers.log 2>&1 || { tail -100 /tmp/univers.log; exit 1; }
+          tail -50 /tmp/univers.log
+      - name: Desa la font i els registres individualitzats a la branca de treball
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/fonts/indexs_originals_congres_xv.zip data/treball/univers_congres_xv_5094.csv data/treball/fora_cua_xv_4264.csv data/treball/manifest_univers_congres_xv.json
+          if git diff --cached --quiet; then
+            echo "Sense canvis"
+          else
+            git commit -m "Recupera i conserva els 5094 expedients i 206 indexs originals"
+            git push
+          fi
+      - name: Adjunta el ZIP original com a prova addicional
+        uses: actions/upload-artifact@v4
+        with:
+          name: indexs-originals-congres-xv-206-pagines
+          path: |
+            data/fonts/indexs_originals_congres_xv.zip
+            data/treball/manifest_univers_congres_xv.json
+          retention-days: 90
