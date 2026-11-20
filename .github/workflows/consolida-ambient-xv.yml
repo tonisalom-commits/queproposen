@@ -1,0 +1,65 @@
+name: Consolida inventari ambiental XV (només dades de revisió)
+
+on:
+  push:
+    branches: [feat/prototip-atles-pnl]
+    paths:
+      - ".github/workflows/consolida-ambient-xv.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  actions: read
+
+jobs:
+  consolidacio:
+    runs-on: ubuntu-latest
+    timeout-minutes: 12
+    steps:
+      - name: Recupera la branca de treball
+        uses: actions/checkout@v4
+        with:
+          ref: feat/prototip-atles-pnl
+          persist-credentials: true
+      - name: Python per als CSV
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Recupera les dues fonts documentals conservades a Actions
+        env:
+          GH_TOKEN: ${{ github.token }}
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p .tmp/corpus1 .tmp/corpus2
+          gh run download 44630938748 --repo "$GITHUB_REPOSITORY" \
+            -n corpus-documental-ambiental-xv -D .tmp/corpus1
+          gh run download 44632672066 --repo "$GITHUB_REPOSITORY" \
+            -n corpus-ambiental-segon-cribratge -D .tmp/corpus2
+          test -s .tmp/corpus1/fitxes_amb_text_original.json
+          test -s .tmp/corpus2/fitxes_amb_text_original.json
+      - name: Consolida, deduplica i comprova omissions
+        shell: bash
+        run: |
+          set -euo pipefail
+          python scripts/consolida_ambient_xv.py \
+            --fase-1 .tmp/corpus1/fitxes_amb_text_original.json \
+            --fase-2 .tmp/corpus2/fitxes_amb_text_original.json \
+            > .tmp/informe_execucio.json
+          python -m json.tool data/treball/manifest_ambient_xv.json >/dev/null
+          echo "Registres consolidats: $(($(wc -l < data/treball/inventari_ambient_xv_830.csv)-1))"
+      - name: Desa permanentment les dades tabulars de revisió a la branca
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/treball/inventari_ambient_xv_830.csv \
+            data/treball/incidencies_ambient_xv_35.csv \
+            data/treball/manifest_ambient_xv.json
+          if git diff --cached --quiet; then
+            echo "Sense canvis"
+          else
+            git commit -m "Consolida 830 expedients de revisió ambiental, sense publicar-los"
+            git push
+          fi
