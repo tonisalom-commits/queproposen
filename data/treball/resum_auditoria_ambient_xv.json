@@ -1,0 +1,32 @@
+{
+  "versio": 1,
+  "legislatura": "XV",
+  "data_tall": "2026-11-20",
+  "univers": 5094,
+  "cua": 830,
+  "fora_cua": 4264,
+  "lot_01_i_successius_amb_decisio_individual": 4,
+  "inclusions_identificades": 4,
+  "exclusions_identificades": 0,
+  "fronterers_identificats": 0,
+  "cua_pendent_de_decisio": 826,
+  "fora_cua_amb_pistes_de_titol": 10,
+  "mostra_fora_cua_per_llegir": 100,
+  "lots_conservats": [
+    "auditoria_mediambient_lot01_2026-11-20.csv"
+  ],
+  "decisions_historic_19nov": {
+    "total_agregat": 34,
+    "inclusions": 19,
+    "exclusions": 10,
+    "ambigus": 5,
+    "identificadors": "NO_RECUPERATS",
+    "no_sumar_al_total_actual": true
+  },
+  "limitacions": [
+    "Les quatre decisions individuals actuals poden coincidir amb les 34 decisions anteriors no atribuïbles.",
+    "La mostra fora de cua no prova ni completitud ni manca d'omissions.",
+    "Pistes dels títols no són lectura documental ni classificació confirmada.",
+    "No es publiquen fitxes ni percentatges partidistes automàticament."
+  ]
+}
