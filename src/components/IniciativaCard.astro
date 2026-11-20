@@ -8,7 +8,7 @@ const tags = Array.isArray(item.etiquetesAmbientals) ? item.etiquetesAmbientals 
 const guide = item.tipus === 'PL' ? 'proposicio' : 'pnl';
 const status = item.estat || 'Resultat no incorporat';
 const review = item.revisio || null;
-const reviewText = review ? {"autoria":"Autoria i títol contrastats","contingut":"Petició principal contrastada","tramitacio":"Tràmit contrastat, resultat final pendent","resultat":"Resultat parlamentari contrastat"}[review.nivell] || 'Revisió parcial' : 'Verificació documental pendent';
+const reviewText = review ? {"autoria":"Autoria i títol contrastats","contingut":"Petició principal contrastada","tramitacio":"Tràmit contrastat, resultat final pendent","resultat":"Estat de l’expedient contrastat a l’índex oficial; esmenes, text final i votacions no necessàriament revisats"}[review.nivell] || 'Revisió parcial' : 'Verificació documental pendent';
 const corpus = [
   item.id, item.titol, item.resum, item.accio, item.lectura,
   item.tema, item.impulsor, ...groups, ...tags
