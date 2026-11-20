@@ -1,0 +1,255 @@
+{
+  "generat": "2026-11-20T19:27:49.875318+00:00",
+  "finalitat": "Localitzar fonts primaries que permetin lectura futura",
+  "advertiment": "No hi ha classificacio automatica. La lectura de cada dispositiu exigeix verificar-ne exactament els punts o l'articulat. Un text HTTP obtingut no equival a document verificat.",
+  "expedients": [
+    "120/000034",
+    "120/000043",
+    "161/003710",
+    "161/003820"
+  ],
+  "consultes": [
+    {
+      "obtingut": true,
+      "http": 200,
+      "mime": "text/html;charset=UTF-8",
+      "url": "https://www.congreso.es/es/busqueda-de-iniciativas?_iniciativas_id=120%2F000034&_iniciativas_legislatura=XV&_iniciativas_mode=mostrarDetalle&p_p_id=iniciativas&p_p_lifecycle=0&p_p_state=normal&p_p_mode=view",
+      "sha256_html": "8cfaa8fab13f086447c0c67e2a6e943720aaac8617f15b64703328d23cf3cb56",
+      "llargada_text": 28414,
+      "enllacos_publicacio": [
+        {
+          "titol": "Actividad internacional de la semana",
+          "url": "https://www.congreso.es/backoffice_doc/internacional/viajes_semana/actividad_internacional_semana.pdf"
+        },
+        {
+          "titol": "Formulario de pedido de publicaciones ",
+          "url": "https://www.congreso.es/webpublica/estudios/formulario_pedido_publicaciones.pdf"
+        },
+        {
+          "titol": "Plan de Sostenibilidad Medioambiental",
+          "url": "https://www.congreso.es/docu/planes/plan_sostenibilidad_medioambiental_2022.pdf"
+        },
+        {
+          "titol": "Actividad internacional de la semana",
+          "url": "https://www.congreso.es/backoffice_doc/internacional/viajes_semana/actividad_internacional_semana.pdf"
+        },
+        {
+          "titol": "\r\n\t\t\t\t\t\t\t       \t\ttexto íntegro\r\n\t\t\t\t\t\t\t       \t\t",
+          "url": "https://www.congreso.es/busqueda-de-publicaciones?p_p_id=publicaciones&p_p_lifecycle=0&p_p_state=normal&p_p_mode=view&_publicaciones_mode=mostrarTextoIntegro&_publicaciones_legislatura=XV&_publicaciones_id_texto=(BOCG-15-D-407.CODI.)"
+        },
+        {
+          "titol": "",
+          "url": "https://www.congreso.es/public_oficiales/L15/CONG/BOCG/D/BOCG-15-D-407.PDF#page=45"
+        },
+        {
+          "titol": "\r\n\t\t\t\t\t\t\t       \t\ttexto íntegro\r\n\t\t\t\t\t\t\t       \t\t",
+          "url": "https://www.congreso.es/busqueda-de-publicaciones?p_p_id=publicaciones&p_p_lifecycle=0&p_p_state=normal&p_p_mode=view&_publicaciones_mode=mostrarTextoIntegro&_publicaciones_legislatura=XV&_publicaciones_id_texto=(BOCG-15-D-595.CODI.)"
+        },
+        {
+          "titol": "",
+          "url": "https://www.congreso.es/public_oficiales/L15/CONG/BOCG/D/BOCG-15-D-595.PDF#page=20"
+        }
+      ],
+      "ocurrencies_id": 1,
+      "fragment_curt": "ciativa legislativa popular. Proposición de Ley para la reforma de la Ley Orgánica 2/2006, de 3 de mayo, de Educación. (120/000034) Presentado el 17/09/2025 , calificado el 23/09/2025 Autor Don Pablo José Verde Martínez y otros Resultado tramitación Caducado Tramitación seguida por la iniciativa Senado desde 23/09/2025 hasta 07/10/2025 Junta Electoral Central desde 07/10/2025 hasta 29/09/2026 Concluido - (Caducado) desde 29/09/2026 hasta 20/10/2026 Boletines BOCG. Congreso de los Diputados Núm. D-407 de 10/10/2025 Pág.: 45 Trámite inicial texto íntegro | PDF BOCG. Congreso de los Diputados Núm. D-595 de 02/10/2026 Pág.: 20 Caducidad de la iniciativa texto íntegro | PDF $(document ).ready(function() { formatListDiarios(); }); function formatListDiarios(){ console.log(\"formatListDiarios\"); var elHtmlDiarios = $(\"#_iniciativas_customHtmlDiarios\"); if( elHtmlDiarios.length ){ var strHtmlDiarios = elHtmlDiarios.html(); strHtmlDiarios = strHtmlDiarios.replace( /<br>\\s<br>/gi, \"<br><br>\" ); var arrElements = strHtmlDiarios.split(\"<br><br>\"); var listDiarios = $(\"#_iniciativas_listDiarios\"); for(var i=0; i<arrElements.length; i++){ var diarioElement = document.createElement('li'); diarioElement.innerHTML = arrElements[i]; listDiarios.append(diarioElement); } listDiarios.find( \"a\" ).each(function( index ) { this.innerHTML = \"\"; var iconPdf = document.createElement('i'); iconPdf.classList.add(\"fas\"); iconPdf.classList.add(\"fa-file-pdf\"); this.appendChild( iconPdf ); var iconText = 'PDF'; this.appendChild(document.createTextNode(iconText)); this.setAttribute(\"target\", \"_blank\"); var parentNode = this.parentNode; var htmlParent = parentNode.innerHTML; if( htmlParent.indexOf(\"<br>\") !== -1 ){ htmlParent = htmlParent.replace( /<a/gi, \"<br><a\" ); parentNode.innerHTML = htmlParent; } }); } } Oculto Contacto | Sugerencias | Accesibilidad | Mapa Web Preguntas Frecuentes | Aviso legal | Protección de datos",
+      "tipus_consulta": "fitxa_expedient",
+      "codi": "120/000034",
+      "lectura_dispositiu_certificada": false
+    },
+    {
+      "obtingut": true,
+      "http": 200,
+      "mime": "text/html;charset=UTF-8",
+      "url": "https://www.congreso.es/en/busqueda-de-publicaciones?_publicaciones_id_texto=%28BOCG-15-D-407.CODI.%29&_publicaciones_legislatura=XV&_publicaciones_mode=mostrarTextoIntegro&p_p_id=publicaciones&p_p_lifecycle=0&p_p_mode=view&p_p_state=normal",
+      "sha256_html": "95e31b9ec33a85cfb9290a33a72d84dad1393507ddeccdc86fc4e026f7d597de",
+      "llargada_text": 161897,
+      "enllacos_publicacio": [
+        {
+          "titol": "This week’s international activities ",
+          "url": "https://www.congreso.es/backoffice_doc/internacional/viajes_semana/actividad_internacional_semana.pdf"
+        },
+        {
+          "titol": "Request form for Publications",
+          "url": "https://www.congreso.es/webpublica/estudios/formulario_pedido_publicaciones.pdf"
+        },
+        {
+          "titol": "Environmental Sustainability Plan",
+          "url": "https://www.congreso.es/docu/planes/plan_sostenibilidad_medioambiental_2022.pdf"
+        },
+        {
+          "titol": "Request form for Publications",
+          "url": "https://www.congreso.es/webpublica/estudios/formulario_pedido_publicaciones.pdf"
+        },
+        {
+          "titol": "Environmental Sustainability Plan",
+          "url": "https://www.congreso.es/docu/planes/plan_sostenibilidad_medioambiental_2022.pdf"
+        },
+        {
+          "titol": "PDF",
+          "url": "https://www.congreso.es/public_oficiales/L15/CONG/BOCG/D/BOCG-15-D-407.PDF"
+        }
+      ],
+      "ocurrencies_id": 2,
+      "fragment_curt": "ocatoria de huelga general para el día 15 de octubre de 2025 ... (Página40) Otros textos INICIATIVA LEGISLATIVA POPULAR 120/000034 Acuerdo de la Mesa de la Cámara admitiendo el escrito presentado por don Pablo José Verde Martínez y otros, por el que se ejercita el trámite inicial de la iniciativa legislativa popular para la reforma de la Ley Orgánica 2/2006, de 3 de mayo, de Educación ... (Página45) 120/000035 Acuerdo de la Mesa de la Cámara admitiendo el escrito presentado por don Sebastià Rotger Campins y otros, por el que se ejercita el trámite inicial de la iniciativa legislativa popular para la modificación del Real Decreto Legislativo 1/2025 y la derogación del Real Decreto 666/2023, de 18 de julio, por el que se regula la distribución, prescripción, dispensación y uso de medicamentos veterinarios ... (Página45) Página 3 COMPOSICIÓN Y ORGANIZACIÓN DE LA CÁMARA DIPUTADOS De conformidad con lo dispuesto en la Norma 5 del Acuerdo de las Mesas del Congreso de los Diputados y del Senado, de 21 de diciembre de 2009, por el que se aprueban las Normas en materia de registro de intereses, en los términos de la redacción dada por la modificación acordada por las Mesas de ambas Cámaras, en su reunión del día 19 de julio de 2011, para dar cumplimiento a lo establecido en la reforma del artículo 160.2 de la Ley Orgánica del Régimen Electoral General, se ordena la publicación en el Boletín Oficial de las Cortes Generales de la siguiente declaración de bienes y rentas presentada, una vez calificada. Palacio del Congreso de los Diputados, 7 de octubre de 2025.-P.D. El Secretario General del Congreso de los Diputados, Fernando Galindo Elola-Olaso. ÍNDICE AGÜERA GAGO, Cristina (GP) (núm. expte. 005/000132/0002) 1 ... (Página4) 0 Declaración inicial. 1 Modificación de la declaración. 2 Declaración final. Página 4 [**********página con cuadro**********] Página 5 [**********página con cuadro**********]",
+      "tipus_consulta": "bocg_tramit_inicial",
+      "codi": "120/000034",
+      "lectura_dispositiu_certificada": false
+    },
+    {
+      "obtingut": true,
+      "http": 200,
+      "mime": "text/html;charset=UTF-8",
+      "url": "https://www.congreso.es/es/busqueda-de-iniciativas?_iniciativas_id=120%2F000043&_iniciativas_legislatura=XV&_iniciativas_mode=mostrarDetalle&p_p_id=iniciativas&p_p_lifecycle=0&p_p_state=normal&p_p_mode=view",
+      "sha256_html": "4ad70822ff1c6df277739e21dccdce86d11a2a7592c7f0086d1e30ad4396bf80",
+      "llargada_text": 28473,
+      "enllacos_publicacio": [
+        {
+          "titol": "Actividad internacional de la semana",
+          "url": "https://www.congreso.es/backoffice_doc/internacional/viajes_semana/actividad_internacional_semana.pdf"
+        },
+        {
+          "titol": "Formulario de pedido de publicaciones ",
+          "url": "https://www.congreso.es/webpublica/estudios/formulario_pedido_publicaciones.pdf"
+        },
+        {
+          "titol": "Plan de Sostenibilidad Medioambiental",
+          "url": "https://www.congreso.es/docu/planes/plan_sostenibilidad_medioambiental_2022.pdf"
+        },
+        {
+          "titol": "Actividad internacional de la semana",
+          "url": "https://www.congreso.es/backoffice_doc/internacional/viajes_semana/actividad_internacional_semana.pdf"
+        },
+        {
+          "titol": "\r\n\t\t\t\t\t\t\t       \t\ttexto íntegro\r\n\t\t\t\t\t\t\t       \t\t",
+          "url": "https://www.congreso.es/busqueda-de-publicaciones?p_p_id=publicaciones&p_p_lifecycle=0&p_p_state=normal&p_p_mode=view&_publicaciones_mode=mostrarTextoIntegro&_publicaciones_legislatura=XV&_publicaciones_id_texto=(BOCG-15-D-493.CODI.)"
+        },
+        {
+          "titol": "",
+          "url": "https://www.congreso.es/public_oficiales/L15/CONG/BOCG/D/BOCG-15-D-493.PDF#page=45"
+        },
+        {
+          "titol": "\r\n\t\t\t\t\t\t\t       \t\ttexto íntegro\r\n\t\t\t\t\t\t\t       \t\t",
+          "url": "https://www.congreso.es/busqueda-de-publicaciones?p_p_id=publicaciones&p_p_lifecycle=0&p_p_state=normal&p_p_mode=view&_publicaciones_mode=mostrarTextoIntegro&_publicaciones_legislatura=XV&_publicaciones_id_texto=(BOCG-15-D-610.CODI.)"
+        },
+        {
+          "titol": "",
+          "url": "https://www.congreso.es/public_oficiales/L15/CONG/BOCG/D/BOCG-15-D-610.PDF#page=1563"
+        }
+      ],
+      "ocurrencies_id": 1,
+      "fragment_curt": "iva popular. Proposición de Ley Integral de Transparencia, Rendición de Cuentas y Protección de Denunciantes (LITFIP). (120/000043) Presentado el 11/02/2026 , calificado el 17/02/2026 Autor Don Jesús Muiños Taboada y otros Resultado tramitación Trasladado al próximo Congreso Tramitación seguida por la iniciativa Senado desde 17/02/2026 hasta 10/03/2026 Junta Electoral Central desde 10/03/2026 hasta 06/10/2026 Concluido - (Trasladado al próximo Congreso) desde 06/10/2026 hasta 04/11/2026 Boletines BOCG. Congreso de los Diputados Núm. D-493 de 13/03/2026 Pág.: 45 Trámite inicial texto íntegro | PDF BOCG. Congreso de los Diputados Núm. D-610 de 04/11/2026 Pág.: 1563 Traslado al próximo Congreso texto íntegro | PDF $(document ).ready(function() { formatListDiarios(); }); function formatListDiarios(){ console.log(\"formatListDiarios\"); var elHtmlDiarios = $(\"#_iniciativas_customHtmlDiarios\"); if( elHtmlDiarios.length ){ var strHtmlDiarios = elHtmlDiarios.html(); strHtmlDiarios = strHtmlDiarios.replace( /<br>\\s<br>/gi, \"<br><br>\" ); var arrElements = strHtmlDiarios.split(\"<br><br>\"); var listDiarios = $(\"#_iniciativas_listDiarios\"); for(var i=0; i<arrElements.length; i++){ var diarioElement = document.createElement('li'); diarioElement.innerHTML = arrElements[i]; listDiarios.append(diarioElement); } listDiarios.find( \"a\" ).each(function( index ) { this.innerHTML = \"\"; var iconPdf = document.createElement('i'); iconPdf.classList.add(\"fas\"); iconPdf.classList.add(\"fa-file-pdf\"); this.appendChild( iconPdf ); var iconText = 'PDF'; this.appendChild(document.createTextNode(iconText)); this.setAttribute(\"target\", \"_blank\"); var parentNode = this.parentNode; var htmlParent = parentNode.innerHTML; if( htmlParent.indexOf(\"<br>\") !== -1 ){ htmlParent = htmlParent.replace( /<a/gi, \"<br><a\" ); parentNode.innerHTML = htmlParent; } }); } } Oculto Contacto | Sugerencias | Accesibilidad | Mapa Web Preguntas Fre",
+      "tipus_consulta": "fitxa_expedient",
+      "codi": "120/000043",
+      "lectura_dispositiu_certificada": false
+    },
+    {
+      "obtingut": true,
+      "http": 200,
+      "mime": "text/html;charset=UTF-8",
+      "url": "https://www.congreso.es/en/busqueda-de-publicaciones?_publicaciones_id_texto=%28BOCG-15-D-493.CODI.%29&_publicaciones_legislatura=XV&_publicaciones_mode=mostrarTextoIntegro&p_p_id=publicaciones&p_p_lifecycle=0&p_p_mode=view&p_p_state=normal",
+      "sha256_html": "dc3596ae39fbebc3378212815cedb9adab2bee3aa671582544f7674d48205dd3",
+      "llargada_text": 142945,
+      "enllacos_publicacio": [
+        {
+          "titol": "This week’s international activities ",
+          "url": "https://www.congreso.es/backoffice_doc/internacional/viajes_semana/actividad_internacional_semana.pdf"
+        },
+        {
+          "titol": "Request form for Publications",
+          "url": "https://www.congreso.es/webpublica/estudios/formulario_pedido_publicaciones.pdf"
+        },
+        {
+          "titol": "Environmental Sustainability Plan",
+          "url": "https://www.congreso.es/docu/planes/plan_sostenibilidad_medioambiental_2022.pdf"
+        },
+        {
+          "titol": "Request form for Publications",
+          "url": "https://www.congreso.es/webpublica/estudios/formulario_pedido_publicaciones.pdf"
+        },
+        {
+          "titol": "Environmental Sustainability Plan",
+          "url": "https://www.congreso.es/docu/planes/plan_sostenibilidad_medioambiental_2022.pdf"
+        },
+        {
+          "titol": "PDF",
+          "url": "https://www.congreso.es/public_oficiales/L15/CONG/BOCG/D/BOCG-15-D-493.PDF"
+        }
+      ],
+      "ocurrencies_id": 2,
+      "fragment_curt": " aprobado por Real Decreto Legislativo 1/2004, de 5 de marzo ... (Página44) Otros textos INICIATIVA LEGISLATIVA POPULAR 120/000043 Acuerdo de la Mesa de la Cámara admitiendo el escrito presentado por don Jesús Muiños Taboada y otros, por el que se ejercita el trámite inicial de la iniciativa legislativa popular de la Ley Integral de Transparencia, Rendición de Cuentas y Protección de Denunciantes (LITFIP) ... (Página45) Página 3 COMPOSICIÓN Y ORGANIZACIÓN DE LA CÁMARA DIPUTADOS De conformidad con lo dispuesto en la Norma 5 del Acuerdo de las Mesas del Congreso de los Diputados y del Senado, de 21 de diciembre de 2009, por el que se aprueban las Normas en materia de registro de intereses, en los términos de la redacción dada por la modificación acordada por las Mesas de ambas Cámaras, en su reunión del día 19 de julio de 2011, para dar cumplimiento a lo establecido en la reforma del artículo 160.2 de la Ley Orgánica del Régimen Electoral General, se ordena la publicación en el Boletín Oficial de las Cortes Generales de las siguientes declaraciones de bienes y rentas presentadas, una vez calificadas. Palacio del Congreso de los Diputados, 10 de marzo de 2026.P.D. El Secretario General del Congreso de los Diputados, Fernando Galindo Elola-Olaso. ÍNDICE CORTÉS CARBALLO, Mario (GP) (núm. expte. 005/000077/0001)1 ... (Página4) TARNO BLANCO, Ricardo (GP) (núm. expte. 005/000071/0002)1 ... (Página9) 0 Declaración inicial. 1 Modificación de la declaración. 2 Declaración final. Página 4 Imagen: 16745415_1.png Página 5 Imagen: 16745415_2.png Página 6 Imagen: 16745415_3.png Página 7 Imagen: 16745415_4.png Página 8 Imagen: 16745415_5.png Página 9 Imagen: 16745415_6.png Página 10 Imagen: 16745415_7.png Página 11 Imagen: 16745415_8.png Página 12 Imagen: 16745415_9.png Página 13 Imagen: 16745415_10.png Página 14 CONTROL DE LA ACCIÓN DEL GOBIERNO PROPOSICIONES NO DE LEY Pleno 162/000716 La Mesa de la Cá",
+      "tipus_consulta": "bocg_tramit_inicial",
+      "codi": "120/000043",
+      "lectura_dispositiu_certificada": false
+    },
+    {
+      "obtingut": true,
+      "http": 200,
+      "mime": "text/html;charset=UTF-8",
+      "url": "https://www.congreso.es/es/busqueda-de-iniciativas?_iniciativas_id=161%2F003710&_iniciativas_legislatura=XV&_iniciativas_mode=mostrarDetalle&p_p_id=iniciativas&p_p_lifecycle=0&p_p_state=normal&p_p_mode=view",
+      "sha256_html": "9247b6feabb4c39913b50f43d0aaec27417dfa91bb3e5473b006f21e563e61f3",
+      "llargada_text": 28335,
+      "enllacos_publicacio": [
+        {
+          "titol": "Actividad internacional de la semana",
+          "url": "https://www.congreso.es/backoffice_doc/internacional/viajes_semana/actividad_internacional_semana.pdf"
+        },
+        {
+          "titol": "Formulario de pedido de publicaciones ",
+          "url": "https://www.congreso.es/webpublica/estudios/formulario_pedido_publicaciones.pdf"
+        },
+        {
+          "titol": "Plan de Sostenibilidad Medioambiental",
+          "url": "https://www.congreso.es/docu/planes/plan_sostenibilidad_medioambiental_2022.pdf"
+        },
+        {
+          "titol": "Actividad internacional de la semana",
+          "url": "https://www.congreso.es/backoffice_doc/internacional/viajes_semana/actividad_internacional_semana.pdf"
+        }
+      ],
+      "ocurrencies_id": 1,
+      "fragment_curt": " Familias y a la equiparación de las familias monoparentales con dos hijos o hijas a la condición de familia numerosa. (161/003710) Presentado el 09/09/2026 , calificado el 15/09/2026 Autor Grupo Parlamentario Mixto Resultado tramitación Inadmitido a trámite con requerimiento de aclaración Tramitación seguida por la iniciativa Mesa del Congreso Requerimiento de aclaración desde 15/09/2026 hasta 06/10/2026 Concluido - (Inadmitido a trámite con requerimiento de aclaración) desde 06/10/2026 hasta 06/10/2026 $(document ).ready(function() { formatListDiarios(); }); function formatListDiarios(){ console.log(\"formatListDiarios\"); var elHtmlDiarios = $(\"#_iniciativas_customHtmlDiarios\"); if( elHtmlDiarios.length ){ var strHtmlDiarios = elHtmlDiarios.html(); strHtmlDiarios = strHtmlDiarios.replace( /<br>\\s<br>/gi, \"<br><br>\" ); var arrElements = strHtmlDiarios.split(\"<br><br>\"); var listDiarios = $(\"#_iniciativas_listDiarios\"); for(var i=0; i<arrElements.length; i++){ var diarioElement = document.createElement('li'); diarioElement.innerHTML = arrElements[i]; listDiarios.append(diarioElement); } listDiarios.find( \"a\" ).each(function( index ) { this.innerHTML = \"\"; var iconPdf = document.createElement('i'); iconPdf.classList.add(\"fas\"); iconPdf.classList.add(\"fa-file-pdf\"); this.appendChild( iconPdf ); var iconText = 'PDF'; this.appendChild(document.createTextNode(iconText)); this.setAttribute(\"target\", \"_blank\"); var parentNode = this.parentNode; var htmlParent = parentNode.innerHTML; if( htmlParent.indexOf(\"<br>\") !== -1 ){ htmlParent = htmlParent.replace( /<a/gi, \"<br><a\" ); parentNode.innerHTML = htmlParent; } }); } } Oculto Contacto | Sugerencias | Accesibilidad | Mapa Web Preguntas Frecuentes | Aviso legal | Protección de datos | Política de Cookies Congreso de los Diputados - Plaza de las Cortes, núm. 1 - 28014 - MADRID // <![CDATA[ Liferay.BrowserSelectors.run(); // ]]> // <![CDATA[ Liferay",
+      "tipus_consulta": "fitxa_expedient",
+      "codi": "161/003710",
+      "lectura_dispositiu_certificada": false
+    },
+    {
+      "obtingut": true,
+      "http": 200,
+      "mime": "text/html;charset=UTF-8",
+      "url": "https://www.congreso.es/es/busqueda-de-iniciativas?_iniciativas_id=161%2F003820&_iniciativas_legislatura=XV&_iniciativas_mode=mostrarDetalle&p_p_id=iniciativas&p_p_lifecycle=0&p_p_state=normal&p_p_mode=view",
+      "sha256_html": "8927eaa828a122eff53d83e5bfb1702b2a85462fca4638447b6b0a05d00e2f94",
+      "llargada_text": 28330,
+      "enllacos_publicacio": [
+        {
+          "titol": "Actividad internacional de la semana",
+          "url": "https://www.congreso.es/backoffice_doc/internacional/viajes_semana/actividad_internacional_semana.pdf"
+        },
+        {
+          "titol": "Formulario de pedido de publicaciones ",
+          "url": "https://www.congreso.es/webpublica/estudios/formulario_pedido_publicaciones.pdf"
+        },
+        {
+          "titol": "Plan de Sostenibilidad Medioambiental",
+          "url": "https://www.congreso.es/docu/planes/plan_sostenibilidad_medioambiental_2022.pdf"
+        },
+        {
+          "titol": "Actividad internacional de la semana",
+          "url": "https://www.congreso.es/backoffice_doc/internacional/viajes_semana/actividad_internacional_semana.pdf"
+        },
+        {
+          "titol": "\r\n\t\t\t\t\t\t\t       \t\ttexto íntegro\r\n\t\t\t\t\t\t\t       \t\t",
+          "url": "https://www.congreso.es/busqueda-de-publicaciones?p_p_id=publicaciones&p_p_lifecycle=0&p_p_state=normal&p_p_mode=view&_publicaciones_mode=mostrarTextoIntegro&_publicaciones_legislatura=XV&_publicaciones_id_texto=(BOCG-15-D-610.CODI.)"
+        },
+        {
+          "titol": "",
+          "url": "https://www.congreso.es/public_oficiales/L15/CONG/BOCG/D/BOCG-15-D-610.PDF#page=1494"
+        }
+      ],
+      "ocurrencies_id": 1,
+      "fragment_curt": "erzo de la colaboración en el sector industrial entre los países europeos desde nuevos ámbitos como las Eurorregiones. (161/003820) Presentado el 02/10/2026 , calificado el 13/10/2026 Autor Grupo Parlamentario Socialista Resultado tramitación Caducado sin calificación previa Tramitación seguida por la iniciativa Concluido - (Caducado sin calificación previa) desde 13/10/2026 hasta 04/11/2026 Boletines BOCG. Congreso de los Diputados Núm. D-610 de 04/11/2026 Pág.: 1494 Caducidad de la iniciativa texto íntegro | PDF $(document ).ready(function() { formatListDiarios(); }); function formatListDiarios(){ console.log(\"formatListDiarios\"); var elHtmlDiarios = $(\"#_iniciativas_customHtmlDiarios\"); if( elHtmlDiarios.length ){ var strHtmlDiarios = elHtmlDiarios.html(); strHtmlDiarios = strHtmlDiarios.replace( /<br>\\s<br>/gi, \"<br><br>\" ); var arrElements = strHtmlDiarios.split(\"<br><br>\"); var listDiarios = $(\"#_iniciativas_listDiarios\"); for(var i=0; i<arrElements.length; i++){ var diarioElement = document.createElement('li'); diarioElement.innerHTML = arrElements[i]; listDiarios.append(diarioElement); } listDiarios.find( \"a\" ).each(function( index ) { this.innerHTML = \"\"; var iconPdf = document.createElement('i'); iconPdf.classList.add(\"fas\"); iconPdf.classList.add(\"fa-file-pdf\"); this.appendChild( iconPdf ); var iconText = 'PDF'; this.appendChild(document.createTextNode(iconText)); this.setAttribute(\"target\", \"_blank\"); var parentNode = this.parentNode; var htmlParent = parentNode.innerHTML; if( htmlParent.indexOf(\"<br>\") !== -1 ){ htmlParent = htmlParent.replace( /<a/gi, \"<br><a\" ); parentNode.innerHTML = htmlParent; } }); } } Oculto Contacto | Sugerencias | Accesibilidad | Mapa Web Preguntas Frecuentes | Aviso legal | Protección de datos | Política de Cookies Congreso de los Diputados - Plaza de las Cortes, núm. 1 - 28014 - MADRID // <![CDATA[ Liferay.BrowserSelectors.run(); // ]]> // <![CDAT",
+      "tipus_consulta": "fitxa_expedient",
+      "codi": "161/003820",
+      "lectura_dispositiu_certificada": false
+    }
+  ]
+}
