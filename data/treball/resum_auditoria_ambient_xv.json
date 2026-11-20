@@ -36,6 +36,13 @@
   "fora_cua_amb_pistes_encara_pendents": 1,
   "mostra_fora_cua_per_llegir": 100,
   "mostra_aleatoria_fora_cua": 100,
+  "mostra_aleatoria_revisats": 7,
+  "mostra_aleatoria_pendents": 93,
+  "mostra_aleatoria_decisions": {
+    "incloses": 1,
+    "excloses": 5,
+    "frontereres": 1
+  },
   "metode_mostra_aleatoria": "estratificada_per_serie_llavor_20261120",
   "lots_conservats": [
     "auditoria_mediambient_lot01_2026-11-20.csv",
