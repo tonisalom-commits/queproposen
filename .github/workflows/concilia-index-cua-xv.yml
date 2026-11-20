@@ -1,0 +1,69 @@
+name: Concilia els 830 expedients de la cua amb l'índex oficial complet
+on:
+  push:
+    branches: [feat/prototip-atles-pnl]
+    paths:
+      - ".github/workflows/concilia-index-cua-xv.yml"
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  concilia:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: feat/prototip-atles-pnl
+          persist-credentials: true
+      - name: Reconcilia autoria, resultat i títol dels quatre registres rescatats
+        shell: bash
+        run: |
+          python - <<'PY'
+          import csv,json,unicodedata
+          from pathlib import Path
+          root=Path('data/treball')
+          def read(name):
+              with (root/name).open(encoding='utf-8-sig',newline='') as f:
+                  return list(csv.DictReader(f))
+          idx={x['id']:x for x in read('univers_congres_xv_5094.csv')}
+          rows=read('inventari_ambient_xv_830.csv')
+          assert len(idx)==5094 and len(rows)==830 and len({x['expedient'] for x in rows})==830
+          def normalize(x):
+              return ''.join(c for c in unicodedata.normalize('NFKD',str(x or '').lower()) if not unicodedata.combining(c)).strip()
+          rescats=[]
+          for row in rows:
+              code=row['expedient']
+              assert code in idx,code
+              source=idx[code]
+              if row['procedencia']=='rescat_web_sense_copia_documental':
+                  row['titol_index']=source['titol_oficial']
+                  row['autor_index']=source['autor_oficial']
+                  row['resultat_index']=source['resultat_oficial']
+                  row['incidencia']='Índex contrastat el 20/11/2026; falta recuperar fitxa íntegra i BOCG'
+                  rescats.append(code)
+              else:
+                  assert normalize(row['autor_index'])==normalize(source['autor_oficial']),(code,'autor')
+                  assert normalize(row['resultat_index'])==normalize(source['resultat_oficial']),(code,'resultat')
+              row['estat_conciliacio_index']='RECUPERAT: no acredita disposicions ni votacions'
+          assert len(rescats)==4,rescats
+          output=root/'cua_ambient_xv_830_conciliada.csv'
+          with output.open('w',encoding='utf-8-sig',newline='') as f:
+              w=csv.DictWriter(f,fieldnames=list(rows[0]));w.writeheader();w.writerows(rows)
+          state={'univers':5094,'cua':830,'rescats_amb_metadades_oficials':rescats,
+                 'incompatibilitats_autoria_resultat_en_826':0,
+                 'incidencies_documentals_pendents':35,
+                 'decisions_34_anteriors_per_id':'NO_RECUPERADES',
+                 'nota':'Les 35 incidències sobre detall/BOCG persisteixen; ara quatre tenen índex complet.'}
+          (root/'conciliacio_index_cua_xv.json').write_text(json.dumps(state,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
+          print(json.dumps(state,ensure_ascii=False,indent=2))
+          PY
+      - name: Conserva la conciliació sense alterar les fitxes públiques
+        shell: bash
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/treball/cua_ambient_xv_830_conciliada.csv data/treball/conciliacio_index_cua_xv.json
+          if ! git diff --cached --quiet; then
+            git commit -m "Concilia 830 registres amb index complet i documenta 4 rescatats"
+            git push
+          fi
