@@ -27,6 +27,14 @@ URL_BOCG = re.compile(r"BOCG-15-(?:D|B|CG-A)-[0-9]+(?:-[0-9A-Za-z]+)?")
 UA = "QueProposen-Corpus-Auditoria/1.1 (recerca parlamentar)"
 MAX_HTML = 5_000_000
 MAX_SNIPPET = 4800
+MAX_CONTEXT = 30000
+DISPOSITIVE_PATTERNS = (
+    ("CONGRES_INSTA", re.compile(r"\b(?:El\s+)?Congreso\s+de\s+los\s+Diputados\s+insta\s+al\s+Gobierno\b", re.I)),
+    ("CORTES_INSTAN", re.compile(r"\b(?:Las\s+)?Cortes\s+Generales\s+instan\s+al\s+Gobierno\b", re.I)),
+    ("COMISSIO_INSTA", re.compile(r"\b(?:La\s+)?Comisi[oó]n\s+Mixta\s+insta\s+al\s+Gobierno\b", re.I)),
+    ("ARTICLE_LLEI", re.compile(r"\bArt[ií]culo\s+[uú]nico\b|\bArt[ií]culo\s+1\b", re.I)),
+)
+
 
 
 def allowed(url):
@@ -108,6 +116,8 @@ def discover(row):
         "url_bocg": "", "sha256_detall": "", "sha256_publicacio": "",
         "ocurrencies_id_publicacio": 0,
         "fragment_de_treball_no_validat": "",
+        "finestra_dispositiu_possible": "",
+        "tipus_senyal_dispositiu": "",
         "estat_recuperacio": "PENDENT",
         "error": "",
         "decisio_ambiental": "",
@@ -139,6 +149,27 @@ def snippet(text, code):
     if next_id:
         following = following[: len(code) + 280 + next_id.start()]
     return following[:MAX_SNIPPET], len(matches)
+
+
+def possible_dispositive(text, code):
+    """Tram de possible mandat; MAI lectura certificada per coincidencia regex."""
+    matches = list(re.finditer(re.escape(code), text))
+    if not matches:
+        return "", ""
+    start = matches[-1].start()
+    remaining = text[start:start + MAX_CONTEXT]
+    other = PATTERN.search(remaining[len(code) + 300:])
+    if other:
+        remaining = remaining[:len(code) + 300 + other.start()]
+    found = []
+    for name, pattern in DISPOSITIVE_PATTERNS:
+        found.extend((m.start(), name) for m in pattern.finditer(remaining))
+    if not found:
+        return "", ""
+    # La coincidencia mes tardana sol ser el mandat final, no un passatge
+    # citat al preambul. Aixo es heuristica, no garantia documental.
+    position, name = max(found, key=lambda item: item[0])
+    return name, remaining[position:position + 3800]
 
 
 def collect(rows, workers=3, pause=0.15):
@@ -177,6 +208,9 @@ def collect(rows, workers=3, pause=0.15):
             fragment, occurrences = snippet(page["text"], r["id"])
             r["ocurrencies_id_publicacio"] = occurrences
             r["fragment_de_treball_no_validat"] = fragment
+            kind, text_candidate = possible_dispositive(page["text"], r["id"])
+            r["tipus_senyal_dispositiu"] = kind
+            r["finestra_dispositiu_possible"] = text_candidate
             r["estat_recuperacio"] = "FRAGMENT_CANDIDAT" if fragment else "NO_APAREIX_ID_AL_BOCG"
     return [raw[row["id"]] for row in rows], len(bocg)
 
@@ -197,6 +231,7 @@ def main():
         "id", "serie", "titol_oficial", "categories_pista",
         "url_expedient", "url_bocg", "sha256_detall", "sha256_publicacio",
         "ocurrencies_id_publicacio", "fragment_de_treball_no_validat",
+        "tipus_senyal_dispositiu", "finestra_dispositiu_possible",
         "estat_recuperacio", "error", "decisio_ambiental",
     ]
     write_csv(out, result, fields)
@@ -206,8 +241,9 @@ def main():
         "data_execucio": datetime.now(timezone.utc).isoformat(),
         "expedients_pilot": len(result), "butlletins_diferents": unique_documents,
         "estats": counts, "fitxer": out.name,
+        "amb_finestra_dispositiu_possible": sum(bool(r["finestra_dispositiu_possible"]) for r in result),
         "advertiment": (
-            "FRAGMENT_CANDIDAT indica solament un passatge HTML del BOCG,"
+            "FRAGMENT_CANDIDAT indica solament un passatge HTML del BOCG;"
             " NO que s'hagi llegit el dispositiu o el text definitiu. "
             "Sense decisions ni aprovacions imputades automaticament."
         ),
