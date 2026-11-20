@@ -56,7 +56,7 @@ class AuditoriaXvTests(unittest.TestCase):
             dump(path / "univers_congres_xv_5094.csv", list(univ[0]), univ)
             dump(path / "fora_cua_xv_4264.csv", list(outside[0]), outside)
             audit = []
-            for i in range(4):
+            for i in [0, 1, 2, 3, 900]:
                 audit.append({
                     "expedient": ids[i], "decisio_ambiental": "INCLOURE",
                     "grau_revision": "TEXT_ORIGINAL_I_RESULTAT", "instrument": "PNL",
@@ -69,20 +69,24 @@ class AuditoriaXvTests(unittest.TestCase):
             report = process(path)
             self.assertEqual(report["univers"], 5094)
             self.assertEqual(report["cua"], 830)
-            self.assertEqual(report["inclusions_identificades"], 4)
+            self.assertEqual(report["inclusions_identificades"], 5)
+            self.assertEqual(report["decisions_recuperades_de_fora_cua"], 1)
+            self.assertEqual(report["total_inventari_revisat"], 831)
             self.assertEqual(report["cua_pendent_de_decisio"], 826)
             self.assertEqual(report["mostra_fora_cua_per_llegir"], 100)
             rows = list(csv.DictReader((path / "inventari_ambient_xv_revisat.csv").open(encoding="utf-8-sig")))
-            self.assertEqual(len(rows), 830)
+            self.assertEqual(len(rows), 831)
             self.assertTrue(all(x["decisio_auditoria"] == "INCLOURE" for x in rows[:4]))
             self.assertEqual(rows[4]["decisio_auditoria"], "")
             self.assertEqual(rows[4]["decisio_ambiental"], "PENDENT")
+            rescued = next(x for x in rows if x["expedient"] == ids[900])
+            self.assertEqual(rescued["procedencia"], "auditoria_omissions_fora_cua")
+            self.assertEqual(rescued["decisio_auditoria"], "INCLOURE")
             check = list(csv.DictReader((path / "control_omissions_fora_cua_xv.csv").open(encoding="utf-8-sig")))
             self.assertEqual(len(check), 4264)
-            self.assertIn("biodiversitat", check[70]["pistes_pel_titol"]
-                          if False else next(x["pistes_pel_titol"] for x in check if x["id"] == ids[900]))
+            self.assertIn("biodiversitat", next(x["pistes_pel_titol"] for x in check if x["id"] == ids[900]))
             self.assertEqual(len(list(csv.DictReader((path / "cua_lot02_40.csv").open(encoding="utf-8-sig")))), 40)
-            self.assertEqual(json.loads((path / "resum_auditoria_ambient_xv.json").read_text())["inclusions_identificades"], 4)
+            self.assertEqual(json.loads((path / "resum_auditoria_ambient_xv.json").read_text())["inclusions_identificades"], 5)
 
     def test_impedeix_decisions_repetides_i_fonts_no_oficials(self):
         with tempfile.TemporaryDirectory() as tmp:
