@@ -5,10 +5,10 @@
   "univers": 5094,
   "cua": 830,
   "fora_cua": 4264,
-  "lot_01_i_successius_amb_decisio_individual": 134,
+  "lot_01_i_successius_amb_decisio_individual": 135,
   "decisions_dins_cua_inicial": 24,
-  "decisions_revisades_fora_cua": 110,
-  "exclusions_a_fora_cua": 83,
+  "decisions_revisades_fora_cua": 111,
+  "exclusions_a_fora_cua": 84,
   "decisions_recuperades_de_fora_cua": 27,
   "nous_expedients_a_inventari_revisat": [
     "122/000035",
@@ -41,18 +41,18 @@
   ],
   "total_inventari_revisat": 857,
   "inclusions_identificades": 41,
-  "exclusions_identificades": 84,
+  "exclusions_identificades": 85,
   "fronterers_identificats": 9,
   "cua_pendent_de_decisio": 806,
   "fora_cua_amb_pistes_de_titol": 10,
   "fora_cua_amb_pistes_encara_pendents": 1,
   "mostra_fora_cua_per_llegir": 100,
   "mostra_aleatoria_fora_cua": 100,
-  "mostra_aleatoria_revisats": 95,
-  "mostra_aleatoria_pendents": 5,
+  "mostra_aleatoria_revisats": 96,
+  "mostra_aleatoria_pendents": 4,
   "mostra_aleatoria_decisions": {
     "incloses": 8,
-    "excloses": 81,
+    "excloses": 82,
     "frontereres": 6
   },
   "metode_mostra_aleatoria": "estratificada_per_serie_llavor_20261120",
@@ -69,7 +69,8 @@
     "auditoria_mediambient_lot10_2026-11-20.csv",
     "auditoria_mediambient_lot11_2026-11-20.csv",
     "auditoria_mediambient_lot12_2026-11-20.csv",
-    "auditoria_mediambient_lot13_2026-11-20.csv"
+    "auditoria_mediambient_lot13_2026-11-20.csv",
+    "auditoria_mediambient_lot14_2026-11-20.csv"
   ],
   "decisions_historic_19nov": {
     "total_agregat": 34,
