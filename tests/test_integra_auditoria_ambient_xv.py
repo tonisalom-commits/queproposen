@@ -106,6 +106,10 @@ class AuditoriaXvTests(unittest.TestCase):
             self.assertEqual(report["cua_pendent_de_decisio"], 826)
             self.assertEqual(report["mostra_fora_cua_per_llegir"], 100)
             self.assertEqual(report["mostra_aleatoria_fora_cua"], 100)
+            self.assertEqual(report["mostra_aleatoria_pendents"] +
+                             report["mostra_aleatoria_revisats"], 100)
+            self.assertEqual(sum(report["mostra_aleatoria_decisions"].values()),
+                             report["mostra_aleatoria_revisats"])
             with (path / "mostra_aleatoria_fora_cua_xv_100.csv").open(encoding="utf-8-sig") as src:
                 self.assertEqual(len(list(csv.DictReader(src))), 100)
             with (path / "manifest_mostra_aleatoria_fora_cua_xv.json").open() as src:
