@@ -36,7 +36,7 @@ jobs:
       - name: Cribratge de pistes sense classificacions automatiques
         run: |
           set -euo pipefail
-          python scripts/prioritza_omissions_fora_cua_xv.py
+          python -m scripts.prioritza_omissions_fora_cua_xv
           python - <<'PY'
           import csv, json
           from pathlib import Path
