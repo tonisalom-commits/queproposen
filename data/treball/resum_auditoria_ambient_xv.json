@@ -7,6 +7,8 @@
   "fora_cua": 4264,
   "lot_01_i_successius_amb_decisio_individual": 30,
   "decisions_dins_cua_inicial": 22,
+  "decisions_revisades_fora_cua": 8,
+  "exclusions_a_fora_cua": 0,
   "decisions_recuperades_de_fora_cua": 8,
   "nous_expedients_a_inventari_revisat": [
     "122/000035",
