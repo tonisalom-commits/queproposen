@@ -1,0 +1,11 @@
+{
+  "data_execucio": "2026-11-20T19:39:33.137500+00:00",
+  "expedients_pilot": 30,
+  "butlletins_diferents": 29,
+  "estats": {
+    "FRAGMENT_CANDIDAT": 29,
+    "NO_APAREIX_ID_AL_BOCG": 1
+  },
+  "fitxer": "fragments_pilot_fora_cua_xv_30.csv",
+  "advertiment": "FRAGMENT_CANDIDAT indica solament un passatge HTML del BOCG, NO que s'hagi llegit el dispositiu o el text definitiu. Sense decisions ni aprovacions imputades automaticament."
+}
