@@ -33,6 +33,8 @@
   "fora_cua_amb_pistes_de_titol": 10,
   "fora_cua_amb_pistes_encara_pendents": 1,
   "mostra_fora_cua_per_llegir": 100,
+  "mostra_aleatoria_fora_cua": 100,
+  "metode_mostra_aleatoria": "estratificada_per_serie_llavor_20261120",
   "lots_conservats": [
     "auditoria_mediambient_lot01_2026-11-20.csv",
     "auditoria_mediambient_lot02_2026-11-20.csv",
