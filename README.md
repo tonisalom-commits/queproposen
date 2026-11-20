@@ -1,5 +1,13 @@
 # Què proposen? — atles parlamentari en català
 
+## Auditoria temàtica integrada (20/11/2026)
+
+S'ha executat la integració auditable de decisions individuals sense modificar el catàleg públic: **830 registres de cua originals** més **2 omissions recuperades** (`122/000043` i `161/003256`) formen un **inventari ampliat de 832 registres**. **Sis inclusions** disposen de lectura documentada (4 de la cua i 2 de fora); 826 de la cua continuen pendents, així com les altres entrades fora de cua. Les **34 decisions antigues** no recuperades per ID no es compten com a sis casos addicionals.
+
+El control de les **4.264 iniciatives fora de la cua** ha detectat 10 pistes ambientals al títol: 2 ja incorporades amb text original, 8 pendents. A més, s'ha preparat una mostra de 100 expedients fora de cua per investigar falsos negatius. La mostra **no demostra exhaustivitat**. Els resultats es regeneren automàticament amb proves unitàries i resten **exclusivament a la branca de treball**.
+
+Fitxers principals: [inventari ampliat](data/treball/inventari_ambient_xv_revisat.csv), [resum](data/treball/resum_auditoria_ambient_xv.json), [alertes](data/treball/cua_omissions_prioritaries_xv.csv), [lot següent de 40](data/treball/cua_lot02_40.csv), [mostra de 100](data/treball/mostra_control_fora_cua_xv_100.csv), [auditoria d'omissions](docs/auditoria-omissions-lot02-2026-11-20.md) i [programa de consolidació](scripts/integra_auditoria_ambient_xv.py).
+
 ## Consolidació documental (20/11/2026)
 
 La cua de revisió ambiental està **consolidada en 830 expedients únics**: 826 fitxes oficials dels dos corpus (621 + 205) i 4 fitxes del web anterior que havien quedat fora del cribratge. D'aquests, 795 tenen un fragment del BOCG localitzat; queden 35 incidències documentals (31 sense fragment i 4 sense còpia oficial als corpus). El total de **5.094** és el recompte oficial agregat de les set sèries, **no** el nombre d'iniciatives ambientals confirmades. Les 34 primeres decisions temàtiques anteriors no es poden atribuir individualment sense recuperar el fitxer de revisió.
