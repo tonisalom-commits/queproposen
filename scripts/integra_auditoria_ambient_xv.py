@@ -206,7 +206,7 @@ def process(data: Path = DATA) -> dict:
                 "PNL al Ple" if original["serie"] == "162" else "Proposicio de llei de grups"),
             "titol_index": original["titol_oficial"],
             "autor_index": original["autor_oficial"],
-            "resultat_index": original["resultat_oficial"],
+            "resultat_index": original.get("resultat_oficial", ""),
             "procedencia": "auditoria_omissions_fora_cua",
             "criteris_cua": "recuperat_de_control_falsos_negatius",
             "text_BOCG_localitzat": "FONT_PUBLICA_AL_LOT_SENSE_COPIA_EN_CORPUS",
