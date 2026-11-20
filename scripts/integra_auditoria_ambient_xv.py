@@ -7,7 +7,7 @@ Entrades permanentment conservades al repositori:
 - auditoria_mediambient_lot*.csv (decisions amb fonts, mai inferides de títols)
 
 Sortides de revisió, separades de data/iniciatives.json:
-- inventari_ambient_xv_revisat.csv: cua + decisions individuals
+- inventari_ambient_xv_revisat.csv: cua + decisions individuals; incorpora omissions auditades
 - cua_lot02_40.csv: propostes prioritàries encara PENDENTS
 - control_omissions_fora_cua_xv.csv: pistes no verificades del títol
 - mostra_control_fora_cua_xv_100.csv: auditoria negativa sistemàtica
@@ -172,14 +172,14 @@ def process(data: Path = DATA) -> dict:
     if set(based) | set(outside_ids) != set(universed) or set(based) & set(outside_ids):
         raise ValueError("La cua i els descartats de cribratge no particionen l'univers")
     decisions = load_decisions(data)
-    unlocated = set(decisions) - set(based)
-    if unlocated:
-        raise ValueError("Decisions sense fitxa en la cua: " + ", ".join(sorted(unlocated)))
+    unknown = set(decisions) - set(universed)
+    if unknown:
+        raise ValueError("Decisions sobre IDs que no pertanyen a l'univers: " + ", ".join(sorted(unknown)))
+    added_outside = sorted(set(decisions) & set(outside_ids))
+    fields = list(base[0]) + [x for x in EXTRA if x not in base[0]]
 
-    augmented = []
-    for row in base:
-        r = dict(row)
-        audit = decisions.get(row["expedient"])
+    def apply_audit(r: dict, audit: dict | None) -> dict:
+        r = dict(r)
         r.update({field: "" for field in EXTRA})
         if audit:
             r["decisio_ambiental"] = audit["decisio_ambiental"]
@@ -192,8 +192,33 @@ def process(data: Path = DATA) -> dict:
             r["font_text_auditoria"] = audit["font_text_inicial"]
             r["font_resultat_auditoria"] = audit["font_resultat_o_tramit"]
             r["data_auditoria"] = audit["data_auditoria"]
-        augmented.append(r)
-    fields = list(base[0]) + [x for x in EXTRA if x not in base[0]]
+        return r
+
+    augmented = [apply_audit(r, decisions.get(r["expedient"])) for r in base]
+    # Els expedients que eren fora de la cua només es promocionen si tenen
+    # decisió explícita amb text original i fonts. La cua original queda immòbil.
+    for code in added_outside:
+        original = outside_ids[code]
+        promoted = {field: "" for field in base[0]}
+        promoted.update({
+            "expedient": code, "serie": original["serie"],
+            "tipus": "PNL en comissio" if original["serie"] == "161" else (
+                "PNL al Ple" if original["serie"] == "162" else "Proposicio de llei de grups"),
+            "titol_index": original["titol_oficial"],
+            "autor_index": original["autor_oficial"],
+            "resultat_index": original["resultat_oficial"],
+            "procedencia": "auditoria_omissions_fora_cua",
+            "criteris_cua": "recuperat_de_control_falsos_negatius",
+            "text_BOCG_localitzat": "FONT_PUBLICA_AL_LOT_SENSE_COPIA_EN_CORPUS",
+            "incidencia": "Pendents incorporacio i empremta de la font al corpus descarregat",
+            "decisio_ambiental": "PENDENT: classificacio de la lectura",
+            "url_expedient": original["url_expedient"],
+            "data_captura": "2026-11-20",
+        })
+        augmented.append(apply_audit(promoted, decisions[code]))
+    augmented.sort(key=lambda row: (int(row["serie"]), int(row["expedient"].split("/")[1])))
+    if len(augmented) != 830 + len(added_outside):
+        raise ValueError("Registres promocionats no conciliats")
     write_csv(data / "inventari_ambient_xv_revisat.csv", augmented, fields)
 
     # La priorització és una pista de cerca, mai una decisió ambiental.
@@ -221,13 +246,20 @@ def process(data: Path = DATA) -> dict:
             "titol_oficial": row["titol_oficial"],
             "autor_oficial": row["autor_oficial"],
             "pistes_pel_titol": " | ".join(hints),
-            "estat_revisio": "PENDENT: fora de cua no és exclusió ambiental",
+            "estat_revisio": (
+                "AUDITAT: " + decisions[row["id"]]["decisio_ambiental"]
+                if row["id"] in decisions else "PENDENT: fora de cua no és exclusió ambiental"
+            ),
             "url_expedient": row["url_expedient"],
-            "prioritat": "ALERTA_TITOL" if hints else "CONTROL_ESTRATIFICAT",
+            "prioritat": (
+                "AUDITAT_FORA_CUA" if row["id"] in decisions
+                else "ALERTA_TITOL" if hints else "CONTROL_ESTRATIFICAT"
+            ),
         })
     alerts = sorted((r for r in all_out if r["pistes_pel_titol"]),
                     key=lambda r: (-len(r["pistes_pel_titol"].split(" | ")), stable_key(r)))
-    controls = sorted((r for r in all_out if not r["pistes_pel_titol"]), key=stable_key)
+    alerts_pending = [r for r in alerts if r["id"] not in decisions]
+    controls = sorted((r for r in all_out if not r["pistes_pel_titol"] and r["id"] not in decisions), key=stable_key)
     # Garantir cobertura de totes les set sèries presents a la mostra (quan sigui possible).
     chosen = []
     for serie in sorted({r["serie"] for r in all_out}):
@@ -235,7 +267,7 @@ def process(data: Path = DATA) -> dict:
         if choices:
             chosen.append(choices[0])
     seen = {r["id"] for r in chosen}
-    for row in alerts[:70] + controls:
+    for row in alerts_pending[:70] + controls:
         if len(chosen) >= 100:
             break
         if row["id"] not in seen:
@@ -245,16 +277,22 @@ def process(data: Path = DATA) -> dict:
         raise ValueError("No s'ha pogut construir la mostra de 100 expedients")
     write_csv(data / "control_omissions_fora_cua_xv.csv", all_out, list(all_out[0]))
     write_csv(data / "mostra_control_fora_cua_xv_100.csv", chosen, list(chosen[0]))
+    write_csv(data / "cua_omissions_prioritaries_xv.csv", alerts, list(alerts[0]))
     counts = Counter(a["decisio_ambiental"] for a in decisions.values())
     manifest = {
         "versio": 1, "legislatura": "XV", "data_tall": "2026-11-20",
         "univers": len(universe), "cua": len(base), "fora_cua": len(outside),
         "lot_01_i_successius_amb_decisio_individual": len(decisions),
+        "decisions_dins_cua_inicial": len(decisions) - len(added_outside),
+        "decisions_recuperades_de_fora_cua": len(added_outside),
+        "nous_expedients_a_inventari_revisat": added_outside,
+        "total_inventari_revisat": len(augmented),
         "inclusions_identificades": counts["INCLOURE"],
         "exclusions_identificades": counts["EXCLOURE"],
         "fronterers_identificats": counts["FRONTERER"],
         "cua_pendent_de_decisio": len(pending),
         "fora_cua_amb_pistes_de_titol": len(alerts),
+        "fora_cua_amb_pistes_encara_pendents": len(alerts_pending),
         "mostra_fora_cua_per_llegir": len(chosen),
         "lots_conservats": sorted({r["lot_auditoria"] for r in decisions.values()}),
         "decisions_historic_19nov": {
@@ -263,7 +301,7 @@ def process(data: Path = DATA) -> dict:
             "no_sumar_al_total_actual": True,
         },
         "limitacions": [
-            "Les quatre decisions individuals actuals poden coincidir amb les 34 decisions anteriors no atribuïbles.",
+            "Les decisions individuals actuals poden coincidir amb les 34 decisions anteriors no atribuïbles.",
             "La mostra fora de cua no prova ni completitud ni manca d'omissions.",
             "Pistes dels títols no són lectura documental ni classificació confirmada.",
             "No es publiquen fitxes ni percentatges partidistes automàticament.",
