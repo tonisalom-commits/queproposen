@@ -5,11 +5,11 @@
   "univers": 5094,
   "cua": 830,
   "fora_cua": 4264,
-  "lot_01_i_successius_amb_decisio_individual": 120,
+  "lot_01_i_successius_amb_decisio_individual": 134,
   "decisions_dins_cua_inicial": 24,
-  "decisions_revisades_fora_cua": 96,
-  "exclusions_a_fora_cua": 70,
-  "decisions_recuperades_de_fora_cua": 26,
+  "decisions_revisades_fora_cua": 110,
+  "exclusions_a_fora_cua": 83,
+  "decisions_recuperades_de_fora_cua": 27,
   "nous_expedients_a_inventari_revisat": [
     "122/000035",
     "122/000043",
@@ -34,25 +34,26 @@
     "161/003259",
     "161/003534",
     "161/003557",
+    "162/000102",
     "162/000108",
     "162/000146",
     "162/000350"
   ],
-  "total_inventari_revisat": 856,
+  "total_inventari_revisat": 857,
   "inclusions_identificades": 41,
-  "exclusions_identificades": 71,
-  "fronterers_identificats": 8,
+  "exclusions_identificades": 84,
+  "fronterers_identificats": 9,
   "cua_pendent_de_decisio": 806,
   "fora_cua_amb_pistes_de_titol": 10,
   "fora_cua_amb_pistes_encara_pendents": 1,
   "mostra_fora_cua_per_llegir": 100,
   "mostra_aleatoria_fora_cua": 100,
-  "mostra_aleatoria_revisats": 81,
-  "mostra_aleatoria_pendents": 19,
+  "mostra_aleatoria_revisats": 95,
+  "mostra_aleatoria_pendents": 5,
   "mostra_aleatoria_decisions": {
     "incloses": 8,
-    "excloses": 68,
-    "frontereres": 5
+    "excloses": 81,
+    "frontereres": 6
   },
   "metode_mostra_aleatoria": "estratificada_per_serie_llavor_20261120",
   "lots_conservats": [
@@ -67,7 +68,8 @@
     "auditoria_mediambient_lot09_2026-11-20.csv",
     "auditoria_mediambient_lot10_2026-11-20.csv",
     "auditoria_mediambient_lot11_2026-11-20.csv",
-    "auditoria_mediambient_lot12_2026-11-20.csv"
+    "auditoria_mediambient_lot12_2026-11-20.csv",
+    "auditoria_mediambient_lot13_2026-11-20.csv"
   ],
   "decisions_historic_19nov": {
     "total_agregat": 34,
