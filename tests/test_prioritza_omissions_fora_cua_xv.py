@@ -20,6 +20,8 @@ class PistesForaCuaTests(unittest.TestCase):
         self.assertEqual(a["pistes_fortes"], [])
         self.assertIn("transport_i_infraestructura", a["pistes_indirectes"])
         self.assertEqual(title_signals("Reforma de la justicia")["prioritat_lectura"], 0)
+        self.assertNotIn("riscos_i_emergencia", title_signals("Gravamen temporal del sector energético")["pistes_fortes"])
+        self.assertNotIn("gestio_del_litoral", title_signals("Bonificaciones en el transporte marítimo")["pistes_fortes"])
 
     def test_particio_amb_exclusions_previament_auditades(self):
         r = [
