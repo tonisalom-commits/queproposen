@@ -7,7 +7,7 @@ import unittest
 from pathlib import Path
 
 from scripts.integra_auditoria_ambient_xv import (
-    load_decisions, process, signal_title, official_source,
+    load_decisions, process, signal_title, official_source, stratified_random_sample,
 )
 
 
@@ -26,6 +26,32 @@ class AuditoriaXvTests(unittest.TestCase):
         self.assertIn("zones de baixes emissions",
                       signal_title("Revisión de las Zonas de Bajas Emisiones"))
         self.assertEqual(signal_title("Acceso a la justicia"), [])
+
+    def test_mostra_aleatoria_estratificada_i_reproduible(self):
+        outside = [
+            {"id": f"161/{i:06d}", "serie": "161",
+             "titol_oficial": "Sense pistes", "url_expedient": "https://www.congreso.es/"}
+            for i in range(1, 41)
+        ] + [
+            {"id": f"162/{i:06d}", "serie": "162",
+             "titol_oficial": "Altres", "url_expedient": "https://www.congreso.es/"}
+            for i in range(1, 11)
+        ]
+        sample, metadata = stratified_random_sample(
+            outside, {"161/000001": {"decisio_ambiental": "EXCLOURE"}},
+            sample_size=10, seed=1234
+        )
+        repeated, repeated_metadata = stratified_random_sample(
+            outside, {}, sample_size=10, seed=1234
+        )
+        self.assertEqual([r["id"] for r in sample], [r["id"] for r in repeated])
+        self.assertEqual(metadata["estrats"], repeated_metadata["estrats"])
+        self.assertEqual(len(sample), 10)
+        self.assertEqual(sum(x["seleccionats"] for x in metadata["estrats"].values()), 10)
+        self.assertEqual(len({x["id"] for x in sample}), 10)
+        for row in sample:
+            self.assertGreater(float(row["probabilitat_inclusio"]), 0)
+            self.assertGreaterEqual(float(row["pes_estadistic"]), 1)
 
     def test_integra_quatre_decisions_i_manté_tots_els_pendents(self):
         with tempfile.TemporaryDirectory() as tmp:
@@ -79,6 +105,12 @@ class AuditoriaXvTests(unittest.TestCase):
             self.assertEqual(report["total_inventari_revisat"], 831)
             self.assertEqual(report["cua_pendent_de_decisio"], 826)
             self.assertEqual(report["mostra_fora_cua_per_llegir"], 100)
+            self.assertEqual(report["mostra_aleatoria_fora_cua"], 100)
+            with (path / "mostra_aleatoria_fora_cua_xv_100.csv").open(encoding="utf-8-sig") as src:
+                self.assertEqual(len(list(csv.DictReader(src))), 100)
+            with (path / "manifest_mostra_aleatoria_fora_cua_xv.json").open() as src:
+                metadata = json.load(src)
+            self.assertEqual(sum(x["seleccionats"] for x in metadata["estrats"].values()), 100)
             rows = list(csv.DictReader((path / "inventari_ambient_xv_revisat.csv").open(encoding="utf-8-sig")))
             self.assertEqual(len(rows), 831)
             self.assertNotIn(ids[950], {r["expedient"] for r in rows})
