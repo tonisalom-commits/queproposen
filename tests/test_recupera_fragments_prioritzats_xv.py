@@ -1,5 +1,5 @@
 import unittest
-from scripts.recupera_fragments_prioritzats_xv import snippet, find_bulletin
+from scripts.recupera_fragments_prioritzats_xv import snippet, find_bulletin, possible_dispositive
 
 
 class FragmentsPrioritzatsTests(unittest.TestCase):
@@ -13,6 +13,22 @@ class FragmentsPrioritzatsTests(unittest.TestCase):
         self.assertEqual(n, 2)
         self.assertIn("eficiencia", fragment)
         self.assertNotIn("Índice", fragment)
+
+    def test_locates_dispositive_beyond_first_four_thousand_characters(self):
+        text = ("161/000473 " + "justificació general " * 310 +
+                "El Congreso de los Diputados insta al Gobierno a: "
+                "1. Revisar la planificación eléctrica para integrar renovables. "
+                "2. Coordinar los operadores de la red. " +
+                "161/000474 un altre expedient")
+        marker, window = possible_dispositive(text, "161/000473")
+        self.assertEqual(marker, "CONGRES_INSTA")
+        self.assertIn("integrar renovables", window)
+        self.assertNotIn("161/000474", window)
+
+    def test_does_not_infer_dispositive_from_title(self):
+        marker, window = possible_dispositive(
+            "161/000533 Proposición no de Ley sobre energía.", "161/000533")
+        self.assertEqual((marker, window), ("", ""))
 
     def test_busca_font_oficial(self):
         page = {
