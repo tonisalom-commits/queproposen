@@ -52,6 +52,12 @@ jobs:
           assert sum(bool(x['decisio_auditoria']) for x in rows)>=4
           assert len(read('control_omissions_fora_cua_xv.csv'))==4264
           assert len(read('mostra_control_fora_cua_xv_100.csv'))==100
+          assert len(read('mostra_aleatoria_fora_cua_xv_100.csv'))==100
+          meta=json.loads((root/'manifest_mostra_aleatoria_fora_cua_xv.json').read_text())
+          assert meta['mida']==100
+          assert len(meta['estrats'])==7
+          assert sum(x['seleccionats'] for x in meta['estrats'].values())==100
+          assert sum(x['poblacio'] for x in meta['estrats'].values())==4264
           assert len(read('cua_omissions_prioritaries_xv.csv'))>=1
           assert len(read('cua_lot02_40.csv'))==40
           report=json.loads((root/'resum_auditoria_ambient_xv.json').read_text())
@@ -71,6 +77,8 @@ jobs:
             data/treball/control_omissions_fora_cua_xv.csv \
             data/treball/cua_omissions_prioritaries_xv.csv \
             data/treball/mostra_control_fora_cua_xv_100.csv \
+            data/treball/mostra_aleatoria_fora_cua_xv_100.csv \
+            data/treball/manifest_mostra_aleatoria_fora_cua_xv.json \
             data/treball/resum_auditoria_ambient_xv.json
           if git diff --cached --quiet; then
             echo "Resultats regenerats sense canvis"
