@@ -5,14 +5,15 @@
   "univers": 5094,
   "cua": 830,
   "fora_cua": 4264,
-  "lot_01_i_successius_amb_decisio_individual": 36,
+  "lot_01_i_successius_amb_decisio_individual": 39,
   "decisions_dins_cua_inicial": 24,
-  "decisions_revisades_fora_cua": 12,
-  "exclusions_a_fora_cua": 0,
-  "decisions_recuperades_de_fora_cua": 12,
+  "decisions_revisades_fora_cua": 15,
+  "exclusions_a_fora_cua": 2,
+  "decisions_recuperades_de_fora_cua": 13,
   "nous_expedients_a_inventari_revisat": [
     "122/000035",
     "122/000043",
+    "125/000013",
     "161/000706",
     "161/001403",
     "161/001408",
@@ -24,9 +25,9 @@
     "162/000146",
     "162/000350"
   ],
-  "total_inventari_revisat": 842,
-  "inclusions_identificades": 32,
-  "exclusions_identificades": 1,
+  "total_inventari_revisat": 843,
+  "inclusions_identificades": 33,
+  "exclusions_identificades": 3,
   "fronterers_identificats": 3,
   "cua_pendent_de_decisio": 806,
   "fora_cua_amb_pistes_de_titol": 10,
@@ -38,7 +39,8 @@
     "auditoria_mediambient_lot03_2026-11-20.csv",
     "auditoria_mediambient_lot04_2026-11-20.csv",
     "auditoria_mediambient_lot05_2026-11-20.csv",
-    "auditoria_mediambient_lot06_2026-11-20.csv"
+    "auditoria_mediambient_lot06_2026-11-20.csv",
+    "auditoria_mediambient_lot07_2026-11-20.csv"
   ],
   "decisions_historic_19nov": {
     "total_agregat": 34,
