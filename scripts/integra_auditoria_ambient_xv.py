@@ -175,7 +175,11 @@ def process(data: Path = DATA) -> dict:
     unknown = set(decisions) - set(universed)
     if unknown:
         raise ValueError("Decisions sobre IDs que no pertanyen a l'univers: " + ", ".join(sorted(unknown)))
-    added_outside = sorted(set(decisions) & set(outside_ids))
+    decisions_outside = sorted(set(decisions) & set(outside_ids))
+    # Les exclusions verificades fora de la cua són controls negatius,
+    # no candidats nous que s'hagin d'afegir a l'inventari ambiental revisat.
+    added_outside = [code for code in decisions_outside
+                     if decisions[code]["decisio_ambiental"] != "EXCLOURE"]
     fields = list(base[0]) + [x for x in EXTRA if x not in base[0]]
 
     def apply_audit(r: dict, audit: dict | None) -> dict:
@@ -283,7 +287,9 @@ def process(data: Path = DATA) -> dict:
         "versio": 1, "legislatura": "XV", "data_tall": "2026-11-20",
         "univers": len(universe), "cua": len(base), "fora_cua": len(outside),
         "lot_01_i_successius_amb_decisio_individual": len(decisions),
-        "decisions_dins_cua_inicial": len(decisions) - len(added_outside),
+        "decisions_dins_cua_inicial": len(set(decisions) & set(based)),
+        "decisions_revisades_fora_cua": len(decisions_outside),
+        "exclusions_a_fora_cua": len(decisions_outside) - len(added_outside),
         "decisions_recuperades_de_fora_cua": len(added_outside),
         "nous_expedients_a_inventari_revisat": added_outside,
         "total_inventari_revisat": len(augmented),
