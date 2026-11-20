@@ -26,12 +26,14 @@ STRONG = {
         r"\belectrica|\belectrific|\bhidrogeno|\bfotovoltaic|\beolic|"
         r"\benergia renovable|\bnuclear|\bdescarboniz|\bdescarbonitz"
     ),
-    "gestio_del_litoral": r"\bcosta(s)?\b|\blitoral|\bplaya|\bmaritim|\bmarino|\bcostero",
+    "gestio_del_litoral": r"\bcosta(s)?\b|\blitoral|\bplaya|\bdominio publico maritim|\bmarino|\bcostero",
     "aigua_i_inundacions": (
         r"\bembalse|\btrasvas|\bdepurad|\bdesalador|\bhidrolog|\binundaci|"
         r"\briada|\bsequia|\bdesbordamiento|\bagua regenerad|\bacuifer|\bgot(a|es) fri(a|es)"
     ),
-    "riscos_i_emergencia": r"\bdana\b|\btemporal|\bincendio forestal|\bincendi forestal|\bcatastrofe natural",
+    "riscos_i_emergencia": (r"\bdana\b|\bborrasca|\bincendio forestal|"
+                             r"\bincendi forestal|\bcatastrofe natural|"
+                             r"\btemporal (maritimo|de lluvia|extremo)") ,
     "proteccio_ecologica": (
         r"\bfauna|\bflora|\bespecie(s)? (invasor|amenazad|proteg)|"
         r"\bbiodivers|\becosistem|\becocid|\bmedio ambiente|\bmedio natural|"
